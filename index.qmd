@@ -1,7 +1,8 @@
 ---
 title: "<strong>International Trade</strong>"
 subtitle: "<strong>ECON 324 • Spring 2023 • Hood College</strong>"
-details: "<strong>Learn the common tools and techniques that economists use to model the world around you</strong><br><br>By the end of this course, you will:<ol><li>articulate basic models of *why* and *what* countries trade</li><li> understand the political economy that determine a country’s trade policies</li><li>intelligently comment on trade-related current events</li><li>present an analysis of a country’s trade policy</li></ol>"
+details: >
+  <strong>Learn the common tools and techniques that economists use to model the world around you</strong><br><br>By the end of this course, you will: <ol><li>articulate basic models of *why* and *what* countries trade</li><li> understand the political economy that determine a country’s trade policies</li><li>intelligently comment on trade-related current events</li><li>present an analysis of a country’s trade policy</li></ol>
 toc: false
 sidebar: false
 page-layout: full
@@ -35,6 +36,6 @@ format:
 
 :::
 ```{r echo=FALSE}
-knitr::include_graphics(here::here("images", "trade_flowchart_blankbg.png"), error = FALSE)
+knitr::include_graphics(here::here("images", "trade_flowchart.png"), error = FALSE)
 ```
 :::
