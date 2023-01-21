@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "assignments/00-preliminary-survey.html",
-    "href": "assignments/00-preliminary-survey.html",
-    "title": "Preliminary Survey on Math Background",
-    "section": "",
-    "text": "Warning\n\n\n\nPlease complete this by next class.\n\n\nThis is an ungraded and anonymous survey for me to evaluate the distribution of your math and statistics backgrounds. Please complete all problems to the best of your ability. Your responses will help me craft the course to see which material we need to focus on at greater length, especially review material.\n\n\n Download PDF  Answer Key\n\n\nQuestion 1\nDraw a graph of the following linear equation, \\(R=4-\\frac{1}{2}W\\). Plot \\(W\\) on the vertical axis and \\(R\\) on the horizontal axis.\n\n\nQuestion 2\nDraw a continuous function which begins at the origin, increases at a decreasing rate, reaches an inflection point, and then increases at an increasing rate. Show where each part of the function is concave or convex.\n\n\nQuestion 3\nSolve the system of equations for \\(x\\) and \\(y\\):\n\\[\\begin{align*}\n2x+y&=20\\\\\n4x-3y&=10\\\\\n\\end{align*}\\]\n\n\nQuestion 4\nSimplify the following equation:\n\\[Z=\\frac{0.5X^{-0.5} Y^{0.5}}{0.5X^{0.5}Y^{-0.5}}\\]\n\n\nQuestion 5\nFor the function \\(f(x) = 3x^2+2x-7\\):\n\nTake the derivative of \\(f(x)\\), i.e. \\(f'(x)\\).\nIn English, describe what the derivative of \\(f(x)\\) means.\nEvaluate \\(f'(4)\\). In English, describe what this means.\n\n\n\nQuestion 6\nFind the maximum value of the function:\n\\[f(x)=-2x^2+16x\\]\n\n\nQuestion 7\nExplain what a tangency on a curve means. What is true about the tangent line?\n\n\nQuestion 8\nOn a scale of 1 (worst) to 10 (best), rate your algebra skills (i.e. solving equations, graphing lines, working with fractions, etc.).\n\n\nQuestion 9\nHave you had any experience with calculus?\n\n\nQuestion 10\nOn a scale of 1 (least) to 10 (most), how anxious are you about this class? Feel free to elaborate any specific anxieties – it will make it more likely that I can specifically address them!"
-  },
-  {
     "objectID": "assignments/index.html",
     "href": "assignments/index.html",
     "title": "Assignment Details",
@@ -65,30 +58,23 @@
   {
     "objectID": "content/1.1-content.html#overview",
     "href": "content/1.1-content.html#overview",
-    "title": "1.1 — The Tools of Microeconomics — Class Content",
+    "title": "1.1 — Why Trade Matters — Class Content",
     "section": " Overview",
-    "text": "Overview\nWelcome to ECON 306 — Microeconomic Analysis! Today’s lesson will be an overview of the content and the assignments of the course. Please read and familiarize yourself with the syllabus.\nThis is not just a “syllabus day,” as we need to hit the ground running, but today will give you a “big picture” look at this semester, and how to use microeconomic analysis, by focusing on the two main tools/models: optimization and equilibrium. We will dive right into optimization models next class."
+    "text": "Overview\nWelcome to ECON 324 - International Trade! Today’s lesson will be an introduction to the course, an overview of international trade and its importance."
   },
   {
     "objectID": "content/1.1-content.html#readings",
     "href": "content/1.1-content.html#readings",
-    "title": "1.1 — The Tools of Microeconomics — Class Content",
+    "title": "1.1 — Why Trade Matters — Class Content",
     "section": " Readings",
-    "text": "Readings\nToday is introductory, but you may look at Chapter 1 if you wish, to remind you about the use of models in economics. Otherwise, please heed this timeless message:\n\n\nA message to students from the Doggfather himself, @SnoopDogg pic.twitter.com/wsSANYv8u6\n\n— Ryan Briggs (@ryancbriggs) August 12, 2020\n\n\nPlease note going forward, the lesson numbers and topics (e.g. 1.1) on this website are my design, and will not match up with the textbook!\n\nOptional/Referenced Readings\n\n de Rohan, Anuschka, 2003, “Why Dolphins are Deep Thinkers”, The Guardian\n Katzen et. al, 2021, The nematode worm C. elegans chooses between bacterial foods exactly as if maximizing economic utility, BioRxiv\n Loch-Temzelides, Ted, 2021, “Walrasian equilibrium behavior in nature”, PNAS 118(27)\n Serrano, Jody, 2021, These Monkeys Understand Economics and Intentionally Steal High-Ticket Items to Barter for Better Food, Study Finds, Gizmodo"
+    "text": "Readings\nToday is introductory, but you may look at Chapter 1 if you wish, to remind you about the use of models in economics. Otherwise, please heed this timeless message:\n\n\nA message to students from the Doggfather himself, @SnoopDogg pic.twitter.com/wsSANYv8u6\n\n— Ryan Briggs (@ryancbriggs) August 12, 2020\n\n\nPlease note going forward, the lesson numbers and topics (e.g. 1.1) on this website are my design, and will not match up with the textbook!"
   },
   {
     "objectID": "content/1.1-content.html#slides",
     "href": "content/1.1-content.html#slides",
-    "title": "1.1 — The Tools of Microeconomics — Class Content",
+    "title": "1.1 — Why Trade Matters — Class Content",
     "section": " Slides",
     "text": "Slides\nBelow, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.\n\n\n\n\n\n\nTip\n\n\n\nYou can type h to see a special list of viewing options, and type o for an outline view of all the slides.\n\n\nI suggest printing the slides beforehand and using them to take additional notes in class (not everything is in the slides)!\n\n\n\n\n Download as PDF"
-  },
-  {
-    "objectID": "content/1.1-content.html#assignments",
-    "href": "content/1.1-content.html#assignments",
-    "title": "1.1 — The Tools of Microeconomics — Class Content",
-    "section": " Assignments",
-    "text": "Assignments\n\nPreliminary Math Survey Due Next Class\nPlease take the preliminary survey on your math background by next class. This will help us all have a productive semester together."
   },
   {
     "objectID": "content/index.html",
@@ -109,7 +95,7 @@
     "href": "index.html",
     "title": "ECON 324 — International Trade",
     "section": "",
-    "text": "International Trade\n        \n        \n            ECON 324 • Spring 2023 • Hood College\n        \n        \n            Learn the common tools and techniques that economists use to model the world around youBy the end of this course, you will:\n\n\narticulate basic models of why and what countries trade\n\n\nunderstand the political economy that determine a country’s trade policies\n\n\nintelligently comment on trade-related current events\n\n\npresent an analysis of a country’s trade policy\n\n\n        \n    \n    \n      \n        \n        \n        \n      \n    \n\n\n\n\n\nInstructor\n\n   Dr. Ryan Safner\n   114 Rosenstock\n   Office Hours: MW 1:30-2:30PM\n   safner@hood.edu\n\n\n\nCourse details\n\n   11:25 AM—12:50 PM\n   Rosenstock 101\n   Jan 24—May 8, 2023\n   Slack"
+    "text": "International Trade\n        \n        \n            ECON 324 • Spring 2023 • Hood College\n        \n        \n            Learn the models and concepts to analyze international trade policy and issues By the end of this course, you will:\n\n\narticulate basic models of why and what countries trade\n\n\nunderstand the political economy that determine a country’s trade policies\n\n\nintelligently comment on trade-related current events\n\n\npresent an analysis of a country’s trade policy\n\n\n        \n    \n    \n      \n        \n        \n        \n      \n    \n\n\n\n\n\nInstructor\n\n   Dr. Ryan Safner\n   114 Rosenstock\n   Office Hours: MW 1:30-2:30PM\n   safner@hood.edu\n\n\n\nCourse details\n\n   11:25 AM—12:50 PM\n   Rosenstock 101\n   Jan 24—May 8, 2023\n   Slack"
   },
   {
     "objectID": "resources/appendices/index.html",
@@ -271,5 +257,89 @@
     "title": "Schedule",
     "section": "",
     "text": "This page contains all of the following resources for each class meeting:\n\n Content materials contains suggested readings, more details about assignments, math appendices, and other helpful resources. I suggest you view these before each class.\n Slides are “Xaringan” presentations that can be opened in any browser (You can find a downloadable PDF in each content page)\n Assignments are listed with due dates\n\nPlease note that the lesson numbers, topics, and titles (e.g. 1.1) are my design, and do not match up with the textbook!\nRelevant materials, if applicable will be posted before class meets and become colored links.\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Models of Trade\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nTue Jan 24\n\n\n1.1 — Why Trade Matters\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Jan 26\n\n\n1.2 — The Smithean View of Trade: Divison of Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Jan 31\n\n\n1.3 — Ricardian View of Trade I: Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 02\n\n\n1.4 — 1.4 Ricardian View of Trade II: One-Factor Model\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 07\n\n\n1.5 — Ricardian View of Trade III: Reflections on Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 09\n\n\n1.6 — The Standard Trade Model I\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 14\n\n\n1.7 — The Standard Trade Model II: Terms of Trade Changes\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 16\n\n\n1.8 — The Specific Factors Model\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 21\n\n\n1.9 — The Hecksher-Ohlin Model: Theory\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 23\n\n\n1.10 — The Hecksher-Ohlin Model: Empirics\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 28\n\n\n1.11 — New Trade Theory I\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 02\n\n\n— New Trade Theory II: Monopolistic Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 07\n\n\nMidterm Exam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nII. Trade Policy\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nThu Mar 09\n\n\n2.1 — Tariffs\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 21\n\n\n2.2 — Quotas and Non-Tariff Barriers\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 23\n\n\n2.3 — An Intellectual History of Trade I: Feudalism\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 28\n\n\n2.4 — An Intellectual History of Trade II: Mercantilism\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 30\n\n\n2.5 — An Intellectual History of Trade III: Better Protectionist Arguments\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 04\n\n\n2.6 — An Intellectual History of Trade IV: Increasing Returns & Industrial Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 06\n\n\n2.7 — The Political Economy of Trade Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 11\n\n\n4.2 — Trade Agreements\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIII. Globalization and its Discontents\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nThu Apr 13\n\n\n3.1 — Immigration\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 18\n\n\n3.2 — Globalization & Its Discontents\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 20\n\n\n4.5 — Trade and Disease\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 25\n\n\n4.6 — TBD\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 27\n\n\n4.7 — TBD\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue May 02\n\n\n4.8 — TBD\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu May 04\n\n\n4.9 — TBD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry Profile"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Dr. Ryan Safner\n   114 Rosenstock\n   Office Hours: MW 1:30-2:30PM\n   safner@hood.edu\n\n\n\n\n\n   11:25 AM—12:50 PM\n   Rosenstock 101\n   Jan 24—May 8, 2023\nDownload PDF\nInternational Trade simply defined, is the movement of goods across political borders. However, this simple concept is both remarkably complex economically, and is a vital ingredient for human civilization to flourish. The biggest difference between the last 250 (or so) years and the entire remainder of human history is the dramatic scale by which we have extended the division of labor. The overwhelming majority of our ancestors mired in what we would today consider abject poverty (for them it was the norm), rarely ever travelled more than a few miles from their birthplace, and to obtain just the basic goods needed for human subsistence–food, clothing, shelter, medicine–they had to make these themselves. Today, each of us consumes a wealth of goods which requires millions of tasks to be performed by people across the globe that we will never meet, and each of us will contribute only a sliver of tasks required to produce wealth to be enjoyed by people across the world we will never meet.\nIn this course, we will look at trade from this broad framework of extending the division of labor for human betterment. At the same time, we will get into the weeds and survey theories (and evidence) for understanding international trade flows and foreign trade policy: the purposes for its existence, the gains (and costs) created, and the division of those gains among different groups. As these subjects often intersect with current geopolitical events, especially during election cycles, we will attempt to explain these events using economic theory. Nearly all international trade theories are extensions of basic microeconomics, so this class assumes you have met the required prerequisite courses: ECON 205, 206, and 306.\nThis course will be a hybrid of formal lecture, readings-based class discussions, with exams and a presentation serving as the prime means of evaluation.\nI reserve the right to change any part of this syllabus and course, at my discretion, with proper advance warning."
+  },
+  {
+    "objectID": "syllabus.html#books",
+    "href": "syllabus.html#books",
+    "title": "Syllabus",
+    "section": "Books",
+    "text": "Books\n\nFeenstra, Robert C, and Allen M. Taylor, 2017, International Trade 4th ed, USA: Worth Publishers, ISBN: 9781319061739\n\nYou are welcome to purchase the book by other means (e.g. Amazon, half.com, etc). I have no financial stake in requiring you to purchase this book. You are welcome to use previous version of the book, but carefully verify the reading assignments, as the material may be different across versions.\nThere are also required readings from scholarly articles and book chapters listed on the schedule below, which I will post online In addition, Marginal Revolution University has an excellent series of videos on international trade that will sync up well with our course. I reserve the right to post and require additional readings as necessary."
+  },
+  {
+    "objectID": "syllabus.html#attendence",
+    "href": "syllabus.html#attendence",
+    "title": "Syllabus",
+    "section": "Attendence",
+    "text": "Attendence\nYour day-to-day classroom attendance is not graded. My philosophy is that you are all adults and must take ownership of your own learning or else you will not succeed. Some assignments may require in-class participation for credit, and an (unexcused) absence may be detrimental to your grade. Attending class is one of the strongest predictors of success.\nIf you know you will be absent, you are not required to let me know, but it is polite to give notice (Note if I do not reply to an email of yours letting me know, I am probably busy but will still see it and appreciate your email). Your absence will be noted and recorded for the purposes stated above. If, however, we have an assignment due in class, you must notify me ahead of time in order to make alternate arrangements to still receive credit. Hasty ex-post attempts to notify me will generate little sympathy."
+  },
+  {
+    "objectID": "syllabus.html#late-assignments",
+    "href": "syllabus.html#late-assignments",
+    "title": "Syllabus",
+    "section": "Late Assignments",
+    "text": "Late Assignments\nI will accept late assignments, but will subtract a specified amount of points as a penalty. Even if it is the last week of the semester, I encourage you to turn in late work: some points are better than no points!\nHomeworks: If you turn in a homework after it is due but before it is graded or the answer key posted, I generally will not take off any points. However, if you turn in a homework after the answer key is posted, I will automatically deduct 20 points (so the maximum grade you can earn on it is an 80).\nExams: If you know that you will be unable to complete an in-class exam as scheduled for a legitimate reason, please notify me at least one week in advance, and we will schedule a make-up exam date. Failure to do so, including desperate attempts to make arrangements only after the exam will result in a grade of 0 and little sympathy.\nI reserve the right to re-weight assignments for students whom I believe are legitimately unable to complete a particular assignment."
+  },
+  {
+    "objectID": "syllabus.html#grading",
+    "href": "syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nI will try my best to post grades on Blackboard’s Grading Center and return graded assignments to you within about one week of you turning them in. There will be exceptions. Where applicable, I will post answer keys once I know most homeworks are turned in (see Late Assignments above for penalties). Blackboard’s Grading Center is the place to look for your most up-to-date grades. See also my  Grade Calculator app where you can calculate your overall grade using existing assignment grades and forecast “what if” scenarios."
+  },
+  {
+    "objectID": "syllabus.html#communication-email-and-office-hours",
+    "href": "syllabus.html#communication-email-and-office-hours",
+    "title": "Syllabus",
+    "section": "Communication: Email and Office Hours",
+    "text": "Communication: Email and Office Hours\nStudents must regularly monitor their Hood email accounts to receive important college information, including messages related to this class. Email through the Blackboard system is my main method of communicating announcements and deadlines regarding your assignments. Please do not reply to any automated Blackboard emails - I may not recieve it!. My Hood email (safner@hood.edu) is the best means of contacting me. I will do my best to respond within 24 hours. If I do not reply within 48 hours, do not take it personally, and feel free to send a follow up email in the very likely event that I genuinely did not see your original message.\nI hold regular “office hours” each week in my office at the time stated above. If you want to go over material from class, please have specific questions you want help with. I am not in the business of giving private lectures (particularly if you missed class without a valid excuse).\nWatch this excellent and accurate video explaining office hours:"
+  },
+  {
+    "objectID": "syllabus.html#netiquette",
+    "href": "syllabus.html#netiquette",
+    "title": "Syllabus",
+    "section": "Netiquette",
+    "text": "Netiquette\nWhen using Zoom and Slack, please follow appropriate internet etiquette (“Netiquette”). Written communications, like blog posts or use of the Zoom chat, lacks important nonverbal cues (such as body language, tone of voice, sarcasm, etc).\nAbove all else, please respect one another and think/reread carefully about how others may see your post before you submit a comment. You are expected to disagree and have different opinions, this is inherently valuable in a discussion. Please be civil and constructive in responding to others’ comments: writing “have you considered ‘X’?” is a lot more helpful to all involved than just writing “well you’re just wrong.”\nPosting content that is wilfully incindiary, illegal, or that constitutes academic dishonesty (such as plagarism) will automatically earn a grade of 0 and may be elevated to other authorities on campus.\nWhen using the chat function on Zoom or public Slack channels, please treat it as official course communications, even though I may not be grading it. It may be a quick and informal tool - don’t feel you need to worry about spelling or perfect grammar - but please try to avoid too informal “text-speak” (i.e. say “That’s good for you” instead of “thas good 4 u”)."
+  },
+  {
+    "objectID": "syllabus.html#privacy",
+    "href": "syllabus.html#privacy",
+    "title": "Syllabus",
+    "section": "Privacy",
+    "text": "Privacy\nMaryland law requires all parties consent for a conversation or meeting to be recorded. If you join in, and certainly if you participate, you are consenting to be recorded. However, as described below, videos are not accessible beyond our class.\nLive lectures are recorded on Zoom and posted to Blackboard via Panopto, a secure course management system for video. Among other nice features (such as multiple video screens, close captioning, and time-stamped search functions!), Panopto is authenticated via your Blackboard credentials, ensuring that our course videos are not accessible to the open internet.\n\nFor the privacy of your peers, and to foster an environment of trust and academic freedom to explore ideas, do not record our course lectures or discussions. You are already getting my official copies.\nThe Family Educational Rights and Privacy Act prevents me from disclosing or discussing any student information, including grades and records about student performance. If the student is at least 18 years of age, parents (or spouses) do not have a right to obtain this information, except with consent by the student.\nMany of you may be tuning in remotely, living with parents, and may have occasional interruptions due to sharing a space. This is normal and fine, but know that I will protect your privacy and not discuss your performance when parents (or anyone other than you, for that matter) are present, without your explicit consent."
+  },
+  {
+    "objectID": "syllabus.html#enrollment",
+    "href": "syllabus.html#enrollment",
+    "title": "Syllabus",
+    "section": "Enrollment",
+    "text": "Enrollment\nStudents are responsible for verifying their enrollment in this class. The last day to add or drop this class with no penalty is Wednesday, September 1. Be aware of important dates."
+  },
+  {
+    "objectID": "syllabus.html#honor-code",
+    "href": "syllabus.html#honor-code",
+    "title": "Syllabus",
+    "section": "Honor Code",
+    "text": "Honor Code\nHood College has an Academic Honor Code which requires all members of this community to maintain the highest standards of academic honesty and integrity. Cheating, plagiarism, lying, and stealing are all prohibited. All violations of the Honor Code are taken seriously, will be reported to appropriate authority, and may result in severe penalties, including expulsion from the college. See here for more detailed information."
+  },
+  {
+    "objectID": "syllabus.html#van-halen-and-mms",
+    "href": "syllabus.html#van-halen-and-mms",
+    "title": "Syllabus",
+    "section": "Van Halen and M&Ms",
+    "text": "Van Halen and M&Ms\nWhen you have completed reading the syllabus, email me a picture of the band Van Halen and a picture of a bowl of M&Ms. If you do this before the date of the first exam, you will get bonus points on the exam. If 75-100% of the class does this, you each get 2 points. If 50-75% of the class does this, you each get 4 points. If 25-50% of the class does this, you each get 6 points. If 0-25% of the class does this, you each get 8 points. Yes, you read this correctly."
+  },
+  {
+    "objectID": "syllabus.html#accessibility-equity-and-accommodations",
+    "href": "syllabus.html#accessibility-equity-and-accommodations",
+    "title": "Syllabus",
+    "section": "Accessibility, Equity, and Accommodations",
+    "text": "Accessibility, Equity, and Accommodations\nCollege courses can, and should, be challenging and bring you out of your comfort zone in a safe and equitable environment. If, however, you feel at any point in the semester that certain assignments or aspects of the course will be disproportionately uncomfortable or burdensome for you due to any factor beyond your control, please come see me or email me. I am a very understanding person and am happy to work out a solution together. I reserve the right to modify and reweight assignments at my sole discretion for students that I belive would legitimately be at a disadvantage, through no fault of their own, to complete them as described.\nIf you are unable to afford required textbooks or other resources for any reason, come see me and we can find a solution that works for you.\nThis course is intended to be accessible for all students, including those with mental, physical, or cognitive disabilities, illness, injuries, impairments, or any other condition that tends to negatively affect one’s equal access to education. If at any point in the term, you find yourself not able to fully access the space, content, and experience of this course, you are welcome to contact me to discuss your specific needs. I also encourage you to contact the Office of Accessibility Services (301-696-3421). If you have a diagnosis or history of accommodations in high school or previous postsecondary institutions, Accessibility Services can help you document your needs and create an accommodation plan. By making a plan through Accessibility Services, you can ensure appropriate accommodations without disclosing your condition or diagnosis to course instructors."
   }
 ]
