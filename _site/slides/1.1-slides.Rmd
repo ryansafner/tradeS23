@@ -494,7 +494,7 @@ knitr::kable(assignments, "html")
 
 .pull-right[
 .center[
-![](../images/tradewebsite.png)
+![](../images/trade_2023_website.png)
 ]
 ]
 
