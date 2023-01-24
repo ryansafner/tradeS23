@@ -62,10 +62,53 @@ class: inverse
 
 # Outline
 
-## [Why Trade Matters](#3)
-## [About This Course](#35)
+## [Why Trade Matters](#5)
+## [About This Course](#37)
 
 ---
+
+# About Me
+
+.left-column[
+.center[
+![](../images/meinfrontofsmith.jpg)
+
+.smallest[
+Edinburgh, 2019
+]
+]
+]
+
+.right-column[
+.smallest[
+
+- Ph.D (Economics) — George Mason University, 2015
+
+- B.A. (Economics) — University of Connecticut, 2011
+
+- 7th year teaching at Hood
+
+- Specializations:
+  - Law and Economics
+  - Austrian Economics
+
+- Research interests
+  - modeling innovation & economic growth
+  - political economy & economic history of intellectual property
+  - Substack: [Increasing Returns](https://increasingreturns.substack.com)
+]
+]
+
+---
+
+# What's Keeping Me Busy
+
+.center[
+![:scale 90%](../images/miles_2023.png)
+]
+
+---
+
 
 class: inverse, center, middle
 
