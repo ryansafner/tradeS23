@@ -1,0 +1,16 @@
+{
+  "hash": "9d6020c17f68e275e683da753fd0f8f7",
+  "result": {
+    "markdown": "---\ntitle: \"1.2 — The Smithean View of Trade: Divison of Labor — Class Content\"\nexecute:\n  freeze: auto\n---\n\n::: {.cell}\n\n:::\n\n\n::: {.callout-note appearance=\"minimal\"}\n# Meeting Date\n\n*Thursday, January 26, 2023*\n:::\n\n## <i class=\"fas fa-info-circle fa-lg\"></i> Overview\n\nToday we look at Adam Smith's understanding of what is the cause of the wealth of nations: the division of labor.\n\n## <i class=\"fas fa-book-reader fa-lg\"></i> Readings\n\n### Recommended Reading\n\n- [<i class=\"fas fa-external-link-square-alt\"></i> Smith (1776), *Wealth of Nations*, Book I, Chs. 1-3](https://www.econlib.org/library/Smith/smWN.html)\n- [<i class=\"fas fa-external-link-square-alt\"></i> Safner (2023), “It All Beings with the Division of Labor: Meditations on what should be the central insight of economics”](https://increasingreturns.substack.com/p/it-all-begins-with-the-division-of)\n- [<i class=\"fas fa-external-link-square-alt\"></i> Safner (2023), “Division of Labor vs. the Invisible Hand: Two divergent trajectories of economic thought from two of its foundations”](https://increasingreturns.substack.com/p/division-of-labor-vs-the-invisible)\n- [<i class=\"fas fa-external-link-square-alt\"></i> Munger (2007), \"I'll Stick With These: Some Sharp Observations on the Division of Labor\"](https://www.econlib.org/library/Columns/y2007/Mungerpins.html)\n- [<i class=\"fas fa-file-pdf\"></i> Bauer (2000), \"From Subsistence to Exchange\"](/readings/Bauer-2000-Ch1.pdf)\n- [<i class=\"fab fa-youtube\"></i> TED Talk: Thomas Thwaites: How I Built a Toaster From Scratch\"](https://www.ted.com/talks/thomas_thwaites_how_i_built_a_toaster_from_scratch?language=en)\n- [<i class=\"fab fa-youtube\"></i> YouTube: How to Make a $1500 Sandwich in Only 6 Months\"](https://www.youtube.com/watch?v=URvWSsAgtJE)\n\n\n## <i class=\"fas fa-chalkboard-teacher\"></i> Slides\n\nBelow, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.\n\n::: callout-tip\nYou can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.\n:::\n\nI suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!\n\n\n<p style=\"text-align:center;\"><a target=\"_blank\" href=\"/slides/1.2-slides.html\"><img src =\"/slides/1.2-slides.png\" alt = \"1.2-slides\"></a></p>\n<p style=\"text-align:center;\"><a class=\"btn btn-primary btn-lg\" target=\"_blank\" href=\"/slides/1.2-slides.pdf\"><i class=\"fas fa-file-pdf\"></i> Download as PDF</a></p>\n\n```{=html}\n<!--## <i class=\"fas fa-laptop-code\"></i> Assignments\n\n### Preliminary Math Survey Due Next Class\n\nPlease take the [preliminary survey](/assignment/00-preliminary-survey) on your math background by next class. This will help us all have a productive semester together.-->\n```\n",
+    "supporting": [
+      "1.2-content_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
