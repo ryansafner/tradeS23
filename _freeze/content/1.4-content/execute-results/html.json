@@ -1,0 +1,14 @@
+{
+  "hash": "dad898e8f0e036a6277f59e3702ea3cc",
+  "result": {
+    "markdown": "---\ntitle: \"1.4 — The Ricardian View of Trade: One-Factor Model — Class Content\"\nexecute:\n  freeze: auto\n---\n\n::: {.cell}\n\n:::\n\n\n::: {.callout-note appearance=\"minimal\"}\n# Meeting Date\n\n*Thursday, February 2, 2023*\n:::\n\n## <i class=\"fas fa-info-circle fa-lg\"></i> Overview\n\nToday, we dive into a more formal Ricardian model that will ultimately be extended into the modern models of international trade over the coming weeks.\n\n## <i class=\"fas fa-dumbbell\"></i> Practice\n\nToday you will be working on practice problems on simple comparative advantage. Answers will be posted later.\n\n## <i class=\"fas fa-book-reader fa-lg\"></i> Readings\n\n- Chapter 2.1 in Feenstra & Taylor\n\n**Note:** Feenstra and Taylor dive right into a Ricardian model in Ch. 2 with some advanced features. This throws a lot of moving parts (marginal products of labor, indifference curves, world relative supply and world relative demand curves, export and import curves, etc.) at you very fast. In my experience, and having used different textbooks in the past, is that it is easier if I build more slowly to the full model. This class will be a “simplified Ricardian model” (there is a bit of fudging with marginal products vs. “required labor”) that gets you to see some of the essentials before we layer on additional parts in next class on the “standard” or “neoclassical” trade model. \n\nSo if you are reading the textbook, it won't exactly match up to class for 1-2 weeks 😕\n\n## <i class=\"fas fa-chalkboard-teacher\"></i> Slides\n\nBelow, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.\n\n::: callout-tip\nYou can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.\n:::\n\nI suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!\n\n\n<p style=\"text-align:center;\"><a target=\"_blank\" href=\"/slides/1.4-slides.html\"><img src =\"/slides/1.4-slides.png\" alt = \"1.4-slides\"></a></p>\n<p style=\"text-align:center;\"><a class=\"btn btn-primary btn-lg\" target=\"_blank\" href=\"/slides/1.4-slides.pdf\"><i class=\"fas fa-file-pdf\"></i> Download as PDF</a></p>\n\n```{=html}\n<!--## <i class=\"fas fa-laptop-code\"></i> Assignments\n\n### Preliminary Math Survey Due Next Class\n\nPlease take the [preliminary survey](/assignment/00-preliminary-survey) on your math background by next class. This will help us all have a productive semester together.-->\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

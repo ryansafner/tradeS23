@@ -1,0 +1,56 @@
+---
+title: "1.4 — The Ricardian View of Trade: One-Factor Model — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, February 2, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we dive into a more formal Ricardian model that will ultimately be extended into the modern models of international trade over the coming weeks.
+
+## <i class="fas fa-dumbbell"></i> Practice
+
+Today you will be working on practice problems on simple comparative advantage. Answers will be posted later.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- Chapter 2.1 in Feenstra & Taylor
+
+**Note:** Feenstra and Taylor dive right into a Ricardian model in Ch. 2 with some advanced features. This throws a lot of moving parts (marginal products of labor, indifference curves, world relative supply and world relative demand curves, export and import curves, etc.) at you very fast. In my experience, and having used different textbooks in the past, is that it is easier if I build more slowly to the full model. This class will be a “simplified Ricardian model” (there is a bit of fudging with marginal products vs. “required labor”) that gets you to see some of the essentials before we layer on additional parts in next class on the “standard” or “neoclassical” trade model. 
+
+So if you are reading the textbook, it won't exactly match up to class for 1-2 weeks 😕
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("1.4-slides")
+```
+
+```{=html}
+<!--## <i class="fas fa-laptop-code"></i> Assignments
+
+### Preliminary Math Survey Due Next Class
+
+Please take the [preliminary survey](/assignment/00-preliminary-survey) on your math background by next class. This will help us all have a productive semester together.-->
+```
