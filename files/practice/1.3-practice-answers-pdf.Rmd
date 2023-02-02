@@ -1,0 +1,147 @@
+---
+title: "1.3 — The Ricardian View of Trade: Comparative Advantage — Practice Problems (Solutions)"
+author: "ECON 324 — International Trade"
+date: ""
+output: pdf_document
+header-includes: 
+  - \usepackage{tikz}
+  - \usetikzlibrary{shapes, arrows, calc}
+  - \usepackage{pgfplots}
+  - \usepackage{booktabs}
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+```
+
+*Gondor* and *Rohan* can each produce *oil (o)* and *linen (l)*. 
+
+If Gondor devotes all of its resources to producing either good, it can produce 500 barrels of oil or 200 yards of linen. If Rohan devotes all of its resources to producing either good, it can produce 300 barrels of oil or 100 yards of linen. 
+
+Currently, Gondor is producing 250 barrels of oil and 100 yards of linen, and Rohan is producing 150 barrels of oil and 50 units of linen.
+
+Put oil (o) on the horizontal axis and linen (l) on the vertical axis.
+
+1. Write the equation of each country's production possibilities frontier (PPF).
+
+---
+
+If they both spent all of their resources on producing each good, they could achieve a maximum as follows:
+
+\begin{center}\begin{tabular}{ccc}
+	& Oil & Linen \\ \toprule
+	Gondor & 500 & 200 \\ \midrule
+	Rohan & 300 & 100 \\ \bottomrule
+\end{tabular} \end{center}
+
+By just graphing the two endpoints, we can construct the PPFs:
+
+---
+
+2. Graph each country's PPF. 
+
+---
+
+\begin{tabular}{cc}
+	Gondor & Rohan \\ 
+		  \begin{tikzpicture} \scriptsize 
+  	\begin{axis}[clip=false,
+  		scale=0.7,
+  		axis lines=middle, 
+  		enlarge x limits={rel=0.15, upper},
+  		enlarge y limits={rel=0.15, upper},
+		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north east},
+  	legend style={at={(axis description cs:0.5,-0.15)},anchor=north},
+  	legend cell align=left,
+  	xlabel=$o$,
+  	ylabel=$l$,
+  	shader=flat,
+  	xtick={0,100,...,500},
+  	ytick={0,100,...,500},
+  	grid=major,
+  	ymin=0,
+  	xmin=0,
+  	xmax=500,
+  	ymax=500
+  ]
+  	\addplot[domain=0:500, samples=20, ultra thick, color=blue!50]{200-0.4*x};
+  	\addlegendentry{$l=200-\frac{2}{5}o$}
+  	\end{axis}
+  \end{tikzpicture}
+&
+		  \begin{tikzpicture} \scriptsize 
+  	\begin{axis}[clip=false,
+  		scale=0.7,
+  		axis lines=middle, 
+  		enlarge x limits={rel=0.15, upper},
+  		enlarge y limits={rel=0.15, upper},
+		every axis x label/.style={at={(current axis.right of origin)},anchor=north west},
+		every axis y label/.style={at={(current axis.above origin)},anchor=north east},
+  	legend style={at={(axis description cs:0.5,-0.15)},anchor=north},
+  	legend cell align=left,
+  	xlabel=$o$,
+  	ylabel=$l$,
+  	shader=flat,
+  	xtick={0,100,...,500},
+  	ytick={0,100,...,500},
+  	grid=major,
+  	ymin=0,
+  	xmin=0,
+  	xmax=500,
+  	ymax=500
+  ]
+  	\addplot[domain=0:300, samples=20, ultra thick, color=red!50]{100-0.33333*x};
+  	\addlegendentry{$l=100-\frac{1}{3}o$}
+  	\end{axis}
+  \end{tikzpicture}\\
+\end{tabular}
+
+\clearpage
+
+3. Which country has an *absolute* advantange in producing each good? Why?
+
+---
+
+Gondor has an absolute advantage in producing both Oil and Linen.
+
+---
+
+4. Find each country's opportunity cost of producing each good.
+
+---
+
+The slope of each PPF is each person's opportunity cost of the horizontal good. The inverse of the slope is each person's opportunity cost of the vertical good: 
+
+\begin{center}\begin{tabular}{ccc}
+	& 1 Oil & 1 Linen \\ \toprule
+	Gondor & $0.4$l & $2.5$o \\ \midrule
+	Rohan & $\frac{1}{3}$l & 3o \\ \bottomrule
+\end{tabular} \end{center}
+
+---
+
+5. Which country has a *comparative* advantage in producing each good? Why?
+
+---
+
+Gondor has a comparative advantage in producing Linen, since it has a lower opportunity cost than Rohan.
+
+Rohan has a comparative advantage in producing Oil, since it has a lower opportunity cost than Gondor.
+
+---
+
+
+6. Which country should specialize in producing which good?
+
+---
+
+Gondor should specialize in producing Linen, and Rohan in producing Oil. 
+
+---
+
+7. What will the range of possible terms of trade be? 
+
+---
+
+The price paid for Oil will be between $\frac{1}{3}$ and $0.4$ Linens. Likewise for Linen, it will be between $2.5$ and $3$ barrels of Oil. 

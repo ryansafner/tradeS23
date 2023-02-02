@@ -1,0 +1,35 @@
+---
+title: "1.4 — The Ricardian View of Trade: Formal One-Factor Model — Practice Problems (Solutions)"
+author: "ECON 324 — International Trade"
+date: ""
+output:
+  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+---
+
+Suppose the following facts to set up:
+
+- Home has 100 Laborers
+  - Requires 5 workers to make 1wheat
+  - Requires 10 workers to make 1 car
+  
+- Foreign has 200 Laborers
+  - Requires 2 workers to make 1 wheat
+  - Requires 8 workers to make 1 car
+
+Plot wheat (w) on the horizontal axis and cars (c) on the vertical axis.
+
+1. Write the equation of each country's production possibilities frontier (PPF).
+
+2. Graph each country's PPF.
+
+3. Which country has an *absolute* advantange in producing each good? Why?
+
+4. Find each country's opportunity cost of producing each good.
+
+5. Which country has a *comparative* advantage in producing each good? Why?
+
+6. Which country should specialize in producing which good?
+
+7. What will the range of possible terms of trade be? 
