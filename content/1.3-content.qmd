@@ -22,8 +22,8 @@ Today we begin looking at David Ricardo's view of trade, focusing on comparative
 
 Today you will be working on practice problems on simple comparative advantage:
 
-- [<i class="fas fa-file-pdf"></i> Practice Problems](files/practice/1.3-practice-pdf.pdf)
-- [<i class="fas fa-file-pdf"></i> Answer Key](files/practice/1.3-practice-answers-pdf.pdf)
+- [<i class="fas fa-file-pdf"></i> Practice Problems](../files/practice/1.3-practice-pdf.pdf)
+- [<i class="fas fa-file-pdf"></i> Answer Key](../files/practice/1.3-practice-answers-pdf.pdf)
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
