@@ -1,0 +1,54 @@
+---
+title: "1.4 — The Ricardian View of Trade: Reflections on Comparative Advantage — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Tuesday, February 7, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we go over the Ricardian model practice from last class, and since we will not have enough time to start the next model (I would rather not split it across classes if I can help it), we will reflect on the nature of comparative advantage and its relationship to the division of labor, and international trade.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+There are no required or unique readings for today. Though as I mentioned in class, you might find [How the Dismal Science Got its Name](https://www.econlib.org/library/Columns/LevyPeartdismal.html) insightful and surprising. It is a 6 part series of blog posts based on research by David Levy & Sandra Peart.
+- [Part I](https://www.econlib.org/library/Columns/LevyPeartdismal.html)
+- [Part II](https://www.econlib.org/library/Columns/LevyPeartdismal2.html)
+- [Part III](https://www.econlib.org/library/Columns/LevyPeartdismal3.html)
+- [Part IV](https://www.econlib.org/library/Columns/LevyPeartdismal4.html)
+- [Part V](https://www.econlib.org/library/Columns/LevyPeartdismal5.html)
+- [Part VI](https://www.econlib.org/library/Columns/LevyPeartdismal6.html)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("1.5-slides")
+```
+
+```{=html}
+<!--## <i class="fas fa-laptop-code"></i> Assignments
+
+### Preliminary Math Survey Due Next Class
+
+Please take the [preliminary survey](/assignment/00-preliminary-survey) on your math background by next class. This will help us all have a productive semester together.-->
+```
