@@ -1,5 +1,5 @@
 ---
-title: "1.4 — The Ricardian View of Trade: Reflections on Comparative Advantage — Class Content"
+title: "1.5 — The Ricardian View of Trade: Reflections on Comparative Advantage — Class Content"
 execute:
   freeze: auto
 ---
