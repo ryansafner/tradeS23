@@ -21,6 +21,7 @@ Today, we go over the Ricardian model practice from last class, and since we wil
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
 There are no required or unique readings for today. Though as I mentioned in class, you might find [How the Dismal Science Got its Name](https://www.econlib.org/library/Columns/LevyPeartdismal.html) insightful and surprising. It is a 6 part series of blog posts based on research by David Levy & Sandra Peart.
+
 - [Part I](https://www.econlib.org/library/Columns/LevyPeartdismal.html)
 - [Part II](https://www.econlib.org/library/Columns/LevyPeartdismal2.html)
 - [Part III](https://www.econlib.org/library/Columns/LevyPeartdismal3.html)

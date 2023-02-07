@@ -1,0 +1,151 @@
+---
+title: "1.4 — The Ricardian View of Trade: Formal One-Factor Model — Practice Problems (Solutions)"
+author: "ECON 324 — International Trade"
+date: ""
+output:
+  pdf_document:
+    latex_engine: xelatex
+    dev: cairo_pdf
+---
+
+```{r setup, include = F}
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F)
+library(tidyverse)
+library(patchwork)
+```
+
+Suppose the following facts to set up:
+
+- Home has 100 Laborers
+  - Requires 5 workers to make 1wheat
+  - Requires 10 workers to make 1 car
+  
+- Foreign has 200 Laborers
+  - Requires 2 workers to make 1 wheat
+  - Requires 8 workers to make 1 car
+
+Plot wheat (w) on the horizontal axis and cars (c) on the vertical axis.
+
+1. Write the equation of each country's production possibilities frontier (PPF).
+
+---
+
+Home:
+$$\begin{aligned}
+l_ww+l_cc&=\bar{L}\\
+5w+10c &= 100\\
+10c&=100-5w\\
+c&=10-0.5w\\
+\end{aligned}$$
+
+Foreign:
+$$\begin{aligned}
+l_w'w+l_c'c&=\bar{L}'\\
+2w+8c &= 200\\
+8c&=200-2w\\
+c&=25-0.25w\\
+\end{aligned}$$
+
+---
+
+2. Graph each country's PPF.
+
+---
+
+```{r}
+
+home_ppf=function(x){10-0.5*x}
+
+home<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = home_ppf, geom = "line", color = "blue", size = 1)+
+  labs(title = "Home",
+       x = "Wheat",
+       y = "Cars")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  coord_fixed()+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+
+foreign_ppf=function(x){25-0.25*x}
+
+foreign<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = foreign_ppf, geom = "line", color = "red", size = 1)+
+  labs(title = "Foreign",
+       x = "Wheat",
+       y = "Cars")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  coord_fixed()+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+
+home+foreign
+```
+
+
+---
+
+3. Which country has an *absolute* advantage in producing each good? Why?
+
+---
+
+**Foreign** has an absolute advantage in producing **wheat**, since it requires only 2 workers to produce 1 wheat, compared to Home's 5 workers. Also see that Foreign can produce more wheat (100 units) than Home (20 units) if it dedicated all of its resources to wheat production — the horizontal intercept.
+
+**Foreign** also has an absolute advantage in producing **cars**, since it requires only 8 workers to produce 1 car, compared to Home's 10 workers. Also see that Foreign can produce more cars (25 units) than Home (10 units) if it dedicated all of its resources to car production — the vertical intercept.
+
+---
+
+4. Find each country's opportunity cost of producing each good.
+
+---
+
+| Country | 1 Wheat | 1 Car |
+|:-------|--------:|------:|
+| \color{blue}{Home} | 0.5 cars | **2 wheat** |
+| \color{red}{Foreign} | **0.25 cars** | 4 wheat |
+
+Each country's opportunity cost of wheat is the slope of its PPF: the relative price of wheat, or, the number of cars needed to be given up to produce 1 additional unit of wheat.
+
+Each country's opportunity cost of cars is the *inverse* of the slope of its PPF: the relative price of cars, or, the number of wheat needed to be given up to produce 1 additional car.
+
+---
+
+5. Which country has a *comparative* advantage in producing each good? Why?
+
+---
+
+**Home** has a comparative advantage in producing **cars** since it has a lower opportunity cost in car production. It only gives up 2 wheat vs. Foreign gives up 4 wheat per car. 
+
+**Foreign** has a comparative advantage in producing **wheat** since it has a lower opportunity cost in wheat production. It only gives up 0.25 cars vs. Home gives up 0.5 cars per 1 wheat. 
+
+---
+
+6. Which country should specialize in producing which good?
+
+---
+
+Each country should specialize in producing the good for which they have the lower opportunity cost: Home should specialize in cars and Foreign should specialize in wheat.
+
+---
+
+7. What will the range of possible terms of trade be? 
+
+---
+
+The price of each good (in terms of the other) must fall between the opportunity cost of each country to produce that good. Thus is because a country will only buy (import) a good if it can get a price *cheaper* than it costs it to produce at home, and a country will only sell (export) a good if it can get a price *higher* than its cost of production:
+
+Simply look down each column for each good in the table above.
+
+\begin{center}
+0.25 cars $< p_W <$ 0.5 cars \\
+2 wheat $< p_C <$ 4 wheat
+\end{center}
