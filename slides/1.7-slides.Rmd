@@ -1,0 +1,1445 @@
+---
+title: "1.7 — The Standard Trade Model II: Terms of Trade Changes"
+author: 'Ryan Safner'
+#date:
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("ggrepel")
+library("fontawesome")
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_freezeframe()
+xaringanExtra::use_progress_bar()
+
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+
+set.seed(256)
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+
+```
+
+class: title-slide
+
+# 1.7 — The Terms of Trade Changes
+
+## ECON 324 • International Trade • Spring 2023
+
+### Ryan Safner<br> Associate Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/tradeS23"><i class="fa fa-github fa-fw"></i>ryansafner/tradeS23</a><br> <a href="https://tradeS23.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>tradeS23.classes.ryansafner.com</a><br>
+
+---
+
+
+```{r, cache=T}
+home_point<-tribble(
+  ~x, ~y, ~letter,
+  2, 2.75, "A"
+)
+
+home_ppf_eq =function(x){sqrt(9-(x-0.75)^2)}
+home_IC_1 = function(x){1.75+(2/x)}
+home_price_1 = function(x){3.75-0.5*x}
+
+home_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  scale_x_continuous(breaks=c(0,2),
+                     labels=c(0, expression(x[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.75),
+                     labels=c(0, expression(y[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_point<-tribble(
+  ~x, ~y, ~letter,
+  2.55, 3, "A'"
+)
+
+foreign_ppf_eq =function(x){sqrt(25-x^3)}
+foreign_IC_1 = function(x){4/(x-1.575)-1}
+foreign_price_1 = function(x){12.5-3.75*x}
+
+foreign_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  scale_x_continuous(breaks=c(0,2.55),
+                     labels=c(0, expression(x[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,3),
+                     labels=c(0, expression(y[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+export_b=tribble(
+  ~x, ~y, ~letter,
+  3.15, 1.8, "B"
+)
+
+home_ppf_world_price = function(x){6.6-1.5*x}
+
+home_exp<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = export_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = export_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  scale_x_continuous(breaks=c(0,2,3.15),
+                     labels=c(0, expression(x[1]), expression(x[2])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75),
+                     labels=c(0, expression(y[2]), expression(y[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+import_b=tribble(
+  ~x, ~y, ~letter,
+  1.95, 4.2, "B'"
+)
+
+foreign_ppf_world_price = function(x){7.15-1.5*x}
+
+foreign_imp<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = import_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = import_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  scale_x_continuous(breaks=c(0,1.95, 2.55),
+                     labels=c(0, expression(x[2]*minute), expression(x[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,3, 4.2),
+                     labels=c(0, expression(y[1]*minute), expression(y[2]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+```
+class: inverse
+
+# Outline
+
+## [Quick Review of Standard Model](#3)
+## [Changes in the Terms of Trade](#11)
+## [Causes of Terms of Trade Changes](#23)
+
+---
+
+class: inverse, center, middle
+
+# Quick Review of Standard Model
+
+---
+
+# The Global Market for x
+
+.pull-left[
+
+- .hi[World equilibrium relative price of x]: $\left(\frac{p_x}{p_y} \right)^{2}$ balances .blue[Home's exports] and .red[Foreign's imports] of x
+
+- As countries trade, changes relative price of x in each country until both reach equilibrium world relative price (B,B'), where both countries have same relative price:
+
+$$\color{blue}{\left(\frac{p_x}{p_y} \right)^{H}} < \left(\frac{p_x}{p_y} \right)^{2} < \color{red}{\left(\frac{p_x}{p_y} \right)^{F}}$$
+
+]
+
+.pull-right[
+
+```{r market}
+market_points<-tribble(
+  ~x, ~y, ~letter,
+  1, 1, "A",
+  1, 3, "A'",
+  2, 2, "B, B'"
+)
+
+ggplot(data = tibble(x = 1:10), aes(x = x))+
+  geom_segment(x = 0, xend = 1, y = 3, yend = 3, size = 2, color = "red")+
+  geom_segment(x = 1, xend = 3, y = 3, yend = 1, size = 2, color = "red")+
+  geom_segment(x = 0, xend = 1, y = 1, yend = 1, size = 2, color = "blue")+
+  geom_segment(x = 1, xend = 3, y = 1, yend = 3, size = 2, color = "blue")+
+  geom_point(data = market_points,
+             aes(x = x,
+                 y = y),
+             size = 2)+
+  geom_text_repel(data = market_points,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 2,
+             size = 4)+
+  geom_segment(x = 0, xend = 2, y = 2, yend = 2, size = 1, linetype = "dotted")+
+  geom_segment(x = 2, xend = 2, y = 2, yend = 0, size = 1, linetype = "dotted")+
+  geom_segment(x = 1, xend = 1, y = 3, yend = 3, size = 1, linetype = "dotted")+
+  geom_segment(x = 1, xend = 1, y = 3, yend = 0, size = 1, linetype = "dotted")+
+  geom_segment(x = 0, xend = 2, y = 2, yend = 2, size = 1, linetype = "dotted")+
+  geom_segment(x = 2, xend = 2, y = 2, yend = 0, size = 1, linetype = "dotted")+
+  labs(y = expression(frac(p[x],p[y])))+
+  scale_x_continuous(breaks=c(0,1, 2),
+                     labels=c(0, expression(x[1]), expression(x[2])),
+                     limits=c(0,3),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1, 2, 3),
+                     labels=c(0, expression(frac(p[x]^{H},p[y]^{H})), expression(frac(p[x]^{2},p[y]^{2})), expression(frac(p[x]^{F},p[y]^{F}))),
+                     limits=c(0,4),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)+
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+```
+]
+
+---
+
+# Autarky Equilibrium
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_ppf_1
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_ppf_1
+```
+]
+
+.smallest[
+- Countries begin in .hi[autarky] optimum with different relative prices
+  - A is optimum for .blue[Home]
+  - A' is optimum for .red[Foreign]
+]
+
+---
+
+# Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_exp
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r,fig.height=3.5}
+foreign_imp
+```
+]
+
+.smallest[
+
+- International trade changes the relative price of x $(\uparrow$ for .blue[Home], $\downarrow$ for .red[Foreign])
+
+- .hi-purple[With international trade, countries face same world relative prices] (slope of dark purple dashed line)
+
+]
+
+---
+
+# Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_exp+
+  annotate("segment", x = 2, xend = 3.15, y = 2.75, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_imp+
+  annotate("segment", x = 2.55, xend = 1.95, y = 3, yend = 4.2, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.smallest[
+- Countries .hi[specialize]: produce *more* of comparative advantaged good, *less* of disadvantaged good
+  - .blue[Home]: A $\rightarrow$ B: produces more x, less y 
+  - .red[Foreign]: A' $\rightarrow$ B': produces less x, more y
+
+- Note this is .hi-purple[incomplete specialization]: countries still produce both goods!
+]
+
+---
+
+# Trade Triangles
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_c_point<-tribble(
+  ~x, ~y, ~letter,
+  1.7, 4.1, "C"
+)
+
+home_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = export_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = export_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  
+  
+  geom_point(data = home_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+    geom_text_repel(data = home_c_point,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  geom_segment(x = 0, xend = 1.7, y = 4.1, yend = 4.1, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.7, xend = 1.7, y = 4.1, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.7, 2,3.15),
+                     labels=c(0, expression(x[3]), expression(x[1]), expression(x[2])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75, 4.1),
+                     labels=c(0, expression(y[2]), expression(y[1]), expression(y[3])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+home_c+annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_c_point<-tribble(
+  ~x, ~y, ~letter,
+  3.2, 2.35, "C'"
+)
+
+foreign_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = import_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = import_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  
+  geom_point(data = foreign_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+    geom_text_repel(data = foreign_c_point,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  geom_segment(x = 0, xend = 3.2, y = 2.35, yend = 2.35, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.2, xend = 3.2, y = 2.35, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.95, 2.55, 3.2),
+                     labels=c(0, expression(x[2]*minute), expression(x[1]*minute), expression(x[3]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.35, 3, 4.2),
+                     labels=c(0, expression(y[3]*minute), expression(y[1]*minute), expression(y[2]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_c+annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- .blue[Home] $\rightarrow$ x $\rightarrow$ .red[Foreign]
+]
+
+---
+
+# Trade Triangles
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_c+
+  annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 1.7, xend = 1.7, y = 1.8, yend = 4.1, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_c+
+  annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  annotate("segment", x = 1.95, xend = 3.2, y = 2.35, yend = 2.35, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- .blue[Home] $\rightarrow$ x $\rightarrow$ .red[Foreign]
+
+- .blue[Home] $\leftarrow$ y $\leftarrow$ .red[Foreign]
+
+]
+
+---
+
+# Gains from Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_high_IC=function(x){1.75+(4/x)}
+
+home_c+
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 1.7, xend = 1.7, y = 1.8, yend = 4.1, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_high_IC=function(x){4/(x-1.575)-0.075}
+
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  annotate("segment", x = 1.95, xend = 3.2, y = 2.35, yend = 2.35, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- Both countries exchange their imports & exports and consume at C and C'
+
+- Both reach a higher indifference curve with trade, well beyond their PPFs!
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Changes in the Terms of Trade
+
+---
+
+# Some Trade-Related Issues
+
+.pull-left[
+
+- .hi-purple[Is economic growth in other countries good or bad for *our* country?]
+  - Good: larger markets for our exports, lower prices for our imports
+  - Bad: increased competition for our exporters and for our domestic producers competing with imports
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+---
+
+# Some Trade-Related Issues
+
+.pull-left[
+
+- .hi-purple[Is economic growth in our country more or less valuable when we are part of a *globalized* world economy?]
+  - Good: we can sell more to the world market 
+  - Bad: the benefits of our growth don't stay at home, are dispersed to foreigners importing at cheaper prices
+
+]
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+---
+
+# The Terms of Trade
+
+.pull-left[
+
+- .hi[Terms of trade] are another name for the relative price of $x$ or $y$ in the international trade equilibrium
+
+- We express the terms of trade (TOT) for a country as the relative price of that country's *exports*:
+  - .hi-turquoise[How many imports does a country gain *per export*]
+
+$$TOT=\frac{p_{exports}}{p_{imports}}$$
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Terms of Trade
+
+.pull-left[
+
+$$TOT=\frac{p_{exports}}{p_{imports}}$$
+
+- In our examples:
+  - For .blue[Home] (exporter of x): $TOT=\frac{p_x}{p_y}$
+  - For .red[Foreign] (exporter of y): $TOT=\frac{p_y}{p_x}$
+
+- The terms of trade can change over time as countries' supply (of exports) and demand (for imports) changes
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Changes in the Terms of Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_high_IC=function(x){1.75+(4/x)}
+
+home_c+
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_high_IC=function(x){4/(x-1.575)-0.075}
+
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+```
+]
+
+.smallest[
+
+]
+
+---
+
+# Changes in the Terms of Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_new_tot = function(x){5-1*x}
+
+home_c+
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  stat_function(fun = home_new_tot, geom = "line", size = 1, color = "magenta")
+  
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_new_tot = function(x){6.2-1*x}
+
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  stat_function(fun = foreign_new_tot, geom = "line", size = 1, color = "magenta")
+```
+]
+
+.smallest[
+
+- Suppose equilibrium relative price of x .b[decreases] (relative price of y increases): .hi-purple[slope gets flatter]
+]
+
+---
+
+# Changes in the Terms of Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=5}
+home_tot_points<-tribble(
+  ~x, ~y, ~letter,
+  2, 2.75, "A",
+  3.15, 1.8, "B",
+  1.7, 4.1, "C",
+  1.4,3.6, "D"
+  )
+
+home_mid_IC=function(x){2.25+(2/(x^{1.2}))}
+
+home_new_tot=ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_tot_points,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_tot_points,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  
+  stat_function(fun = home_new_tot, geom = "line", size = 1, color = "magenta")+
+  stat_function(fun = home_mid_IC, geom = "line", size = 1, color = "blue", xlim=c(0,3.5))+
+  geom_label(x=3, y=home_mid_IC(3), size = 3, label = expression(IC[3]), color = "blue")+
+  geom_segment(x = 0, xend = 1.4, y = 3.6, yend = 3.6, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.4, xend = 1.4, y = 3.6, yend = 0, linetype = "dotted", size = 1)+
+  
+  geom_segment(x = 0, xend = 1.7, y = 4.1, yend = 4.1, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.7, xend = 1.7, y = 4.1, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.4, 1.7, 2,3.15),
+                     labels=c(0, expression(x[4]), expression(x[3]), expression(x[1]), expression(x[2])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75, 3.6, 4.1),
+                     labels=c(0, expression(y[2]), expression(y[1]), expression(y[4]), expression(y[3])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+home_new_tot
+```
+]
+
+.pull-right[
+
+- Suppose equilibrium relative price of x .b[decreases] (relative price of y increases): .hi-purple[slope gets flatter]
+
+- .blue[Home] (exporter of x, importer of y) reaches a .hi-blue[lower indifference curve] (at D) than before (at C)
+
+- .blue[Home]'s TOT: $\frac{p_x}{p_y}$ *worsened* (fewer imports per export)
+]
+
+---
+
+# Changes in the Terms of Trade
+
+.pull-left[
+
+- Suppose equilibrium relative price of x .b[decreases] (relative price of y increases): .hi-purple[slope gets flatter]
+
+- .red[Foreign] (exporter of y, importer of x) reaches a .hi-red[higher indifference curve] (at D') than before (at C')
+
+- .red[Foreign]'s TOT: $\frac{p_y}{p_x}$ *strengthened* (more imports per export)
+
+]
+
+.pull-right[
+### .hi-red[Foreign]
+
+
+```{r, fig.height=5}
+foreign_tot_points<-tribble(
+  ~x, ~y, ~letter,
+  2.55, 3, "A'",
+  1.95, 4.2, "B'",
+  3.2, 2.35, "C'",
+  3.95,2.25, "D'"
+  )
+
+foreign_higher_IC=function(x){4/(x-2)+0.25}
+
+foreign_new_tot=ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_tot_points,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_tot_points,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  
+  geom_segment(x = 0, xend = 3.2, y = 2.35, yend = 2.35, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.2, xend = 3.2, y = 2.35, yend = 0, linetype = "dotted", size = 1)+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  
+  
+  stat_function(fun = foreign_new_tot, geom = "line", size = 1, color = "magenta")+
+  stat_function(fun = foreign_higher_IC, geom = "line", size = 1, color = "red")+
+  geom_label(x=3.5, y=foreign_higher_IC(3.5), size = 3, label = expression(IC[3]), color = "red")+
+  geom_segment(x = 0, xend = 3.95, y = 2.25, yend = 2.25, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.95, xend = 3.95, y = 2.25, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.95, 2.55, 3.2, 3.95),
+                     labels=c(0, expression(x[2]*minute), expression(x[1]*minute), expression(x[3]*minute), expression(x[4]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.25, 2.35, 3, 4.2),
+                     labels=c(0, expression(y[4]*minute), expression(y[3]*minute), expression(y[1]*minute), expression(y[2]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_new_tot
+```
+]
+
+---
+
+# Changes in the Terms of Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_new_tot
+```
+]
+
+.pull-right[
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_new_tot
+```
+]
+
+.smallest[
+- Suppose equilibrium relative price of x .b[decreases] (relative price of y increases): .hi-purple[slope gets flatter]
+
+- .blue[Home]'s TOT: $\frac{p_x}{p_y}$ *worsened* (fewer imports per export)
+
+- .red[Foreign]'s TOT: $\frac{p_y}{p_x}$ *strengthened* (more imports per export)
+
+]
+
+---
+
+# Terms of Trade Changes
+
+.pull-left[
+.smallest[
+- Increases in a country's TOT (higher relative price of its exports) is generally better
+  - country can buy more imports per export
+  - Caused by price of exports increasing or price of imports decreasing
+  
+- Decreases in a country's TOT (lower relative price of its exports) is generally worse
+  - country can buy fewer imports per export
+  - Caused by price of exports decreasing or price of imports increasing
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+
+---
+
+# Terms of Trade Changes
+
+.pull-left[
+- Recall, terms of trade can only fall within the range between countries' relative autarky prices!
+
+$$\color{blue}{\big(\frac{p_x}{p_y}\big)^H} < \big(\frac{p_x}{p_y}\big)^{\star} < \color{red}{\big(\frac{p_x}{p_y}\big)^F}$$ 
+
+- But there is still room for TOT to increase or decrease
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+
+---
+
+class: inverse, center, middle
+
+# Causes of Terms of Trade Changes
+
+---
+
+# Economic Growth
+
+.pull-left[
+
+- .hi[Economic growth]: an outward expansion of a country's PPF
+  - increase in productivity
+  - generating greater output with (fewer) inputs
+]
+
+.pull-right[
+```{r}
+grow_1=function(x){sqrt(9-x^2)}
+grow_2=function(x){sqrt(16-x^2)}
+grow_3=function(x){sqrt(25-x^2)}
+
+grow_rel_1=function(x){4.25-x}
+grow_rel_2=function(x){5.7-x}
+grow_rel_3=function(x){7.125-x}
+
+growth=ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = grow_1, geom = "line", color = "blue", size = 1)+
+  stat_function(fun = grow_rel_1, geom = "line", size = 1, linetype="dashed")+
+  #geom_segment(x = 0, xend = 3.95, y = 2.25, yend = 2.25, linetype = "dotted", size = 1)+
+  #geom_segment(x = 3.95, xend = 3.95, y = 2.25, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+growth
+```
+]
+---
+
+# Economic Growth
+
+.pull-left[
+
+- .hi[Economic growth]: an outward expansion of a country's PPF
+  - increase in productivity
+  - generating greater output with (fewer) inputs
+]
+
+.pull-right[
+```{r}
+growth+
+  stat_function(fun = grow_2, geom = "line", color = "blue", size = 1)+
+  stat_function(fun = grow_rel_2, geom = "line", size = 1, linetype="dashed")
+```
+]
+---
+
+# Economic Growth
+
+.pull-left[
+
+- .hi[Economic growth]: an outward expansion of a country's PPF
+  - increase in productivity
+  - generating greater output with (fewer) inputs
+
+- Here we demonstrate .hi-purple[balanced growth], where relative prices (slopes) remain unchanged
+]
+
+.pull-right[
+```{r}
+growth+
+  stat_function(fun = grow_2, geom = "line", color = "blue", size = 1)+
+  stat_function(fun = grow_rel_2, geom = "line", size = 1, linetype="dashed")+
+  stat_function(fun = grow_3, geom = "line", color = "blue", size = 1)+
+  stat_function(fun = grow_rel_3, geom = "line", size = 1, linetype="dashed")
+```
+]
+
+---
+
+# Biased Growth
+
+.pull-left[
+
+- Economic growth is often .hi-purple[biased] towards particular industries
+]
+
+.pull-right[
+
+## x-Biased Growth
+
+```{r, fig.height=5}
+bias_h=function(x){sqrt(9-(x-0.75)^2)}
+bias_rel_1=function(x){4.3-0.75*x}
+
+growth+
+  stat_function(fun = bias_h, geom = "line", color = "darkblue", size = 2)+
+  stat_function(fun = grow_rel_1, geom = "line", color = "black", size = 1,  linetype="dashed")+
+  stat_function(fun = bias_rel_1, geom = "line", size = 1, linetype="dashed", color = "purple")
+```
+
+]
+---
+
+# Biased Growth
+
+.pull-left[
+
+- Economic growth is often .hi-purple[biased] towards particular industries
+]
+
+.pull-right[
+
+## y-Biased Growth
+
+```{r, fig.height=5}
+bias_f=function(x){sqrt(25-x^3)}
+bias_rel_2=function(x){7.125-1.5*x}
+
+growth+
+  stat_function(fun = bias_f, geom = "line", color = "darkblue", size = 2)+
+  stat_function(fun = grow_rel_1, geom = "line", color = "black", size = 1,  linetype="dashed")+
+  stat_function(fun = bias_rel_2, geom = "line", size = 1, linetype="dashed", color = "purple")
+```
+
+]
+
+---
+
+# Biased Growth Affecting Global Relative Supply
+
+.pull-left[
+
+- Growth biased towards x: increases relative supply of x
+  - (If we graphed market for y, would decrease relative supply of y)
+
+- Will push down relative price of x (push up relative price of y)
+]
+
+.pull-right[
+
+## x-Biased Growth
+
+```{r, fig.height=5}
+ggplot(data = tibble(x = 1:10), aes(x = x))+
+  geom_segment(x = 0, xend = 1, y = 3, yend = 3, size = 2, color = "red")+
+  geom_segment(x = 1, xend = 3, y = 3, yend = 1, size = 2, color = "red")+
+  
+  geom_segment(x = 0, xend = 1, y = 1, yend = 1, size = 2, color = "blue", alpha=0.5)+
+  geom_segment(x = 1, xend = 3, y = 1, yend = 3, size = 2, color = "blue", alpha=0.5)+
+  
+  geom_segment(x = 0, xend = 1, y = 0, yend = 0, size = 2, color = "skyblue", alpha=0.5)+
+  geom_segment(x = 1, xend = 3, y = 0, yend = 2, size = 2, color = "skyblue", alpha=0.5)+
+  
+  annotate("segment", x = 2, xend = 2.5, y = 2, yend = 1.5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+
+  labs(y = expression(frac(p[x],p[y])))+
+  scale_x_continuous(breaks=NULL,
+                     limits=c(0,3),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,4),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)+
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+```
+]
+
+---
+
+# Biased Growth Affecting Global Relative Supply
+
+.pull-left[
+
+- Growth biased towards y: decreases relative supply of x
+  - (If we graphed market for y, would increase relative supply of y)
+
+- Will push up relative price of x (push down relative price of y)
+
+]
+
+.pull-right[
+
+## y-Biased Growth
+
+```{r, fig.height=5}
+ggplot(data = tibble(x = 1:10), aes(x = x))+
+  geom_segment(x = 0, xend = 1, y = 3, yend = 3, size = 2, color = "red")+
+  geom_segment(x = 1, xend = 3, y = 3, yend = 1, size = 2, color = "red")+
+  
+  geom_segment(x = 0, xend = 1, y = 1, yend = 1, size = 2, color = "blue", alpha=0.5)+
+  geom_segment(x = 1, xend = 3, y = 1, yend = 3, size = 2, color = "blue", alpha=0.5)+
+  
+  geom_segment(x = 0, xend = 1, y = 2, yend = 2, size = 2, color = "darkblue", alpha=0.5)+
+  geom_segment(x = 1, xend = 3, y = 2, yend = 4, size = 2, color = "darkblue", alpha=0.5)+
+
+  annotate("segment", x = 2, xend = 1.5, y = 2, yend = 2.5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+
+  labs(y = expression(frac(p[x],p[y])))+
+  scale_x_continuous(breaks=NULL,
+                     limits=c(0,3),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,4),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)+
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5))
+```
+]
+
+---
+
+# Causes of Terms of Trade Changes
+
+.pull-left[
+
+- .hi-purple[What is important is *not which country grew*, but *which industry*]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+# Causes of Terms of Trade Changes
+
+.pull-left[
+
+.smaller[
+- Biased growth is caused by a variety of factors
+
+- Technological progress increasing labor productivity in a particular industry
+
+- Increase in supply of certain factors (labor, capital, land) may affect some industries more than others
+
+- Trade policies
+  - export subsidies
+  - import tariffs
+  - industrial policy
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Terms of Trade
+
+.pull-left[
+
+- Recall each country's terms of trade are:
+
+$$TOT=\frac{p_{exports}}{p_{imports}}$$
+
+- Events that raise (lower) price of our exports raise (lower) our TOT
+
+- Events that raise (lower) price of our imports lower (raise) our TOT
+
+> “How many imports can we buy with a unit of our exports?”
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Terms of Trade
+
+.pull-left[
+
+.content-box-green[
+.smallest[
+.hi-green[Example]: Suppose the U.S. exports cars and imports raw materials. How would the U.S.' terms of trade be affected by:
+
+1. A war in the Middle East disrupts the supply of oil.
+
+2. Japan provides export subsidies to its car industry. 
+
+3. The U.S. reduces tariffs on imported fruit.
+
+4. Germany reduces tariffs on imported American cars.
+]
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Terms of Trade
+
+.pull-left[
+
+- Recall each country's terms of trade are:
+
+$$TOT=\frac{p_{exports}}{p_{imports}}$$
+
+- Events that raise (lower) price of our exports raise (lower) our TOT
+
+- Events that raise (lower) price of our imports lower (raise) our TOT
+
+> .hi-turquoise[“How many imports can we buy with a unit of our exports?”]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Terms of Trade
+
+.pull-left[
+- Often compare export industries & import industries growth
+
+- Export-biased growth tends to worsen a growing country's TOT, to the benefit of the rest of the world
+  - Raises other importing countries' TOT
+
+- Import-biased growth tends to increase a growing country's TOT, to the expense of the rest of the world
+  - Lowers other exporting countries' TOT
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Don't Get Misled!
+
+.pull-left[
+
+- .hi-purple[Trade is a positive sum game!]
+
+- Regardless of what TOT are, both countries are still consuming beyond their PPFs!
+
+- We are arguing about *how far* each country gets beyond its PPF
+
+- The .hi-purple[distribution of the gains from exchange] are zero sum
+
+- Both countries are “winners”, this is about “who wins more?”
+]
+
+.pull-right[
+.center[
+![](../images/tugofwar.png)
+]
+]
+
+---
+# Don't Get Misled!
+
+.pull-left[
+
+- .hi-purple[Exports are the price a country pays for imports!]
+
+- Exports are a *cost*! (our consumers lose them)
+
+- Imports are a *benefit*! (our consumers gain them)
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Distribution With vs. Across Countries
+
+.pull-left[
+
+- We have still been considering countries *as a whole*
+  - A “national” indifference curve
+
+- Trade benefits entire nation *in aggregate* (for both countries)
+
+- TOT trade changes affect *how much* a nation gains from exchange
+
+]
+
+.pull-right[
+.center[
+![](../images/tugofwar.png)
+]
+]
+
+---
+
+# Distribution With vs. Across Countries
+
+.pull-left[
+.smallest[
+- In reality, changes in international trade and changes in TOT affect groups *within* a country differently
+  - Some may clearly be harmed from international trade & TOT changes
+
+- We next consider 2 models to reflect reality:
+  - .hi-purple[Specific factors model]: some factors are mobile between industries, some are not
+    - Trade changes will benefit/hurt factors in proportion to their mobility
+  - .hi-purple[Hecksher-Ohlin model] where comparative advantage is determined by relative factor endowments
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/tugofwar.png)
+]
+]
+
