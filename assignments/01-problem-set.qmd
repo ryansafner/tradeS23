@@ -1,0 +1,126 @@
+---
+title: "Problem Set 1"
+execute: 
+  freeze: auto
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+```
+
+::: {.callout-warning appearance="minimal"}
+Due by 11:59 PM Thursday February 23 via by Blackboard Assignments
+:::
+
+Please read the [instructions](https://trades23.classes.ryansafner.com/assignments/problem-sets) for completing homeworks.
+
+<p style="text-align:center;"><a class="btn btn-primary btn-lg" target="_blank" href="/files/assignment/01-problem-set-pdf.pdf"><i class="fas fa-file-pdf"></i> Download as PDF</a> <a class="btn btn-primary btn-lg" target="_blank" href="/files/assignment/01-problem-set-docx.docx"><i class="fa-regular fa-file-word"></i> Download as .docx</a></p>
+
+<!--## Answers
+
+<p style="text-align:center"><a target="_blank" href="/files/assignment/01-problem-set-answers.html"><span class="btn btn-primary btn-lg"><i class="far fa-life-ring"></i> Answers</a> <a target="_blank" href="/files/assignment/01-problem-set-answers-pdf.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Answers (PDF)</a> </p>-->
+
+# Concepts and Critical Thinking
+
+## Question 1
+
+Adam Smith notes that the “division of labor is limited by the extent of the market.” What does this mean, and what is its significance? As a way of answering this question, compare the economics of a small isolated island of a few hundred people with the economics of a large scale society of millions.
+
+## Question 2
+
+Adam Smith also uses the example of the philosopher and the porter to talk about the division of labor – arguing that the wide diversity of talents and specialized jobs is not the cause of the division of labor, but one of its effects. Why is this so? Hint: Your answer to the previous question should help explain this.
+
+# Problems
+
+## Question 3
+
+Suppose Vietnam *only* exports clothing, and *only* imports rice. Analyze the impact on Vietnam's terms of trade from the following events.
+
+### Part A
+
+Tensions in the region disrupts trade routes delivering rice from abroad.
+
+### Part B
+
+Malaysia stimulates its own clothing-export industry, lowering clothing prices.
+
+### Part C
+
+There is a massive rice harvest in China.
+
+### Part D
+
+Vietnam raises tariffs on rice imports.
+
+### Part E
+
+Vietnam lowers tariffs on rice imports.
+
+### Part F
+
+India raises tariffs on imported clothing.
+
+## Question 4
+
+Suppose there are two countries, Ruritania and Lideria. Were they to trade, Ruritania has a comparative advantage in raising goats, Lideria has a comparative advantage in mining copper. Following the Ricardian model, explain which country would face a higher autarky relative price of goats, and what happens to the relative price of goats in each country as they open to trade? It may help to sketch a graph, with goats on the horizontal axis, but is not necessary.
+
+## Question 5
+
+The planet Coruscant and the planet Tatooine can each produce Podracers and Lightsabers. If Coruscant devotes all of its resources, it can produce 75 Podracers, or 300 Lightsabers. If Tatooine devotes all of its resources, it can produce 30 Podracers or 150 Lightsabers. Put podracers on the horizontal axis and lightsabers on the vertical axis.
+
+### Part A
+
+Write the PPF equation for each planet.
+
+### Part B
+
+Graph the PPF for each planet.
+
+### Part C
+
+Which planet has an *absolute* advantage in producing each good?
+
+### Part D
+
+Which planet has a *comparative* advantage in producing each good?
+
+### Part E
+
+What will the range of prices be for each good?
+
+## Question 6
+
+Suppose Finland has 250 workers, and Malaysia has 100 workers. It takes 2 workers in Finland to produce 1 lb of rice, and 4 workers to produce 1 lb of fish. It takes 2 workers in Malaysia to produce 1 lb of rice, and 5 workers to produce 1 lb of fish. Put rice on the horizontal axis and fish on the vertical axis.
+
+### Part A
+
+Write the PPF equation for each country.
+
+### Part B
+
+Graph the PPF for each country.
+
+### Part C
+
+Which country has an *absolute* advantage in producing each good?
+
+### Part D
+
+Which country has a *comparative* advantage in producing each good?
+
+### Part E
+
+What will the range of prices be for each good?
+
+### Part F
+
+Suppose Malaysia becomes more productive at growing rice, such that it only needs 1 worker to produce 1 lb of rice. Recalculate Malaysia’s PPF equation and re-draw its PPF graph.
+
+### Part G
+
+Recalculate the opportunity costs for both countries and both goods. What has happened to the countries’ comparative advantages?
+
+### Part H
+
+What will the *new* range of prices be for each good?
+

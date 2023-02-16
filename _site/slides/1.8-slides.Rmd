@@ -469,16 +469,17 @@ ppf2/labor_constraint
 # Production Possibilities Frontier
 
 .pull-left[
-
+.smaller[
 - .hi[Marginal rate of transformation (MRT)] .hi-purple[*increases*] as we produce more of a good
   - Again: .b[“slope”], .b[“relative price of M”], .b[“opportunity cost of M”]
   - Amount of $A$ given up for 1 more $M$
 
 $$\underbrace{MRT}_{slope}=-\frac{MPL_A}{MPL_M}$$
 
-- Note $A (y)$ on top and $M (x)$ on bottom!
-  - if you think in our Ricardian terms, `\\(l_x=\frac{1}{MPL_x}\\)` and `\\(l_y=\frac{1}{MPL_y}\\)`, so `\\(\frac{l_x}{l_y} \implies \frac{MPL_y}{MPL_x}\\)`
+- Note $A \, (y)$ on top and $M \, (x)$ on bottom!
+    - if you think in our Ricardian terms, $l_x=\frac{1}{MPL_x}$ and $l_y=\frac{1}{MPL_y}$, so $\frac{l_x}{l_y} \implies \frac{MPL_y}{MPL_x}$
 
+]
 ]
 
 .pull-right[
@@ -534,7 +535,7 @@ $$w = MPL_M * P_M$$
 
 $$w = MPL_A * P_A$$
 
-- Again, if you want to remember why, see my slides on [Factor Markets](https://ios20.classes.ryansafner.com/slides/1.8-slides.html#1)
+- Again, if you want to remember why, see my slides on [Factor Markets](https://ios23.classes.ryansafner.com/slides/1.8-slides.html#20)
 ]
 ]
 
@@ -576,10 +577,10 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
 
 - Because we have assumed .hi-purple[labor is mobile] (and homogenous “labor hours”), workers will always move out of a lower-paying industry and into a higher-paying industry
 
-- Thus, in equilibrium, .hi-turquoise[wages $w$ must equalize across both industries], with the implication:
+- Thus, in equilibrium, .hi-turquoise[wages `\\(w\\)` must equalize across both industries], with the implication:
 
 $$\begin{align*}
-(w =) MPL_M * P_M &= MPL_A * P_A (= w)\\
+(w =) \quad MPL_M * P_M &= MPL_A * P_A \quad(= w)\\
 -\frac{MPL_A}{MPL_M} &= - \frac{P_M}{P_A}\\
 \end{align*}$$
 
@@ -597,12 +598,12 @@ $$\begin{align*}
 
 .pull-left[
 
-- Thus, we finally see how it is that the slope of the PPF is equivalent to the relative price of $M$
+- Thus, we finally see how it is that the slope of the PPF is equivalent to the relative price of $M:$
 
 $$MRT = -\frac{p_M}{p_A}$$
-
-- (Back to $x$ on top, $y$ on bottom!)
-
+  - Opportunity cost of $M$, slope is amount of $A$ given up for $1 M$
+  - (Back to $x$ on top, $y$ on bottom!)
+  
 - At the optimum production, PPF is tangent to a value line with slope the relative price of $M$
 ]
 
@@ -622,7 +623,7 @@ base_ppf+
 # Labor Allocation
 
 .pull-left[
-.smallesr[
+.smallest[
 - We can also visualize the allocation of labor in the country
 
 - Recall both industries in equilibrium must charge the same wage $w_M=w_A=w^{\star}$
@@ -1281,7 +1282,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
   geom_ribbon(data=k_fill,aes(x=fx,ymin=fymin,ymax=ymax),fill="green", alpha=0.25)+
   geom_rect(xmin=0, xmax=0.5, ymin=mp(0.5), ymax=mp(1), fill="green", alpha=1)+
   geom_ribbon(data=k_fill2,aes(x=fx,ymin=fymin,ymax=ymax),fill="green", alpha=1)+
-  geom_label_repel(data=tibble(x=1),aes(x=x),x=0.5, y=1, label="Gain to Capital Owners", color = "green", nudge_x = 0.5, nudge_y=0.75)+
+  geom_label_repel(data=tibble(x=1),aes(x=x),x=0.05, y=1.25, label="Gain to K Owners", color = "green", nudge_x = 0.5, nudge_y=0.75)+
   stat_function(fun=mp, geom="line", size=2, color="blue")+
   geom_label(aes(x=1.5,y=mp(1.5)), color = "blue", label=expression(MPL[M]), size = 4)+
   geom_segment(x=0, xend = 0.5, y=mp(0.5), yend=mp(0.5), size = 1, linetype="dotted")+
@@ -1406,7 +1407,7 @@ ggplot(data.frame(x=c(0,10)), aes(x=x))+
   geom_ribbon(data=k_fill,aes(x=fx,ymin=fymin,ymax=ymax),fill="green", alpha=0.25)+
   geom_rect(xmin=0, xmax=0.5, ymin=mp(0.5), ymax=mp(1), fill="black", alpha=1)+
   geom_ribbon(data=k_fill2,aes(x=fx,ymin=fymin,ymax=ymax),fill="black", alpha=1)+
-  geom_label_repel(data=tibble(x=1),aes(x=x),x=0.5, y=1, label="Loss to Land Owners", color = "black", nudge_x = 0.5, nudge_y=0.75)+
+  geom_label_repel(data=tibble(x=1),aes(x=x),x=0.05, y=1.25, label="Loss to T Owners", color = "black", nudge_x = 0.5, nudge_y=0.75)+
   stat_function(fun=mp, geom="line", size=2, color="blue")+
   geom_label(aes(x=1.5,y=mp(1.5)), color = "blue", label=expression(MPL[A]), size = 4)+
   geom_segment(x=0, xend = 0.5, y=mp(0.5), yend=mp(0.5), size = 1, linetype="dotted")+
