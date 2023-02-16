@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1.8 — The Specific Factors Model</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide
+
+# 1.8 — The Specific Factors Model
+
+## ECON 324 • International Trade • Spring 2023
+
+### Ryan Safner&lt;br&gt; Associate Professor of Economics &lt;br&gt; &lt;a href="mailto:safner@hood.edu"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;safner@hood.edu&lt;/a&gt; &lt;br&gt; &lt;a href="https://github.com/ryansafner/tradeS23"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;ryansafner/tradeS23&lt;/a&gt;&lt;br&gt; &lt;a href="https://tradeS23.classes.ryansafner.com"&gt; &lt;i class="fa fa-globe fa-fw"&gt;&lt;/i&gt;tradeS23.classes.ryansafner.com&lt;/a&gt;&lt;br&gt;
+
+---
+
+
+class: inverse
+
+# Outline
+
+### [Assumptions of the Specific Factors Model](#3)
+
+### [Allocating the Mobile Factor (Labor)](#11)
+
+### [Distribution Effects Using our Two Country Trade Example](#23)
+
+### [Takeaways from the Specific Factors Model](#44)
+
+---
+
+class: inverse, center, middle
+
+# Assumptions of the Specific Factors Model
+
+---
+
+# Assumptions of the Specific Factors Model
+
+.pull-left[
+
+.smallest[
+- Until now, we've assumed (within each country), factors are mobile
+
+- But in truth, some factors are .hi[specific] or .hi[immobile]: can only be used for the production of a specific set of goods or industry
+  - e.g. programmers can only work in software, not in pro-football
+  - e.g. equipment used to make beer barrels cannot switch to producing computer chips
+
+- .hi-purple[Opening up trade will affect the distribution of income between fixed and mobile factors]
+]
+]
+.pull-right[
+.center[
+![](../images/workers.png)
+]
+]
+
+---
+
+# Assumptions of the Specific Factors Model
+
+.pull-left[
+
+- Imagine 2 countries, .blue[Home] and .red[Foreign]
+
+- Countries have three factors of production:
+   - labor `\((L)\)`
+   - capital `\((K)\)`
+   - land `\((T)\)`
+
+]
+
+.pull-right[
+.center[
+![](../images/factors.jpg)
+]
+]
+
+---
+
+# Assumptions of the Specific Factors Model
+
+.pull-left[
+
+- Each country has two industries, .b[manufacturing (M)] and .b[agriculture (A)]
+
+- .b[Manufacturing] is produced using *capital* `\((K)\)` and *labor* `\((L)\)`
+
+- .b[Agriculture] is produced using *land* `\((T)\)` and *labor* `\((L)\)`
+
+- Land `\((T)\)` and capital `\((K)\)` are .hi[specific factors], only used to produce one good
+
+- Labor `\((L)\)` is a .hi[mobile factor] that can be used in *either* (or both) sectors
+
+]
+.pull-right[
+.center[
+![:scale 75%](../images/factoryrobots.jpg)
+![:scale 75%](../images/peasants1.jpg)
+
+]
+]
+
+---
+
+# Setting up the Model: Production Function
+
+.pull-left[
+
+- An economy's production can be described as a set of production functions for manufacturing `\((M)\)` and agriculture `\((A)\)`
+
+`$$\begin{align*}
+Q_M&amp;=Q_M(K,L_M)\\
+Q_A&amp;=Q_A(T,L_A)\\
+\end{align*}$$`
+
+- Each country can only allocate its labor force between two industries
+
+`$$L_M+L_A=\bar{L}$$`
+
+
+]
+
+.pull-right[
+.center[
+![:scale 75%](../images/factoryrobots.jpg)
+![:scale 75%](../images/peasants1.jpg)
+
+]
+]
+
+---
+
+# Diminishing Marginal Product of Labor
+
+.pull-left[
+
+- Each industry exhibits .hi[diminishing returns to labor]
+
+- .hi[Marginal product of labor in manufacturing `\\((MPL_{M})\\)`]: additional manufacturing output produced by adding one more unit of labor (holding `\(K\)` constant)
+
+`$$MPL_{M} = \frac{\Delta Q_M}{\Delta L_M}$$`
+
+- Declines as more `\(L\)` is added to manufacturing production
+
+]
+
+.pull-right[
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Diminishing Marginal Product of Labor
+
+.pull-left[
+
+- Each industry exhibits .hi[diminishing returns to labor]
+
+- .hi[Marginal product of labor in agriculture `\\((MPL_{A})\\)`]: additional agriculture output produced by adding one more unit of labor (holding `\(T\)` constant)
+
+`$$MPL_{A} = \frac{\Delta Q_A}{\Delta L_A}$$`
+
+- Declines as more `\(L\)` is added to agriculture production
+
+]
+
+.pull-right[
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# PPF
+
+.pull-left[
+
+- We get a PPF with increasing costs again
+
+- Let's examine more *why*
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Allocating the Mobile Factor (Labor)
+
+---
+
+# A Note About Labor
+
+.pull-left[
+.smaller[
+- A simple (and very Ricardian) assumption about labor: it is measured in hours, and can equally be applied to each industry
+
+`$$\bar{L}=L_M+L_A$$`
+
+- Every labor hour allocated to agriculture is a labor hour *not* allocated to manufacturing, and vice versa
+  - .hi-purple[Opportunity cost of labor]
+
+- Visualize a “labor budget constraint” to understand movements along the PPF
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Allocating Labor
+
+.pull-left[
+.smallest[
+- Shows relationship of moving along PPF `\(\iff\)` reallocating labor across industries
+
+- If all labor in `\(A\)` (point A), country only produces `\(A\)`, no `\(M\)`
+- If all labor in `\(M\)` (point D), country only produces `\(M\)`, no `\(A\)`
+
+- Remember, each industry has diminishing returns to labor, and will have a particular `\(MPL\)` depending on how much land or capital there are
+  - Hence, a 1 unit `\(\uparrow \downarrow\)` in `\(L\)` in one industry *does not* imply a 1 unit increase in output
+
+]
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Allocating Labor
+
+.pull-left[
+.smallest[
+- As we move to the right of the PPF, we are pulling labor out of agriculture and into manufacturing
+
+- Each single unit of labor we take out of `\(A\)` and put into `\(M\)` will:
+  - Lower `\(\downarrow Q_A\)` by `\(MPL_{A}\)`
+  - Raise `\(\uparrow Q_M\)` by `\(MPL_{M}\)`
+
+- Or to put it inversely, to produce 1 more unit of `\(M\)`:
+  - Reallocate `\(\downarrow L_A\)` input by `\(\frac{1}{MPL_{A}}\)`
+  - Reallocate `\(\uparrow L_M\)` input by `\(\frac{1}{MPL_{M}}\)`
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Production Possibilities Frontier
+
+.pull-left[
+
+- .hi[Marginal rate of transformation (MRT)] .hi-purple[*increases*] as we produce more of a good
+  - Again: .b[“slope”], .b[“relative price of M”], .b[“opportunity cost of M”]
+  - Amount of `\(A\)` given up for 1 more `\(M\)`
+
+`$$\underbrace{MRT}_{slope}=-\frac{MPL_A}{MPL_M}$$`
+
+- Note `\(A (y)\)` on top and `\(M (x)\)` on bottom!
+  - if you think in our Ricardian terms, `\\(l_x=\frac{1}{MPL_x}\\)` and `\\(l_y=\frac{1}{MPL_y}\\)`, so `\\(\frac{l_x}{l_y} \implies \frac{MPL_y}{MPL_x}\\)`
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Allocating Labor
+
+.pull-left[
+.smallest[
+
+- Because of diminishing returns, as we move labor out of `\(A\)` and into `\(M\)`, we lower `\(MPL_M\)` and raise `\(MPL_A\)`
+
+- This is why the PPF has increasing opportunity costs, and is bent inwards the way it is!
+
+- For a given amount of `\(T\)`, `\(K\)`, and `\(L\)`, we can determine the economy's output bundle `\((Q_M, Q_A)\)` by knowing how much labor is allocated across `\((L_M, L_A)\)`
+
+- Now let's find how labor is allocated across industries
+]
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# The Demand for Labor in Competitive Industries
+
+.pull-left[
+.quitesmall[
+- Profit-maximizing firms in competitive labor markets will hire labor (hours) up to the point where the marginal benefit of hiring labor equals the marginal cost
+  - .red[Marginal cost per labor-hour]: wage `\(w\)`
+  - .blue[Marginal benefit per labor-hour]: marginal revenue product (marginal product `\(\times\)` price of output)
+
+- In manufacturing:
+
+`$$w = MPL_M * P_M$$`
+
+- In agriculture:
+
+`$$w = MPL_A * P_A$$`
+
+- Again, if you want to remember why, see my slides on [Factor Markets](https://ios20.classes.ryansafner.com/slides/1.8-slides.html#1)
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# The Demand for Labor in Both Industries
+
+.pull-left[
+
+- Because we have assumed .hi-purple[labor is mobile] (and homogenous “labor hours”), workers will always move out of a lower-paying industry and into a higher-paying industry
+
+- Thus, in equilibrium, .hi-turquoise[wages `\(w\)` must equalize across both industries], with the implication:
+
+`$$\begin{align*}
+(w =) MPL_M * P_M &amp;= MPL_A * P_A (= w)\\
+-\frac{MPL_A}{MPL_M} &amp;= - \frac{P_M}{P_A}\\
+\end{align*}$$`
+
+]
+
+.pull-right[
+.center[
+![](../images/equilibriumbalance.png)
+]
+]
+
+---
+
+# Labor and the PPF
+
+.pull-left[
+
+- Thus, we finally see how it is that the slope of the PPF is equivalent to the relative price of `\(M\)`
+
+`$$MRT = -\frac{p_M}{p_A}$$`
+
+- (Back to `\(x\)` on top, `\(y\)` on bottom!)
+
+- At the optimum production, PPF is tangent to a value line with slope the relative price of `\(M\)`
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Labor Allocation
+
+.pull-left[
+.smallesr[
+- We can also visualize the allocation of labor in the country
+
+- Recall both industries in equilibrium must charge the same wage `\(w_M=w_A=w^{\star}\)`
+
+- Moving from left to right, &lt;span style="color:#000066"&gt;labor allocated to manufacturing&lt;/span&gt;, `\(L_M\)`
+
+- Moving from right to left, &lt;span style="color:#33CCFF"&gt;labor allocated to agriculture&lt;/span&gt;, `\(L_A\)`
+]
+]
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# A Change in Relative Prices on Labor Allocation
+
+.pull-left[
+.smaller[
+- An increase in the relative price of manufacturing `\(\left(\frac{p_M}{p_A}\right)\)` will increase the demand for labor in manufacturing
+
+- Because both industries have to compete for labor, wages do increase, but not as much as the increase in the relative price of manufacturing
+
+- More labor will be used in manufacturing than in agriculture, and thus, the economy will produce more manufacturing and less agriculture
+]
+]
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# A Change in Relative Prices on PPF
+
+.pull-left[
+
+- We can equivalently see this on the PPF
+
+- Increase in the relative price of manufacturing
+
+`$$\bigg(\displaystyle\frac{p_M}{p_A}\bigg)^1 \rightarrow \bigg(\displaystyle\frac{p_M}{p_A}\bigg)^2$$`
+
+- Moving from `\(A \rightarrow B\)`
+  - Slope steepens
+  - Country will produce less agriculture, more manufacturing
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Distribution Effects Using our Two Country Trade Example
+
+---
+
+# Our Two Country Trade Example: Autarky
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.smallest[
+- Countries begin in .hi[autarky] optimum with different relative prices
+  - A is optimum for .blue[Home]
+  - A' is optimum for .red[Foreign]
+]
+
+---
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-18-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.smallest[
+- .blue[Home] has comparative advantage in manufacturing
+- .red[Foreign] has comparative advantage in agriculture
+]
+
+---
+
+
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-21-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-22-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+- Countries .hi[specialize]: produce *more* of comparative advantaged good, *less* of disadvantaged good
+  - .blue[Home]: A `\(\rightarrow\)` B: produces more M, less A 
+  - .red[Foreign]: A' `\(\rightarrow\)` B': produces less M, more A
+
+]
+
+---
+
+# Relative Price Changes in Home
+
+.pull-left[
+
+- Let's look at three groups at .blue[Home]:
+  - Laborers `\((L)\)`
+  - Capitalists (owners of `\(K)\)`
+  - Landowners (owners of `\(T)\)`
+
+- Increase in the relative price of manufacturing from trade
+  - decrease in relative price of agriculture
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-23-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Home's Income Distribution: L
+
+.pull-left[
+.quitesmall[
+- Workers find their wage has increased (but less than increase in relative price of M)
+`$$\frac{\Delta w}{w_1} &lt; \cfrac{\Delta \left(\frac{P_M}{P_A}\right)}{\left(\frac{P_M}{P_A}\right)_1}$$`
+
+- Amount of manufactures `\(Q_M\)` that can be purchased with wages has *fallen*!
+  - .hi-purple[Real wage in terms of manufacturing, `\\(\downarrow \frac{w}{p_M}\\)`]
+
+- Amount of agriculture `\(Q_A\)` that can be purchased with wages has *risen*!
+  - .hi-purple[Real wage in terms of agriculture, `\\(\uparrow \frac{w}{p_A}\\)`]
+
+- .hi-purple[Effect on workers is ambiguous]
+  - Depends on their consumption preferences between `\(M\)` and `\(A\)`
+]
+]
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-24-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Home's Income Distribution: K
+
+.pull-left[
+.smallest[
+- What about capital owners?
+
+- Total income to capitalists `\(= \underbrace{(P_M * Q_M)}_{\text{Revenues in M}} - \underbrace{(W * L_M)}_{\text{Labor costs}}\)`
+
+- As more labor used in manufacturing, `\(\uparrow MP_K\)`: Each machine has more workers to work it.
+
+- .hi-purple[Capital owners gain]
+  - We saw (1) `\(\uparrow\)` relative price of manufacturing and (2) `\(\downarrow\)` real wage in terms of manufacturing
+  - Thus, income to capital will rise more than proportionately to the rise in relative price of manufacturing
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-25-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Advanced Explanation for Capital
+
+.pull-left[
+.smallest[
+- Manufacturing is produced with capital and labor, `\(Q_M = Q_M(K,L_M)\)`
+
+- Total output `\(Q_M\)` using `\(L_M\)` is equal to the area under the `\(MPL_M\)` curve up to `\(L_M\)`
+
+- Labor is paid `\(w = MPL_M * p_M\)`
+  - Rewrite as real wage (in terms of `\(M)\)`: `\(\frac{w}{P_M}\)`
+  - This times the total number of workers `\(L_M\)` equals the .blue[total wages paid]
+
+- All .green[residual income] goes to capital owners
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-26-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Advanced Explanation for Capital
+
+.pull-left[
+.smallest[
+- Because trade raises the relative price of manufacturing, `\(\frac{p_M}{p_A}\)`, we saw:
+  - Increase in labor `\(L_M\)`, and increase in *nominal* wage `\(w\)`, but
+  - Decrease in real wage in terms of `\(m\)`, `\(\frac{w}{p_M}\)`
+
+- .hi-green[Capital owners gain]
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-27-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Home's Income Distribution: T
+
+.pull-left[
+.smallest[
+- What about land owners?
+
+- Total income to landowners `\(= \underbrace{(P_AM * Q_A)}_{\text{Revenues in A}} - \underbrace{(W * L_A)}_{\text{Labor costs}}\)`
+
+- As less labor used in agriculture, `\(\downarrow MP_T\)`: Each piece of land has fewer workers to work it.
+
+- .hi-purple[Land owners lose]
+  - We saw (1) `\(\downarrow\)` relative price of agriculture and (2) `\(\uparrow\)` real wage in terms of agriculture
+  - Thus, income to landowners will fall more than proportionately to the fall in relative price of agriculture
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-28-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Advanced Explanation for Land
+
+.pull-left[
+.smallest[
+- Agriculture is produced with land and labor, `\(Q_A = Q_A(T,L_A)\)`
+
+- Total output `\(Q_A\)` using `\(L_A\)` is equal to the area under the `\(MPL_A\)` curve up to `\(L_A\)`
+
+- Labor is paid `\(w = MPL_A * p_A\)`
+  - Rewrite as real wage (in terms of `\(A)\)`: `\(\frac{w}{P_A}\)`
+  - This times the total number of workers `\(L_A\)` equals the total wages paid
+
+- All .green[residual income] goes to land owners (as rent)
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-29-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Advanced Explanation for Land
+
+.pull-left[
+.smallest[
+- Because trade lowers the relative price of agriculture, `\(\frac{p_A}{p_M}\)`, we saw:
+  - Decrease in labor `\(L_A\)`, but increase in *nominal* wage `\(w\)`, so
+  - Increase in real wage in terms of `\(A\)`, `\(\frac{w}{p_A}\)`
+
+- .b[Land owners lose]
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-30-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Home's Income Distribution
+
+.pull-left[
+
+EFfects of trade on .blue[Home]'s:
+
+- .b[Labor]: ambiguous
+  - real wage rises in terms of `\(M\)`, falls in terms of `\(A\)`
+  
+- .b[Capital]: income rises more than proportionate to `\(M\)` relative price increase
+
+- .b[Land]: income falls more than proportionate to `\(A\)` relative price fall
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-31-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Home Income Distribution
+
+.pull-left[
+.smallest[
+
+- .hi-purple[Factor specific to the sector whose relative price rises is *better off* with trade]
+  - Capital for manufacturing
+  
+- .hi-purple[Factor specific to the sector whose relative price falls is *worse off* with trade]
+  - Land for agriculture
+
+- .hi-purple[The mobile factor is *not clearly* better or worse off with trade.]
+  - Labor
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-32-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Specialization (Again)
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-33-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-34-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+- Countries .hi[specialize]: produce *more* of comparative advantaged good, *less* of disadvantaged good
+  - .blue[Home]: A `\(\rightarrow\)` B: produces more M, less A 
+  - .red[Foreign]: A' `\(\rightarrow\)` B': produces less M, more A
+
+]
+
+---
+
+# Relative Price Changes in Foreign
+
+.pull-left[
+
+- Let's look at three groups at .red[Foreign]:
+  - Laborers `\((L)\)`
+  - Capitalists (owners of `\(K)\)`
+  - Landowners (owners of `\(T)\)`
+
+- Decrease in the relative price of manufacturing from trade
+  - increase in relative price of agriculture
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-35-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Foreign's Income Distribution: L
+
+.pull-left[
+.quitesmall[
+- Workers find their wage has increased (but less than increase in relative price of A)
+`$$\frac{\Delta w}{w_1} &lt; \cfrac{\Delta \left(\frac{P_A}{P_M}\right)}{\left(\frac{P_A}{P_M}\right)_1}$$`
+
+- Amount of manufactures `\(Q_M\)` that can be purchased with wages has *risen*!
+  - .hi-purple[Real wage in terms of manufacturing, `\\(\uparrow \frac{w}{p_M}\\)`]
+
+- Amount of agriculture `\(Q_A\)` that can be purchased with wages has *fallen*!
+  - .hi-purple[Real wage in terms of agriculture, `\\(\downarrow \frac{w}{p_A}\\)`]
+
+- .hi-purple[Effect on workers is ambiguous]
+  - Depends on their consumption preferences between `\(M\)` and `\(A\)`
+]
+]
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-36-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# Effects of Trade on Foreign's Income Distribution: K
+
+.pull-left[
+.smallest[
+- What about capital owners?
+
+- Total income to capitalists `\(= \underbrace{(P_M * Q_M)}_{\text{Revenues in M}} - \underbrace{(W * L_M)}_{\text{Labor costs}}\)`
+
+- As less labor used in manufacturing, `\(\downarrow MP_K\)`: Each machine has fewer workers to work it.
+
+- .hi-purple[Capital owners lose]
+  - We saw (1) `\(\downarrow\)` relative price of manufacturing and (2) `\(\uparrow\)` real wage in terms of manufacturing
+  - Thus, income to capital will fall more than proportionately to the fall in relative price of manufacturing
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-37-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Foreign's Income Distribution: T
+
+.pull-left[
+.smallest[
+- What about land owners?
+
+- Total income to landowners `\(= \underbrace{(P_A * Q_A)}_{\text{Revenues in A}} - \underbrace{(W * L_A)}_{\text{Labor costs}}\)`
+
+- As more labor used in agriculture, `\(\uparrow MP_T\)`: Each piece of land has more workers to work it.
+
+- .hi-purple[Land owners gain]
+  - We saw (1) `\(\uparrow\)` relative price of agriculture and (2) `\(\downarrow\)` real wage in terms of agriculture
+  - Thus, income to landowners will rise more than proportionately to the rise in relative price of agriculture
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-38-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Foreign's Income Distribution
+
+.pull-left[
+
+EFfects of trade on .red[Foreign]'s:
+
+- .b[Labor]: ambiguous
+  - real wage rises in terms of `\(M\)`, falls in terms of `\(A\)`
+  
+- .b[Capital]: income falls more than proportionate to `\(M\)` relative price fall
+
+- .b[Land]: income rises more than proportionate to `\(A\)` relative price increase
+
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-39-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Effects of Trade on Foreign's Income Distribution
+
+.pull-left[
+.smallest[
+
+- .hi-purple[Factor specific to the sector whose relative price rises is *better off* with trade.]
+  - Land for agriculture
+  
+- .hi-purple[Factor specific to the sector whose relative price falls is *worse off* with trade.]
+  - Capital for manufacturing
+
+- .hi-purple[The mobile factor is *not clearly* better or worse off with trade.]
+  - Labor
+
+]
+]
+
+.pull-right[
+&lt;img src="1.8-slides_files/figure-html/unnamed-chunk-40-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+class: inverse, center, middle
+
+# Takeways from The Specific Factors Model
+
+---
+
+# Takeways from The Specific Factors Model
+
+.pull-left[
+
+- .hi-purple[Changes in trade fall mainly upon the fixed/specific factors of production]
+  - Increase in relative prices (exports) benefit fixed factor producing exports
+  - Decrease in relative prices (imports) harm fixed factor competing with imports
+
+- .hi-purple[Mobile factors face ambiguous change]
+  - Can move from low-income industries to high-income industries
+  
+]
+
+.pull-right[
+.center[
+![](../images/laborvscapital.jpg)
+]
+
+]
+
+---
+
+# Takeways from The Specific Factors Model
+
+.pull-left[
+
+- Of course, our simple model aggregates labor into a single mobile factor
+
+- In reality, different types of labor, some may be .hi[mobile] and some may be .hi[immoble] and .hi[specific]
+
+- .hu-purple[Changes in trade patterns and relative prices will affect specific and mobile factors differently]
+]
+
+.pull-right[
+.center[
+![](../images/stuck.jpg)
+]
+
+]
+
+---
+
+# Example of Mobile vs. Specific Labor
+
+.pull-left[
+
+.content-box-green[
+.hi-green[Example]: Auto-workers in Detroit in the 1980s were a relatively specific and immobile factor
+
+- Geographically concentrated
+
+- Skills specific to car assembly-lines
+]
+]
+
+.pull-right[
+.center[
+![:scale 50%](../images/gmworkers.jpg)
+![:scale 50%](../images/gmbuilding.jpg)
+]
+]
+
+---
+
+# Example of Mobile vs. Specific Labor
+
+.pull-left[
+.quitesmall[
+- Japan begins exporting cheap cars in 1980s, U.S. consumers import them
+
+- Relative price of cars falls in U.S., U.S. factories produce fewer cars, wages &amp; jobs in U.S. auto manufacturing diminish
+
+- More .hi-purple[mobile] and .hi-purple[nonspecific] workers left Detroit for other industries
+  - e.g. maybe they went to Texas to work in booming oil industry
+
+- More .hi-purple[immobile] and .hi-purple[specific] workers lost jobs
+  - Maybe geographically stuck in Detroit
+  - Skills were too specific to auto industry, not transferrable to other industries
+]
+]
+
+.pull-right[
+.center[
+![:scale 50%](../images/japan.jpg)
+![:scale 50%](../images/car.png)
+]
+]
+
+---
+
+# Some More Examples
+
+.center[
+![:scale 80%](../images/feenstramanuf.png)
+
+.source[Source: Feenstra &amp; Taylor (2017)]
+]
+
+---
+
+# Some More Examples
+
+.center[
+![:scale 60%](../images/feenstrawages.png)
+
+.source[Source: Feenstra &amp; Taylor (2017)]
+]
+
+---
+
+# Some More Examples
+
+.center[
+![:scale 80%](../images/feenstralosses.png)
+
+.source[Source: Feenstra &amp; Taylor (2017)]
+]
+
+---
+
+# Takeways from The Specific Factors Model
+
+.pull-left[
+.smallest[
+- Again, .hi-purple[changes in trade fall mainly upon the fixed/specific factors of production]
+  - Increase in relative prices (exports) benefit fixed factor producing exports
+  - Decrease in relative prices (imports) harm fixed factor competing with imports
+
+- .hi-purple[Mobile factors face ambiguous change]
+  - Can move from low-income industries to high-income industries
+
+- .hi[Policy implication]: if governments wish to protect domestic groups from adverse trade shocks, increase mobility and non-specific skills/uses
+  - make labor, capital, land markets *more flexible* to reduce shocks from trade on domestic workers, capital-, &amp; land-owners
+
+]
+]
+.pull-right[
+.center[
+![](../images/stuck.jpg)
+]
+
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
