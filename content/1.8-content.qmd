@@ -1,5 +1,5 @@
 ---
-title: "1.7 — The Specific Factors Model — Class Content"
+title: "1.8 — The Specific Factors Model — Class Content"
 execute:
   freeze: auto
 ---
@@ -13,6 +13,12 @@ source(here::here("slides", "slide-links.R"))
 
 *Thursday, February 16, 2023*
 :::
+
+::: callout-warning
+# Upcoming Assignment
+[Problem Set 1](/assignment/01-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.
+:::
+
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
@@ -41,10 +47,8 @@ I suggest printing the slides beforehand and using them to take additional notes
 slide_links("1.8-slides")
 ```
 
-```{=html}
-<!--## <i class="fas fa-laptop-code"></i> Assignments
+## <i class="fas fa-laptop-code"></i> Assignments
 
-### Preliminary Math Survey Due Next Class
+### Problem Set 1 Due Thursday February 23
 
-Please take the [preliminary survey](/assignment/00-preliminary-survey) on your math background by next class. This will help us all have a productive semester together.-->
-```
+[Problem Set 1](/assignment/01-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.

@@ -54,6 +54,10 @@ website:
               href: content/1.7-content.qmd
             - text: "1.8 — The Specific Factors Model"
               href: content/1.8-content.qmd
+            - text: "1.9 — The Hecksher-Ohlin Model: Theory"
+              href: content/1.9-content.qmd
+            - text: "1.10 — The Hecksher-Ohlin Model: Empirics"
+              href: content/1.10-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
