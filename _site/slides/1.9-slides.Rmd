@@ -1,0 +1,1545 @@
+---
+title: "1.9 — The Hecksher-Ohlin Model"
+author: 'Ryan Safner'
+#date:
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    css: [custom.css, "hygge"] #, metropolis, metropolis-fonts
+    nature:
+      beforeInit: ["macros.js", "https://platform.twitter.com/widgets.js"] # first is for rescaling images , second is for embedding tweets, https://github.com/yihui/xaringan/issues/100
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    includes:
+      in_header: header.html # for font awesome, used in title  
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo=F,
+                      message=F,
+                      warning=F,
+                      fig.retina = 3,
+                      fig.align = "center")
+library("tidyverse")
+library("ggrepel")
+library("fontawesome")
+xaringanExtra::use_tile_view()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_freezeframe()
+xaringanExtra::use_progress_bar()
+
+update_geom_defaults("label", list(family = "Fira Sans Condensed"))
+update_geom_defaults("text", list(family = "Fira Sans Condensed"))
+
+set.seed(256)
+
+theme_slides <- theme_light() + 
+  theme(
+    text = element_text(family = "Fira Sans", size = 24)
+  )
+
+```
+
+class: title-slide
+
+# 1.9 — The Hecksher-Ohlin Model
+
+## ECON 324 • International Trade • Spring 2023
+
+### Ryan Safner<br> Associate Professor of Economics <br> <a href="mailto:safner@hood.edu"><i class="fa fa-paper-plane fa-fw"></i>safner@hood.edu</a> <br> <a href="https://github.com/ryansafner/tradeS23"><i class="fa fa-github fa-fw"></i>ryansafner/tradeS23</a><br> <a href="https://tradeS23.classes.ryansafner.com"> <i class="fa fa-globe fa-fw"></i>tradeS23.classes.ryansafner.com</a><br>
+
+---
+
+
+class: inverse
+
+# Outline
+
+### [Motivations of the Hecksher-Ohlin Model](#3)
+
+### [Assumptions of the H-O Model](#14)
+
+### [Relative Factor Uses and Relative Factor Prices](#21)
+
+### [Running Through Our Two Country Example](#27)
+
+### [Factor Price Equalization](#34)
+
+### [Long-Run Changes to Real Income (Stolper-Samuelson)](#41)
+
+---
+
+class: inverse, center, middle
+
+# Motivations of the Hecksher-Ohlin Model
+
+---
+
+# Extending/Applying the Standard Model
+
+.pull-left[
+.smallest[
+- Explore (some of) the .hi-purple[determinants of comparative advantage]
+  - Standard model merely *assumed* comparative advantages via different relative prices across countries
+  - What *causes* countrues to start with do those different relative prices?
+
+- Explore effect that international trade has on earnings of factors in trading countries
+  - We did that with specific factors model
+  - Here we do that again with different assumptions
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+
+---
+
+# Motivations
+
+.pull-left[
+
+- Eli Hecksher was a Swedish economist
+
+- He & his student Bertil Ohlin developed a model to explain international trade
+
+- They were writing during the late 1910s, during the .hi-purple[“golden age of international trade”] before WWI
+
+- Wanted to explain the enormous burst of trade during their lifetimes
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# The Golden Age of International Trade
+
+.center[
+![](https://ourworldindata.org/uploads/2018/10/broadberry-migration-778x550.png)
+]
+
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# The Golden Age of International Trade
+
+<iframe src="https://ourworldindata.org/grapher/globalization-over-5-centuries-km" loading="lazy" style="width: 100%; height: 500px; border: 0px none;"></iframe>
+
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# The Second Industrial Revolution
+
+.pull-left[
+
+- .hi-purple[“Second industrial revolution”] c.1890-1914, especially in United States
+
+- Massive improvements & innovation in transportation & supply chains
+  - railroads, steamships, automobiles, electrification, refrigeration
+
+- Massive increase in international trade until WWI (1914)
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/railroad2.jpg)
+
+![:scale 65%](../images/steamship.jpg)
+
+]
+]
+
+---
+
+# Motivations
+
+.pull-left[
+
+- Unlike Ricardo: it’s not differences in technology/productivity across countries that cause trade
+  - can mimic and transfer!
+
+- It’s the uneven distribution of resources, the .hi-purple[factors of production]: land, labor, capital
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Differences in Factor Endowments
+
+|    |    |    |
+|----|----|----|
+| ![:scale 75%](../images/canadaflagmap.png) | ![:scale 40%](../images/eu1.png) | ![:scale 75%](../images/china1.png) |
+| Relatively .b[land] abundant | Relatively .b[capital] abundant | Relatively .b[labor] abundant |
+| Exports timber, agricultural products | Exports services, sophisticated manuf. | Exports basic manuf. |
+
+
+---
+
+# Hecksher-Ohlin Theory
+
+.pull-left[
+
+- .hi[Hecksher-Ohlin (H-O) Theory]: focus on differences in relative abundance of factors of production across countries
+  - determines different relative prices and hence comparative advantage
+
+- H-O Theory is often expressed as the combination of .hi-turquoise[several “theorems”]...
+
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Hecksher-Ohlin Theorem
+
+.pull-left[
+
+1) .hi[Hecksher-Ohlin (H-O) Theorem]: a nation will export the good whose production requires the intensive use of the nation’s relatively abundant factor, and import the good whose production requires the intensive use of the nation’s relatively scarce factor
+
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Factor-Price Equalization Theorem
+
+.pull-left[
+
+2) .hi[Factor Price Equalization (FPE) Theorem]: under certain conditions, international trade tends to bring about equalization in relative and absolute returns to homogeneous factors across nations
+
+3) .hi[Stolper-Samuelson Theorem]: in the long run, an increase in the relative price of a good will increase the real earnings of the factor used intensively in that good’s production and decrease the earnings of the other factor
+]
+
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Assumptions of the H-O Model
+
+---
+
+# Assumptions of the H-O Model
+
+.pull-left[
+
+- Imagine 2 countries, .blue[Home] and .red[Foreign]
+
+- Countries have two factors of production:
+   - labor $(L)$
+   - capital $(K)$
+
+- All factors of production are .hi-purple[mobile] (non-specific) .purple[within a country], but *not internationally*
+
+]
+
+.pull-right[
+.center[
+![](../images/factors.jpg)
+]
+]
+
+---
+
+# Setting up an H-O Model Example
+
+.pull-left[
+
+- Each country has two industries, .b[computers (c)] and .b[shoes (s)]
+
+- .b[Shoe] production (s) is .hi-purple[relatively labor-intensive], requiring a *higher* .hi-turquoise[labor to capital ratio] $\frac{l}{k}$
+
+- .b[Computer] production (c) is .hi-purple[relatively capital-intensive], requiring a *lower* .hi-turquoise[labor to capital ratio] $\frac{l}{k}$
+
+$$\frac{l_c}{k_c} < \frac{l_s}{k_s}$$
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/shoes.jpg)
+![:scale 65%](../images/laptop.jpg)
+
+]
+]
+
+---
+
+# Setting up an H-O Model Example
+
+.pull-left[
+
+- .hi-red[Foreign] is .hi-purple[relatively labor-abundant], with a high .hi-turquoise[labor to capital ratio], $\frac{L}{K}$
+
+- .hi-blue[Home] is .hi-purple[relatively capital-abundant], with a low .hi-turquoise[labor to capital ratio], $\frac{L}{K}$
+
+$$\color{blue}{\frac{L}{K}} < \color{red}{\frac{L'}{K'}}$$
+
+
+]
+
+.pull-right[
+.center[
+![:scale 70%](../images/shoefactory.jpg)
+![:scale 70%](../images/factoryrobots.jpg)
+
+]
+]
+
+---
+
+# A Few Simplifying Assumptions
+
+.pull-left[
+
+- Both factors are required to produce each good
+
+- Final products are traded freely
+
+- Technology is identical across countries
+
+- Consumer preferences are identical across countries and do not vary with income
+]
+
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# The Two Industries
+
+.pull-left[
+.smallest[
+- .b[Shoe] production (s) is .hi-purple[relatively labor-intensive good], requiring a *higher* labor to capital ratio $\frac{l_s}{k_s}$
+
+- .b[Computer] production (c) is .hi-purple[relatively capital-intensive good], requiring a *lower* labor to capital ratio $\frac{l_c}{k_c}$
+
+- Key is .hi-purple[*relative* factor intensity]!
+
+- In absolute terms, computers could need *more* labor to make than shoes, but if computers require more capital *per worker* than shoes, they are *relatively* more capital-intensive (and vice versa)!
+]
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/shoes.jpg)
+![:scale 65%](../images/laptop.jpg)
+
+]
+]
+
+---
+
+# The Two Countries
+
+.pull-left[
+- .hi-red[Foreign] is .hi-purple[relatively labor-abundant], with a high labor to capital ratio, $\frac{L}{K}$
+
+- .hi-blue[Home] is .hi-purple[relatively capital-abundant], with a low labor to capital ratio, $\frac{L}{K}$
+
+- Key is .hi-purple[*relative* factor abundance]!
+
+- In absolute terms, .blue[Home] could have *more* labor than .red[Foreign], but if .red[Foreign] has more labor *per unit of capital* than .blue[Home], .red[Foreign] is *relatively* more labor-abundant (and vice versa)!
+
+]
+.pull-right[
+.center[
+![:scale 70%](../images/shoefactory.jpg)
+![:scale 70%](../images/factoryrobots.jpg)
+
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Relative Factor Uses and Relative Factor Prices
+
+---
+
+# Relative Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- Consider *relative* factor uses and *relative* factor prices
+
+- Note: I'll always do everything in terms of labor (labor-to-capital ratio $\frac{l}{k}$ and labor-to-capital return $\frac{w}{r})$ for consistency
+
+- How much $\frac{l}{k}$ a country uses depends on the relative price of labor $\frac{w}{r}$
+
+]
+
+.pull-right[
+```{r}
+rel_shoes=function(x){8/x}
+rel_comps=function(x){4/x}
+
+line_colors=c("Shoes" = "orange", "Computers" = "green")
+#colors=c(expression(paste("Relative Labor Demand for Shoes ", frac(l[s],k[s]))),
+#         expression(paste("Relative Labor Demand for Computers ", frac(l[c],k[c]))))
+
+ggplot(tibble(x=0:10), aes(x=x))+
+
+  # PPF 
+  stat_function(fun=rel_comps, geom="line", size=2, aes(color = "Shoes"))+
+
+  stat_function(fun=rel_shoes, geom="line", size=2, aes(color = "Computers"))+
+  scale_colour_manual("Relative Labor Demand",
+                      values = line_colors,
+                      labels = c(expression(paste("for Shoes ", frac(l[s],k[s]))),
+                                 expression(paste("for Computers ", frac(l[c],k[c])))))+
+  scale_x_continuous(breaks=NULL,
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  labs(x = expression(paste("Relative Labor Use, ", frac(L,K))),
+       y = expression(paste("Relative Labor Price, ", frac(w,r))))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)+
+  theme(legend.position = "bottom")
+```
+]
+
+---
+
+# Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the $\color{green}{\frac{l_s}{k_s}}$ and $\color{orange}{\frac{l_c}{k_c}}$ relative labor demand curves
+
+]
+
+.pull-right[
+```{r}
+demand=function(x){6/x}
+
+line_colors=c("Shoes" = "orange", "Computers" = "green")
+#colors=c(expression(paste("Relative Labor Demand for Shoes ", frac(l[s],k[s]))),
+#         expression(paste("Relative Labor Demand for Computers ", frac(l[c],k[c]))))
+
+rel_demand=ggplot(tibble(x=0:10), aes(x=x))+
+
+  # PPF 
+  stat_function(fun=rel_comps, geom="line", size=0.5, aes(color = "Shoes"), linetype="dashed")+
+
+  stat_function(fun=rel_shoes, geom="line", size=0.5, aes(color = "Computers"), linetype="dashed")+
+  
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+  
+  scale_colour_manual("Relative Labor Demand",
+                      values = line_colors,
+                      labels = c(expression(paste("for Shoes ", frac(l[s],k[s]))),
+                                 expression(paste("for Computers ", frac(l[c],k[c])))))+
+  scale_x_continuous(breaks=NULL,
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  scale_y_continuous(breaks=NULL,
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  labs(x = expression(paste("Relative Labor Use, ", frac(L,K))),
+       y = expression(paste("Relative Labor Price, ", frac(w,r))))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)+
+  theme(legend.position = "none")
+rel_demand
+```
+]
+
+---
+
+# Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the $\color{green}{\frac{l_s}{k_s}}$ and $\color{orange}{\frac{l_c}{k_c}}$ relative labor demand curves
+
+- A country is endowed with a fixed .hi-red[relative supply of labor] $\frac{\bar{L}}{K}$
+
+]
+
+.pull-right[
+```{r}
+rel_demand+
+  geom_vline(xintercept = 2, size = 2, color = "red")+
+    scale_x_continuous(breaks=c(2),
+                       labels=c(expression(frac(bar(L),K))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )
+
+```
+]
+
+---
+
+# Relative Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the $\color{green}{\frac{l_s}{k_s}}$ and $\color{orange}{\frac{l_c}{k_c}}$ relative labor demand curves
+
+- A country is endowed with a fixed .hi-red[relative supply of labor] $\frac{\bar{L}}{K}$
+
+- Intersection of relative supply and relative demand sets country’s relative wage rate $\frac{w}{r}$
+
+]
+
+.pull-right[
+```{r}
+rel_demand+
+  geom_vline(xintercept = 2, size = 2, color = "red")+
+  geom_segment(x = 0, xend = 2, y=3, yend=3, size = 1, linetype="dotted")+
+    scale_x_continuous(breaks=c(2),
+                       labels=c(expression(frac(bar(L),K))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+    scale_y_continuous(breaks=c(3),
+                       labels=c(expression(frac(w,r))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )
+```
+]
+
+---
+
+# *Different* Relative Factor Endowments in Autarky
+
+.pull-left[
+
+### .blue[Home]
+
+```{r, fig.height=3.5}
+rel_demand+
+  geom_vline(xintercept = 2, size = 2, color = "red")+
+  geom_segment(x = 0, xend = 2, y=3, yend=3, size = 1, linetype="dotted")+
+    scale_x_continuous(breaks=c(2),
+                       labels=c(expression(frac(bar(L),K))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+    scale_y_continuous(breaks=c(3),
+                       labels=c(expression(frac(w,r)^{H})),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )
+```
+]
+
+.pull-right[
+
+### .red[Foreign]
+
+```{r, fig.height=3.5}
+rel_demand+
+  geom_vline(xintercept = 3, size = 2, color = "red")+
+  geom_segment(x = 0, xend = 3, y=2, yend=2, size = 1, linetype="dotted")+
+    scale_x_continuous(breaks=c(3),
+                       labels=c(expression(frac(bar(L*minute),K*minute))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+    scale_y_continuous(breaks=c(2),
+                       labels=c(expression(frac(w,r)^{F})),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )
+```
+]
+
+.smallest[
+- .red[Foreign] relatively more labor-abundant than .blue[Home] $\color{blue}{(\frac{\bar{L}}{\bar{K}})^H} < \color{red}{(\frac{\bar{L}}{\bar{K}})^F}$
+- Thus, .red[Foreign] has a lower relative price of labor than Home $\color{blue}{(\frac{w}{r})^H} > \color{red}{(\frac{w}{r})^F}$
+  - Hence, .red[Foreign] has a comparative advantage in making .red[shoes]; .blue[Home] in .blue[computers]
+
+]
+---
+
+class: inverse, center, middle
+
+# Running Our Two Country Example
+
+---
+
+# Our Two Country Trade Example: Autarky
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_point<-tribble(
+  ~x, ~y, ~letter,
+  2, 2.75, "A"
+)
+
+home_ppf_eq =function(x){sqrt(9-(x-0.75)^2)}
+home_IC_1 = function(x){1.75+(2/x)}
+home_price_1 = function(x){3.75-0.5*x}
+
+home_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,2),
+                     labels=c(0, expression(c[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.75),
+                     labels=c(0, expression(s[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+home_ppf_1
+```
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+```{r, fig.height=3.5}
+foreign_point<-tribble(
+  ~x, ~y, ~letter,
+  2.55, 3, "A'"
+)
+
+foreign_ppf_eq =function(x){sqrt(25-x^3)}
+foreign_IC_1 = function(x){4/(x-1.575)-1}
+foreign_price_1 = function(x){12.5-3.75*x}
+
+foreign_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,2.55),
+                     labels=c(0, expression(c[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,3),
+                     labels=c(0, expression(s[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_ppf_1
+```
+
+]
+
+.smallest[
+- Countries begin in .hi[autarky] optimum with different relative prices
+  - A is optimum for .blue[Home]
+  - A' is optimum for .red[Foreign]
+]
+
+---
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_point<-tribble(
+  ~x, ~y, ~letter,
+  2, 2.75, "A"
+)
+
+home_ppf_eq =function(x){sqrt(9-(x-0.75)^2)}
+home_IC_1 = function(x){1.75+(2/x)}
+home_price_1 = function(x){3.75-0.5*x}
+
+home_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,2),
+                     labels=c(0, expression(c[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.75),
+                     labels=c(0, expression(s[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+home_ppf_1
+```
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+```{r, fig.height=3.5}
+foreign_point<-tribble(
+  ~x, ~y, ~letter,
+  2.55, 3, "A'"
+)
+
+foreign_ppf_eq =function(x){sqrt(25-x^3)}
+foreign_IC_1 = function(x){4/(x-1.575)-1}
+foreign_price_1 = function(x){12.5-3.75*x}
+
+foreign_ppf_1<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,2.55),
+                     labels=c(0, expression(c[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,3),
+                     labels=c(0, expression(s[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_ppf_1
+```
+
+]
+
+.smallest[
+- .blue[Home] has comparative advantage in computers
+- .red[Foreign] has comparative advantage in shoes
+]
+
+---
+
+```{r}
+export_b=tribble(
+  ~x, ~y, ~letter,
+  3.15, 1.8, "B"
+)
+
+home_ppf_world_price = function(x){6.6-1.5*x}
+
+home_exp<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = export_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = export_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  scale_x_continuous(breaks=c(0,2,3.15),
+                     labels=c(0, expression(c[1]), expression(c[2])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75),
+                     labels=c(0, expression(s[2]), expression(s[1])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+import_b=tribble(
+  ~x, ~y, ~letter,
+  1.95, 4.2, "B'"
+)
+
+import_b=tribble(
+  ~x, ~y, ~letter,
+  1.95, 4.2, "B'"
+)
+
+foreign_ppf_world_price = function(x){7.15-1.5*x}
+
+foreign_imp<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = import_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = import_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  scale_x_continuous(breaks=c(0,1.95, 2.55),
+                     labels=c(0, expression(c[2]*minute), expression(c[1]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,3, 4.2),
+                     labels=c(0, expression(s[1]*minute), expression(s[2]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+```
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_exp+
+  annotate("segment", x = 2, xend = 3.15, y = 2.75, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_imp+
+  annotate("segment", x = 2.55, xend = 1.95, y = 3, yend = 4.2, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.smallest[
+- Countries .hi[specialize]: produce *more* of comparative advantaged good, *less* of disadvantaged good
+  - .blue[Home]: A $\rightarrow$ B: produces more computers, fewer shoes 
+  - .red[Foreign]: A' $\rightarrow$ B': produces fewer computers, more shoes
+
+]
+
+---
+
+# Our Two Country Trade Example: Exports
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_c_point<-tribble(
+  ~x, ~y, ~letter,
+  1.7, 4.1, "C"
+)
+
+home_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "blue", size = 1)+
+  geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = home_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = home_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = export_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = export_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  
+  
+  geom_point(data = home_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+    geom_text_repel(data = home_c_point,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  geom_segment(x = 0, xend = 1.7, y = 4.1, yend = 4.1, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.7, xend = 1.7, y = 4.1, yend = 0, linetype = "dotted", size = 1)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,1.7, 2,3.15),
+                     labels=c(0, expression(c[3]), expression(c[1]), expression(c[2])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75, 4.1),
+                     labels=c(0, expression(s[2]), expression(s[1]), expression(s[3])),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+home_c+annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_c_point<-tribble(
+  ~x, ~y, ~letter,
+  3.2, 2.35, "C'"
+)
+
+foreign_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "red", size = 1, xlim=c(0,4.1))+
+  geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "blue")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "red", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "green", size = 1)+
+  geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "green")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "purple", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+  geom_text_repel(data = foreign_point,
+             mapping=aes(x=x, y=y,
+             label = letter),
+             seed = 4,
+             size = 4)+
+geom_point(data = import_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_text_repel(data = import_b,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "darkorchid4")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  
+  geom_point(data = foreign_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+    geom_text_repel(data = foreign_c_point,
+             aes(x = x,
+                 y = y,
+                 label = letter),
+             seed = 4, 
+             size = 4)+
+  geom_segment(x = 0, xend = 3.2, y = 2.35, yend = 2.35, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.2, xend = 3.2, y = 2.35, yend = 0, linetype = "dotted", size = 1)+
+  labs(x = "Computers, c",
+       y = "Shoes, s")+
+  scale_x_continuous(breaks=c(0,1.95, 2.55, 3.2),
+                     labels=c(0, expression(c[2]*minute), expression(c[1]*minute), expression(c[3]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.35, 3, 4.2),
+                     labels=c(0, expression(s[3]*minute), expression(s[1]*minute), expression(s[2]*minute)),
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+foreign_c+annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- .blue[Home] exports computers
+- .red[Foreign] exports shoes
+]
+
+---
+
+# Our Two Country Trade Example: Imports
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_c+
+  annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 1.7, xend = 1.7, y = 1.8, yend = 4.1, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_c+
+  annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  annotate("segment", x = 1.95, xend = 3.2, y = 2.35, yend = 2.35, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- .blue[Home] imports shoes
+- .red[Foreign] imports computers
+
+]
+
+---
+
+# Our Two Country Trade Example: Gains from Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=3.5}
+home_high_IC=function(x){1.75+(4/x)}
+
+home_c+
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  annotate("segment", x = 3.15, xend = 1.7, y = 1.8, yend = 1.8, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  
+  annotate("segment", x = 1.7, xend = 1.7, y = 1.8, yend = 4.1, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=3.5}
+foreign_high_IC=function(x){4/(x-1.575)-0.075}
+
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")+
+  annotate("segment", x = 1.95, xend = 1.95, y = 4.2, yend = 2.35, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  annotate("segment", x = 1.95, xend = 3.2, y = 2.35, yend = 2.35, colour = "orange", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))
+```
+]
+
+.smallest[
+
+- Both countries exchange their imports & exports and consume at C and C'
+
+- Both reach a higher indifference curve with trade, well beyond their PPFs!
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Factor Price Equalization
+
+---
+
+# Relative Price Changes in Home
+
+.pull-left[
+
+- Let's look at .blue[Home]
+
+- Increase in the relative price of computers from trade
+  - decrease in relative price of shoes
+]
+
+.pull-right[
+```{r}
+home_c+stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+```
+]
+
+---
+
+# Relative *Factor* Price Changes in Home
+
+.pull-left[
+
+- Fixed .hi-red[relative labor supply] $\frac{\bar{L}}{K}$
+
+- *Decrease* in .hi-blue[relative labor demand]
+  - More demand for capital (for computers)
+  - Less demand for labor (for shoes)
+
+- *Lowers* relative wages $\frac{w}{r}$
+
+]
+
+.pull-right[
+```{r}
+demand_H2=function(x){5/x}
+
+home_fall<-ggplot(tibble(x=0:10), aes(x=x))+
+
+  # PPF 
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+  stat_function(fun=demand_H2, geom="line", size=2, color = "darkblue")+
+  geom_vline(xintercept = 2, size = 2, color = "red")+
+  geom_segment(x=0, xend=2, y=3, yend=3, linetype="dotted")+
+  geom_segment(x=0, xend=2, y=2.5, yend=2.5, linetype="dotted")+
+  
+  annotate("segment", x = 2, xend = 2, y = 3, yend = 2.5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.25,"cm"), ends="last", type="closed"))+
+  
+    scale_x_continuous(breaks=c(2),
+                       labels=c(expression(frac(bar(L),K))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  scale_y_continuous(breaks=c(2.5,3),
+                       labels=c("w2/r2", "w1/r1"),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  labs(x = expression(paste("Relative Labor Use, ", frac(L,K))),
+       y = expression(paste("Relative Labor Price, ", frac(w,r))))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+home_fall
+```
+]
+
+---
+
+# Relative Price Changes in Foreign
+
+.pull-left[
+
+- Let's look at .red[Foreign]
+
+- Increase in the relative price of shoes from trade
+  - decrease in relative price of computers
+]
+
+.pull-right[
+```{r}
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+```
+]
+
+---
+
+# Relative *Factor* Price Changes in Foreign
+
+.pull-left[
+
+- Fixed .hi-red[relative labor supply] $\frac{\bar{L}'}{K}'$
+
+- *Increase* in .hi-blue[relative labor demand]
+  - More demand for labor (for shoes)
+  - Less demand for capital (for computers)
+
+- *Raises* relative wages $\frac{w}{r}$
+
+]
+
+.pull-right[
+```{r}
+demand_F2=function(x){7.5/x}
+
+foreign_raise<-ggplot(tibble(x=0:10), aes(x=x))+
+
+  # PPF 
+  stat_function(fun=demand, geom="line", size=2, color = "blue")+
+  stat_function(fun=demand_F2, geom="line", size=2, color = "darkblue")+
+  geom_vline(xintercept = 3, size = 2, color = "red")+
+  geom_segment(x=0, xend=3, y=2, yend=2, linetype="dotted")+
+  geom_segment(x=0, xend=3, y=2.5, yend=2.5, linetype="dotted")+
+  
+  annotate("segment", x = 3, xend = 3, y = 2, yend = 2.5, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.25,"cm"), ends="last", type="closed"))+
+  
+    scale_x_continuous(breaks=c(3),
+                       labels=c(expression(frac(bar(L*minute),K*minute))),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  scale_y_continuous(breaks=c(2,2.5),
+                       labels=c("w1/r1", "w2/r2"),
+                     limits=c(0,5),
+                     expand=expansion(mult=c(0,0.1))
+                     )+
+  labs(x = expression(paste("Relative Labor Use, ", frac(L,K))),
+       y = expression(paste("Relative Labor Price, ", frac(w,r))))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+foreign_raise
+```
+]
+
+---
+
+# Factor Price Equalization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+```{r, fig.height=4}
+home_fall
+```
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+```{r, fig.height=4}
+foreign_raise
+```
+]
+
+.smallest[
+- .hi-purple[Relative factor prices equalize across both countries] (at w2/r2)
+- .blue[Home]: $\downarrow$ wages $w$, $\uparrow$ capital returns $r$
+- .red[Foreign]: $\uparrow$ wages $w$, $\downarrow$ capital returns $r$
+]
+
+---
+
+# Factor Price Equalization Theorem
+
+.pull-left[
+- .hi[Factor Price Equalization (FPE) Theorem]: under certain conditions, international trade tends to bring about equalization in relative and absolute returns to homogeneous factors across nations
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Long Run Real Income Changes (Stolper-Samuelson)
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+
+- Real income changes at .blue[Home] in the .hi[long-run], when both $L$ and $K$ are mobile:
+  - implies factor returns $(w$ and $r)$ must (each) equalize across industries $(s$ and $c)$
+
+- Increase in the relative price of computers (fall in relative price in shoes) $\implies$ fall in relative price of labor $\frac{w}{r}$ (rise in relative price of capital)
+
+- This implies both industries will use relatively more labor (cheaper) and less capital (more expensive)
+]
+]
+
+
+.pull-right[
+```{r}
+home_c+stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+
+```
+]
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+- Using more labor, less capital, in both industries:
+
+- Change in real wages:
+$$p_c * MPL_c = w = p_s*MPL_s$$
+  - $\downarrow MPL_c=\frac{w}{p_c}$ & $\downarrow MPL_s=\frac{w}{p_s}$
+  - .hi-purple[Real wages fall]
+
+- Change in real income to capital:
+$$p_c * MPK_c =r=p_s*MPK_s$$
+  - $\uparrow MPK_c=\frac{r}{p_c}$ & $\uparrow MPK_s=\frac{r}{p_s}$
+  - .hi-purple[Real return to capital rises]
+]
+]
+
+
+.pull-right[
+```{r}
+home_c+stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+
+```
+]
+
+---
+
+# Long-Run Real Income Changes: Foreign
+
+.pull-left[
+.smallest[
+
+- Real income changes at .red[Foreign] in the .hi[long-run], when both $L$ and $K$ are mobile:
+  - implies factor returns $(w$ and $r)$ must (each) equalize across industries $(s$ and $c)$
+
+- Increase in the relative price of shoes (fall in relative price in computers) $\implies$ rise in relative price of labor $\frac{w}{r}$ (fall in relative price of capital)
+
+- This implies both industries will use relatively less labor (more expensive) and more capital (cheaper)
+]
+]
+
+
+.pull-right[
+```{r}
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+
+```
+]
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+- Using less labor, more capital, in both industries:
+
+- Change in real wages:
+$$p_c * MPL_c = w = p_s*MPL_s$$
+  - $\uparrow MPL_c=\frac{w}{p_c}$ & $\uparrow MPL_s=\frac{w}{p_s}$
+  - .hi-purple[Real wages rise]
+
+- Change in real income to capital:
+$$p_c * MPK_c =r=p_s*MPK_s$$
+  - $\downarrow MPK_c=\frac{r}{p_c}$ & $\downarrow MPK_s=\frac{r}{p_s}$
+  - .hi-purple[Real return to capital falls]
+]
+]
+
+
+.pull-right[
+```{r}
+foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "darkgreen")+
+  geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "darkgreen")
+
+```
+]
+
+---
+
+# Stolper-Samuelson Theorem
+
+.pull-left[
+- .hi[Stolper-Samuelson Theorem]: in the long run, an increase in the relative price of a good will increase the real earnings of the factor used intensively in that good’s production and decrease the earnings of the other factor
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]

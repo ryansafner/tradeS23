@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1.9 — The Hecksher-Ohlin Model</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide
+
+# 1.9 — The Hecksher-Ohlin Model
+
+## ECON 324 • International Trade • Spring 2023
+
+### Ryan Safner&lt;br&gt; Associate Professor of Economics &lt;br&gt; &lt;a href="mailto:safner@hood.edu"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;safner@hood.edu&lt;/a&gt; &lt;br&gt; &lt;a href="https://github.com/ryansafner/tradeS23"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;ryansafner/tradeS23&lt;/a&gt;&lt;br&gt; &lt;a href="https://tradeS23.classes.ryansafner.com"&gt; &lt;i class="fa fa-globe fa-fw"&gt;&lt;/i&gt;tradeS23.classes.ryansafner.com&lt;/a&gt;&lt;br&gt;
+
+---
+
+
+class: inverse
+
+# Outline
+
+### [Motivations of the Hecksher-Ohlin Model](#3)
+
+### [Assumptions of the H-O Model](#14)
+
+### [Relative Factor Uses and Relative Factor Prices](#21)
+
+### [Running Through Our Two Country Example](#27)
+
+### [Factor Price Equalization](#34)
+
+### [Long-Run Changes to Real Income (Stolper-Samuelson)](#41)
+
+---
+
+class: inverse, center, middle
+
+# Motivations of the Hecksher-Ohlin Model
+
+---
+
+# Extending/Applying the Standard Model
+
+.pull-left[
+.smallest[
+- Explore (some of) the .hi-purple[determinants of comparative advantage]
+  - Standard model merely *assumed* comparative advantages via different relative prices across countries
+  - What *causes* countrues to start with do those different relative prices?
+
+- Explore effect that international trade has on earnings of factors in trading countries
+  - We did that with specific factors model
+  - Here we do that again with different assumptions
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+
+---
+
+# Motivations
+
+.pull-left[
+
+- Eli Hecksher was a Swedish economist
+
+- He &amp; his student Bertil Ohlin developed a model to explain international trade
+
+- They were writing during the late 1910s, during the .hi-purple[“golden age of international trade”] before WWI
+
+- Wanted to explain the enormous burst of trade during their lifetimes
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# The Golden Age of International Trade
+
+.center[
+![](https://ourworldindata.org/uploads/2018/10/broadberry-migration-778x550.png)
+]
+
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# The Golden Age of International Trade
+
+&lt;iframe src="https://ourworldindata.org/grapher/globalization-over-5-centuries-km" loading="lazy" style="width: 100%; height: 500px; border: 0px none;"&gt;&lt;/iframe&gt;
+
+.source[Source: [Our World in Data: Economic Growth](https://ourworldindata.org/economic-growth)]
+
+---
+
+# The Second Industrial Revolution
+
+.pull-left[
+
+- .hi-purple[“Second industrial revolution”] c.1890-1914, especially in United States
+
+- Massive improvements &amp; innovation in transportation &amp; supply chains
+  - railroads, steamships, automobiles, electrification, refrigeration
+
+- Massive increase in international trade until WWI (1914)
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/railroad2.jpg)
+
+![:scale 65%](../images/steamship.jpg)
+
+]
+]
+
+---
+
+# Motivations
+
+.pull-left[
+
+- Unlike Ricardo: it’s not differences in technology/productivity across countries that cause trade
+  - can mimic and transfer!
+
+- It’s the uneven distribution of resources, the .hi-purple[factors of production]: land, labor, capital
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Differences in Factor Endowments
+
+|    |    |    |
+|----|----|----|
+| ![:scale 75%](../images/canadaflagmap.png) | ![:scale 40%](../images/eu1.png) | ![:scale 75%](../images/china1.png) |
+| Relatively .b[land] abundant | Relatively .b[capital] abundant | Relatively .b[labor] abundant |
+| Exports timber, agricultural products | Exports services, sophisticated manuf. | Exports basic manuf. |
+
+
+---
+
+# Hecksher-Ohlin Theory
+
+.pull-left[
+
+- .hi[Hecksher-Ohlin (H-O) Theory]: focus on differences in relative abundance of factors of production across countries
+  - determines different relative prices and hence comparative advantage
+
+- H-O Theory is often expressed as the combination of .hi-turquoise[several “theorems”]...
+
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Hecksher-Ohlin Theorem
+
+.pull-left[
+
+1) .hi[Hecksher-Ohlin (H-O) Theorem]: a nation will export the good whose production requires the intensive use of the nation’s relatively abundant factor, and import the good whose production requires the intensive use of the nation’s relatively scarce factor
+
+]
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# Factor-Price Equalization Theorem
+
+.pull-left[
+
+2) .hi[Factor Price Equalization (FPE) Theorem]: under certain conditions, international trade tends to bring about equalization in relative and absolute returns to homogeneous factors across nations
+
+3) .hi[Stolper-Samuelson Theorem]: in the long run, an increase in the relative price of a good will increase the real earnings of the factor used intensively in that good’s production and decrease the earnings of the other factor
+]
+
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Assumptions of the H-O Model
+
+---
+
+# Assumptions of the H-O Model
+
+.pull-left[
+
+- Imagine 2 countries, .blue[Home] and .red[Foreign]
+
+- Countries have two factors of production:
+   - labor `\((L)\)`
+   - capital `\((K)\)`
+
+- All factors of production are .hi-purple[mobile] (non-specific) .purple[within a country], but *not internationally*
+
+]
+
+.pull-right[
+.center[
+![](../images/factors.jpg)
+]
+]
+
+---
+
+# Setting up an H-O Model Example
+
+.pull-left[
+
+- Each country has two industries, .b[computers (c)] and .b[shoes (s)]
+
+- .b[Shoe] production (s) is .hi-purple[relatively labor-intensive], requiring a *higher* .hi-turquoise[labor to capital ratio] `\(\frac{l}{k}\)`
+
+- .b[Computer] production (c) is .hi-purple[relatively capital-intensive], requiring a *lower* .hi-turquoise[labor to capital ratio] `\(\frac{l}{k}\)`
+
+`$$\frac{l_c}{k_c} &lt; \frac{l_s}{k_s}$$`
+
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/shoes.jpg)
+![:scale 65%](../images/laptop.jpg)
+
+]
+]
+
+---
+
+# Setting up an H-O Model Example
+
+.pull-left[
+
+- .hi-red[Foreign] is .hi-purple[relatively labor-abundant], with a high .hi-turquoise[labor to capital ratio], `\(\frac{L}{K}\)`
+
+- .hi-blue[Home] is .hi-purple[relatively capital-abundant], with a low .hi-turquoise[labor to capital ratio], `\(\frac{L}{K}\)`
+
+`$$\color{blue}{\frac{L}{K}} &lt; \color{red}{\frac{L'}{K'}}$$`
+
+
+]
+
+.pull-right[
+.center[
+![:scale 70%](../images/shoefactory.jpg)
+![:scale 70%](../images/factoryrobots.jpg)
+
+]
+]
+
+---
+
+# A Few Simplifying Assumptions
+
+.pull-left[
+
+- Both factors are required to produce each good
+
+- Final products are traded freely
+
+- Technology is identical across countries
+
+- Consumer preferences are identical across countries and do not vary with income
+]
+
+.pull-right[
+.center[
+![:scale 45%](../images/hecksher.jpg) ![:scale 45%](../images/ohlin.jpg)
+
+.smallest[
+L: Eli Hecksher (1879-1952)
+
+R: Bertil Ohlin (1899-1979)
+]
+
+]
+]
+
+---
+
+# The Two Industries
+
+.pull-left[
+.smallest[
+- .b[Shoe] production (s) is .hi-purple[relatively labor-intensive good], requiring a *higher* labor to capital ratio `\(\frac{l_s}{k_s}\)`
+
+- .b[Computer] production (c) is .hi-purple[relatively capital-intensive good], requiring a *lower* labor to capital ratio `\(\frac{l_c}{k_c}\)`
+
+- Key is .hi-purple[*relative* factor intensity]!
+
+- In absolute terms, computers could need *more* labor to make than shoes, but if computers require more capital *per worker* than shoes, they are *relatively* more capital-intensive (and vice versa)!
+]
+]
+
+.pull-right[
+.center[
+![:scale 65%](../images/shoes.jpg)
+![:scale 65%](../images/laptop.jpg)
+
+]
+]
+
+---
+
+# The Two Countries
+
+.pull-left[
+- .hi-red[Foreign] is .hi-purple[relatively labor-abundant], with a high labor to capital ratio, `\(\frac{L}{K}\)`
+
+- .hi-blue[Home] is .hi-purple[relatively capital-abundant], with a low labor to capital ratio, `\(\frac{L}{K}\)`
+
+- Key is .hi-purple[*relative* factor abundance]!
+
+- In absolute terms, .blue[Home] could have *more* labor than .red[Foreign], but if .red[Foreign] has more labor *per unit of capital* than .blue[Home], .red[Foreign] is *relatively* more labor-abundant (and vice versa)!
+
+]
+.pull-right[
+.center[
+![:scale 70%](../images/shoefactory.jpg)
+![:scale 70%](../images/factoryrobots.jpg)
+
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Relative Factor Uses and Relative Factor Prices
+
+---
+
+# Relative Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- Consider *relative* factor uses and *relative* factor prices
+
+- Note: I'll always do everything in terms of labor (labor-to-capital ratio `\(\frac{l}{k}\)` and labor-to-capital return `\(\frac{w}{r})\)` for consistency
+
+- How much `\(\frac{l}{k}\)` a country uses depends on the relative price of labor `\(\frac{w}{r}\)`
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the `\(\color{green}{\frac{l_s}{k_s}}\)` and `\(\color{orange}{\frac{l_c}{k_c}}\)` relative labor demand curves
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the `\(\color{green}{\frac{l_s}{k_s}}\)` and `\(\color{orange}{\frac{l_c}{k_c}}\)` relative labor demand curves
+
+- A country is endowed with a fixed .hi-red[relative supply of labor] `\(\frac{\bar{L}}{K}\)`
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Relative Factor Uses and Relative Factor Prices
+
+.pull-left[
+
+- A country's *economy-wide* .hi-blue[relative demand for labor] is an average of the `\(\color{green}{\frac{l_s}{k_s}}\)` and `\(\color{orange}{\frac{l_c}{k_c}}\)` relative labor demand curves
+
+- A country is endowed with a fixed .hi-red[relative supply of labor] `\(\frac{\bar{L}}{K}\)`
+
+- Intersection of relative supply and relative demand sets country’s relative wage rate `\(\frac{w}{r}\)`
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# *Different* Relative Factor Endowments in Autarky
+
+.pull-left[
+
+### .blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .red[Foreign]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+- .red[Foreign] relatively more labor-abundant than .blue[Home] `\(\color{blue}{(\frac{\bar{L}}{\bar{K}})^H} &lt; \color{red}{(\frac{\bar{L}}{\bar{K}})^F}\)`
+- Thus, .red[Foreign] has a lower relative price of labor than Home `\(\color{blue}{(\frac{w}{r})^H} &gt; \color{red}{(\frac{w}{r})^F}\)`
+  - Hence, .red[Foreign] has a comparative advantage in making .red[shoes]; .blue[Home] in .blue[computers]
+
+]
+---
+
+class: inverse, center, middle
+
+# Running Our Two Country Example
+
+---
+
+# Our Two Country Trade Example: Autarky
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.smallest[
+- Countries begin in .hi[autarky] optimum with different relative prices
+  - A is optimum for .blue[Home]
+  - A' is optimum for .red[Foreign]
+]
+
+---
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+.smallest[
+- .blue[Home] has comparative advantage in computers
+- .red[Foreign] has comparative advantage in shoes
+]
+
+---
+
+
+
+# Our Two Country Trade Example: Specialization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+- Countries .hi[specialize]: produce *more* of comparative advantaged good, *less* of disadvantaged good
+  - .blue[Home]: A `\(\rightarrow\)` B: produces more computers, fewer shoes 
+  - .red[Foreign]: A' `\(\rightarrow\)` B': produces fewer computers, more shoes
+
+]
+
+---
+
+# Our Two Country Trade Example: Exports
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+
+- .blue[Home] exports computers
+- .red[Foreign] exports shoes
+]
+
+---
+
+# Our Two Country Trade Example: Imports
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+
+- .blue[Home] imports shoes
+- .red[Foreign] imports computers
+
+]
+
+---
+
+# Our Two Country Trade Example: Gains from Trade
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-18-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+
+- Both countries exchange their imports &amp; exports and consume at C and C'
+
+- Both reach a higher indifference curve with trade, well beyond their PPFs!
+
+]
+
+---
+
+class: inverse, center, middle
+
+# Factor Price Equalization
+
+---
+
+# Relative Price Changes in Home
+
+.pull-left[
+
+- Let's look at .blue[Home]
+
+- Increase in the relative price of computers from trade
+  - decrease in relative price of shoes
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-20-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Relative *Factor* Price Changes in Home
+
+.pull-left[
+
+- Fixed .hi-red[relative labor supply] `\(\frac{\bar{L}}{K}\)`
+
+- *Decrease* in .hi-blue[relative labor demand]
+  - More demand for capital (for computers)
+  - Less demand for labor (for shoes)
+
+- *Lowers* relative wages `\(\frac{w}{r}\)`
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-21-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Relative Price Changes in Foreign
+
+.pull-left[
+
+- Let's look at .red[Foreign]
+
+- Increase in the relative price of shoes from trade
+  - decrease in relative price of computers
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-22-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Relative *Factor* Price Changes in Foreign
+
+.pull-left[
+
+- Fixed .hi-red[relative labor supply] `\(\frac{\bar{L}'}{K}'\)`
+
+- *Increase* in .hi-blue[relative labor demand]
+  - More demand for labor (for shoes)
+  - Less demand for capital (for computers)
+
+- *Raises* relative wages `\(\frac{w}{r}\)`
+
+]
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-23-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Factor Price Equalization
+
+.pull-left[
+
+### .hi-blue[Home]
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-24-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+
+### .hi-red[Foreign]
+
+
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-25-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.smallest[
+- .hi-purple[Relative factor prices equalize across both countries] (at w2/r2)
+- .blue[Home]: `\(\downarrow\)` wages `\(w\)`, `\(\uparrow\)` capital returns `\(r\)`
+- .red[Foreign]: `\(\uparrow\)` wages `\(w\)`, `\(\downarrow\)` capital returns `\(r\)`
+]
+
+---
+
+# Factor Price Equalization Theorem
+
+.pull-left[
+- .hi[Factor Price Equalization (FPE) Theorem]: under certain conditions, international trade tends to bring about equalization in relative and absolute returns to homogeneous factors across nations
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Long Run Real Income Changes (Stolper-Samuelson)
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+
+- Real income changes at .blue[Home] in the .hi[long-run], when both `\(L\)` and `\(K\)` are mobile:
+  - implies factor returns `\((w\)` and `\(r)\)` must (each) equalize across industries `\((s\)` and `\(c)\)`
+
+- Increase in the relative price of computers (fall in relative price in shoes) `\(\implies\)` fall in relative price of labor `\(\frac{w}{r}\)` (rise in relative price of capital)
+
+- This implies both industries will use relatively more labor (cheaper) and less capital (more expensive)
+]
+]
+
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-26-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+- Using more labor, less capital, in both industries:
+
+- Change in real wages:
+`$$p_c * MPL_c = w = p_s*MPL_s$$`
+  - `\(\downarrow MPL_c=\frac{w}{p_c}\)` &amp; `\(\downarrow MPL_s=\frac{w}{p_s}\)`
+  - .hi-purple[Real wages fall]
+
+- Change in real income to capital:
+`$$p_c * MPK_c =r=p_s*MPK_s$$`
+  - `\(\uparrow MPK_c=\frac{r}{p_c}\)` &amp; `\(\uparrow MPK_s=\frac{r}{p_s}\)`
+  - .hi-purple[Real return to capital rises]
+]
+]
+
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-27-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Long-Run Real Income Changes: Foreign
+
+.pull-left[
+.smallest[
+
+- Real income changes at .red[Foreign] in the .hi[long-run], when both `\(L\)` and `\(K\)` are mobile:
+  - implies factor returns `\((w\)` and `\(r)\)` must (each) equalize across industries `\((s\)` and `\(c)\)`
+
+- Increase in the relative price of shoes (fall in relative price in computers) `\(\implies\)` rise in relative price of labor `\(\frac{w}{r}\)` (fall in relative price of capital)
+
+- This implies both industries will use relatively less labor (more expensive) and more capital (cheaper)
+]
+]
+
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-28-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Long-Run Real Income Changes: Home
+
+.pull-left[
+.smallest[
+- Using less labor, more capital, in both industries:
+
+- Change in real wages:
+`$$p_c * MPL_c = w = p_s*MPL_s$$`
+  - `\(\uparrow MPL_c=\frac{w}{p_c}\)` &amp; `\(\uparrow MPL_s=\frac{w}{p_s}\)`
+  - .hi-purple[Real wages rise]
+
+- Change in real income to capital:
+`$$p_c * MPK_c =r=p_s*MPK_s$$`
+  - `\(\downarrow MPK_c=\frac{r}{p_c}\)` &amp; `\(\downarrow MPK_s=\frac{r}{p_s}\)`
+  - .hi-purple[Real return to capital falls]
+]
+]
+
+
+.pull-right[
+&lt;img src="1.9-slides_files/figure-html/unnamed-chunk-29-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Stolper-Samuelson Theorem
+
+.pull-left[
+- .hi[Stolper-Samuelson Theorem]: in the long run, an increase in the relative price of a good will increase the real earnings of the factor used intensively in that good’s production and decrease the earnings of the other factor
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
