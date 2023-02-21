@@ -1450,7 +1450,7 @@ home_c+stat_function(fun = home_high_IC, geom = "line", size = 1, color = "darkg
 
 .pull-left[
 .smallest[
-- Using more labor, less capital, in both industries:
+- Using more labor, less capital, (because $\downarrow \frac{w}{r}$) across *both* industries:
 
 - Change in real wages:
 $$p_c * MPL_c = w = p_s*MPL_s$$
@@ -1501,11 +1501,11 @@ foreign_c+
 
 ---
 
-# Long-Run Real Income Changes: Home
+# Long-Run Real Income Changes: Foreign
 
 .pull-left[
 .smallest[
-- Using less labor, more capital, in both industries:
+- Using less labor, more capital (because $\uparrow \frac{w}{r}$) across *both* industries:
 
 - Change in real wages:
 $$p_c * MPL_c = w = p_s*MPL_s$$
