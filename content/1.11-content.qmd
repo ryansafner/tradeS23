@@ -1,5 +1,5 @@
 ---
-title: "1.10 — The Hecksher-Olin Model: Empirics — Class Content"
+title: "1.11 — New Trade Theory I — Class Content"
 execute:
   freeze: auto
 ---
@@ -11,27 +11,29 @@ source(here::here("slides", "slide-links.R"))
 ::: {.callout-note appearance="minimal"}
 # Meeting Date
 
-*Thursday, February 23, 2023*
+*Tuesday, February 28, 2023*
 :::
 
 ::: callout-warning
 # Upcoming Assignment
-[Problem Set 1](/assignment/01-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.
+[Problem Set 1](/assignment/02-problem-set) (1.9-1.12) is due by 11:59 PM Thursday March 9 on Blackboard Assignments.
 :::
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
 
-Today, we cover the empirical findings and tests of the Hecksher-Ohlin model.
+Today, we begin New Trade Theory.
 
 ## <i class="fas fa-book-reader fa-lg"></i> Readings
 
-- Chapter 4.2 in Feenstra & Taylor
+- Chapter 6.4 in Feenstra & Taylor
 
-### Primary Sources Mentioned:
+We will cover 6.1-6.2 next class.
 
-- [<i class="fas fa-file-pdf"></i> Leontief (1953), “Domestic Production and Foreign Trade; The American Capital Position Re-Examined”](/files/readings/Leontief-1953.pdf)
-- [<i class="fas fa-file-pdf"></i> Bowen, Leamer, and Sveikauskas (1987), “Multicountry, Multifactor Tests of Factor Abundance Theory”](/files/readings/Bowen-1987.pdf)
-- [<i class="fas fa-file-pdf"></i> Trefler (1995), “The Case of the Missing Trade and Other Mysteries”](/files/readings/Trefler-1995.pdf)
+I also strongly suggest you consume Paul Krugman’s [2008 Economics Nobel Prize address](https://www.nobelprize.org/prizes/economic-sciences/2008/krugman/lecture/) in some format. There is a video, his slides, and his written lecture posted there. I will be drawing from some of that today.
+
+# Primary Sources Mentioned:
+
+- [<i class="fas fa-file-pdf"></i> Krugman (1980), “Scale Economies, Product Differentiation, and Pattern of Trade”](/files/readings/Krugman-1980.pdf)
 
 ## <i class="fas fa-chalkboard-teacher"></i> Slides
 

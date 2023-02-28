@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>1.11 — New Trade Theory I</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ryan Safner" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide
+
+# 1.11 — New Trade Theory
+
+## ECON 324 • International Trade • Spring 2023
+
+### Ryan Safner&lt;br&gt; Associate Professor of Economics &lt;br&gt; &lt;a href="mailto:safner@hood.edu"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;safner@hood.edu&lt;/a&gt; &lt;br&gt; &lt;a href="https://github.com/ryansafner/tradeS23"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;ryansafner/tradeS23&lt;/a&gt;&lt;br&gt; &lt;a href="https://tradeS23.classes.ryansafner.com"&gt; &lt;i class="fa fa-globe fa-fw"&gt;&lt;/i&gt;tradeS23.classes.ryansafner.com&lt;/a&gt;&lt;br&gt;
+
+---
+
+class: inverse
+
+# Outline
+
+### [Trade Puzzles](#3)
+
+### [The Gravity Model of Trade](#21)
+
+### [New Trade Theory](#27)
+
+### [Internal Economies of Scale](#41)
+
+### [External Economies of Scale](#41)
+
+---
+
+class: inverse, center, middle
+
+# Trade Puzzles
+
+---
+
+# Trade Puzzles
+
+.pull-left[
+.center[
+![:scale 95%](../images/wheat.jpeg)
+]
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/islandcoconut.jpg)
+
+]
+]
+
+.center[
+Ricardian comparative advantage
+]
+
+---
+
+# Trade Puzzles
+
+.pull-left[
+.center[
+![:scale 100%](../images/boeing777.jpg)
+]
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/shoefactory.jpg)
+
+]
+]
+
+.center[
+Hecksher-Ohlin factor endowments
+]
+
+---
+
+# Upending the Classic Paradigm
+
+.pull-left[
+.center[
+![:scale 85%](../images/harleydavidson.jpg)
+
+U.S. exports to Japan
+]
+]
+
+.pull-right[
+.center[
+![:scale 100%](../images/kawasaki.png)
+
+Japan exports to U.S.
+]
+]
+
+.center[
+???
+]
+
+---
+
+# Intra-Industry Trade
+
+.pull-left[
+
+- .hi[Intra-industry trade]: share of international trade (exports + imports) that takes place *within* the same industry (across countries) rather than *across* industries
+
+]
+
+.pull-right[
+.center[
+
+![:scale 70%](../images/harleydavidson.jpg)
+
+
+![:scale 70%](../images/kawasaki.png)
+
+]
+]
+
+---
+
+# Intra-Industry Trade
+
+.pull-left[
+
+- .hi[Intra-industry trade]: share of international trade (exports + imports) that takes place *within* the same industry (across countries) rather than *across* industries
+
+- Measured by the .hi-purple[Grubel-Lloyd Index (GLI)]:
+
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+where `\(X\)` is exports, `\(M\)` is imports, for industry `\(i\)`
+]
+
+.pull-right[
+.center[
+
+![:scale 70%](../images/harleydavidson.jpg)
+
+
+![:scale 70%](../images/kawasaki.png)
+
+]
+]
+
+---
+
+# Grubel-Lloyd Index
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+.content-box-green[
+.hi-green[Example:] suppose a country exports good `\(i\)` but does not import good `\(i\)`:
+
+`$$GLI = 1 - 1 = 0$$`
+
+- No intra-industry trade; only inter-industry trade
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+---
+
+# Grubel-Lloyd Index
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+.content-box-green[
+.hi-green[Example:] same for a good a country imports but does not export:
+
+`$$GLI = 1 - 1 = 0$$`
+
+- No intra-industry trade; only inter-industry trade
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Grubel-Lloyd Index
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+.content-box-green[
+.hi-green[Example:] what if a country’s exports of `\(i \approx\)` its imports of `\(i\)`?
+
+`$$GLI = 1 - \frac{0}{X_i+M_i} = 1$$`
+
+- Only intra-industry trade, no inter-industry trade
+
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Grubel-Lloyd Index
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+- .hi-purple[GLI mesaures how closely exports &amp; imports are *matched* within an industry]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+# Grubel-Lloyd Index: Example I
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+.content-box-green[
+.hi-green[Example:] In 2010, the U.S. exported $170 million and imported $1.9 billion worth of raw sugar cane.
+
+`$$GLI = 1 - \frac{\vert 0.170-1.900\vert}{0.170+1.900} = 0.164$$`
+
+- Little intra-industry trade
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# Grubel-Lloyd Index: Example II
+
+.pull-left[
+`$$GLI = 1 - \frac{\vert X_i - M_i \vert}{X_i + M_i}$$`
+
+.content-box-green[
+.hi-green[Example:] In 2010, the U.S. exported $1 billion and imported $1.2 billion worth of aircraft.
+
+`$$GLI = 1 - \frac{\vert 1.000-1.200\vert}{1.000+1.200} = 0.909$$`
+
+- Mostly intra-industry trade
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+# The Dilemma of Similar Trade
+
+.center[
+![:scale 70%](../images/brulhart.png)
+]
+
+.source[Brulhart, Marius, 2009, “An Account of Global Intra-industry Trade, 1962-2006,” *The World Economy* 32(2):401-459]
+
+---
+
+# The Dilemma of Similar Trade
+
+.center[
+![](../images/intraindustrytrade.png)
+]
+
+.source[Krugman, Paul, Maurice Obstfeld, and Mark Melitz, 2011, *International Economics: Theory &amp; Policy*, 9th ed., p.169]
+
+
+---
+
+# The Dilemma of Similar Trade
+
+.center[
+![:scale 70%](../images/iit.png)
+]
+
+.source[Krugman, Paul, Maurice Obstfeld, and Mark Melitz, 2011, *International Economics: Theory &amp; Policy*, 9th ed., p.169]
+
+---
+
+# The Dilemma of Similar Trade
+
+.center[
+![:scale 25%](../images/intraindustrytrade2.png)
+]
+
+.smallest[Total share of IIT by country (out of 100%): sum over all industries, weighing each industry by its share of total trade]
+
+.source[Krugman, Paul, 2008, “The Increasing Returns Revolution in Trade and Geography,” *Nobel Prize Lecture*]
+
+---
+
+# The Dilemma of Similar Trade
+
+.pull-left[
+.center[
+![](../images/britishXM1910.png)
+]
+]
+
+--
+
+.pull-right[
+.center[
+![](../images/britishXM1990.png)
+]
+
+]
+
+.source[Krugman, Paul, 2008, “The Increasing Returns Revolution in Trade and Geography,” *Nobel Prize Lecture*, p. 336-7]
+
+---
+
+# The Dilemma of Similar Trade
+
+
+.center[
+![](../images/britishXM.png)
+]
+
+.source[Krugman, Paul, 2008, “The Increasing Returns Revolution in Trade and Geography,” *Nobel Prize Lecture*, p.337]
+
+---
+
+# What We *Export*
+
+.center[
+![](../images/usexports.png)
+]
+.source[U.S. Exports: [MIT Observatory of Economic Complexity](http://atlas.media.mit.edu/en/profile/country/usa/)]
+
+---
+
+# What We *Import*
+
+.center[
+![](../images/usimports.png)
+]
+.source[U.S. Imports: [MIT Observatory of Economic Complexity](http://atlas.media.mit.edu/en/profile/country/usa/)]
+
+---
+
+# Who We Trade With (Exports) Has Changed
+
+&lt;iframe src="https://ourworldindata.org/grapher/merchandise-exports-by-continent?stackMode=relative&amp;country=~USA" loading="lazy" style="width: 100%; height: 500px; border: 0px none;"&gt;&lt;/iframe&gt;
+
+---
+
+class: inverse, center, middle
+
+# The Gravity Model of Trade
+
+---
+
+# The Gravity Model of Trade
+
+.pull-left[
+
+- One way to estimate the volume of trade flows is with a .hi[gravity model of trade]
+
+- Almost identically analogous to Newton’s model of gravitational attraction 
+
+`$$F_{1,2}=G\frac{m_1m_2}{r^2}$$`
+
+]
+
+.pull-right[
+.center[
+![](../images/newtonapple.jpg)
+]
+]
+
+---
+
+# The Gravity Model of Trade
+
+.pull-left[
+
+`$$Trade_{i,j}=A\frac{M_iM_j}{(D_{i,j})^n}$$`
+.smallest[
+
+- Volume of trade estimated between country `\(i\)` and country `\(j\)`
+- `\(A\)`: a universal constant
+
+- `\(M\)`: size of a country's economy (often GDP)
+
+- `\(D\)`: distance between country `\(i\)` and country `\(j\)`
+  - Power of distance: distance becomes a hinderance to trade at an increasing rate
+  - "Distance" need not be just length (e.g. miles, km), but relative to alternatives 
+]
+
+]
+
+.pull-right[
+.center[
+![](../images/newtonapple.jpg)
+]
+]
+
+---
+
+# Gravity
+
+.center[
+![:scale 60%](../images/tradegravity1.png)
+]
+
+.source[Krugman, Paul, Maurice Obstfeld, and Mark Melitz, 2011, *International Economics: Theory &amp; Policy*, 9th ed., p.12]
+
+
+---
+
+# Gravity
+
+.center[
+![:scale 60%](../images/tradegravity2.png)
+]
+
+.source[Krugman, Paul, Maurice Obstfeld, and Mark Melitz, 2011, *International Economics: Theory &amp; Policy*, 9th ed., p.14]
+
+---
+
+# Gravity: Distance Matters
+
+.pull-left[
+
+- Consider trade between **Australia &amp; New Zealand** and between **Austria &amp; Portugal**
+
+- Both pairs have roughly same distance apart and roughly same GDPs
+
+- Trade between Australia and New Zealand is **9x higher** than trade between Austria &amp; Portugal!
+
+- Fewer alternatives in isolated Pacific Ocean relative to European countries with many trading partners
+
+]
+
+
+.pull-right[
+.center[
+![:scale 70%](../images/australianz.jpg)
+
+![:scale 70%](../images/europe1.jpg)
+]
+]
+
+---
+
+# Gravity: Size &amp; Distance Matters!
+
+.center[
+![:scale 80%](../images/freenstragravity1.png)
+]
+
+.source[Feenstra and Taylor (2017)]
+
+---
+
+# Gravity: Size &amp; Distance Matters!
+
+.center[
+![:scale 80%](../images/feenstragravity2.png)
+]
+
+.source[Feenstra and Taylor (2017)]
+
+---
+
+# Gravity: Apparently Distance Matters *More Now!*
+
+`$$Trade_{i,j}=A\frac{M_iM_j}{(D_{i,j})^2}$$`
+
+.center[
+![:scale 40%](../images/tradedistance.png)
+
+.smallest[
+Trade is becoming more sensitive to distance over time!
+]]
+
+.source[Krugman, Paul, 2008, “The Increasing Returns Revolution in Trade and Geography,” *Nobel Prize Lecture*]
+
+---
+
+# Gravity Always Wins
+
+.center[
+![](../images/gravitytrade.png)
+]
+- **"The gravity equation is one of the best fitting and most established empirical relationships in all of Trade."** 
+
+.source[Lai, Huiwen and Daniel Treffler, 2002, “The Gains from Trade with Monopolistic Competition: Specification, Estimation, and Mis-Specification”, *NBER Working Paper* 9169]
+
+---
+
+# Gravity
+
+.pull-left[
+- Implications of Gravity Models:
+
+.hi-purple[1) Larger countries trade more with larger countries]
+
+.hi-purple[2) Closer countries trade more than distant countries]
+
+]
+
+.pull-right[
+.center[
+![](../images/newtonapple.jpg)
+]
+]
+
+---
+
+# Gravity vs. H-O Theory
+
+.pull-left[
+.smallest[
+- .hi-purple[Is gravity consistent with H-O theory?]
+  - If trade drops off with distance, would require very strongly differentiated products to get trade off the ground
+
+- It used to be that most international trade was between countries very far apart for different things
+    - e.g. Britain imported wheat from Argentina, mutton from New Zealand
+
+- Now it seems to be that trade is dominated by very close countries trading very similar goods!
+    - Britain now both exports and imports airplanes to/from France and Germany
+]
+]
+
+.pull-right[
+.center[
+![](../images/tradeportship.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# New Trade Theory
+
+---
+
+# A New Paradigm in International Trade
+
+.pull-left[
+.smallest[
+- In a **Neoclassical** world, only differences in **relative autarky prices** cause international trade via specialization by **comparative advantage**
+  - **Ricardian** differences in labor productivity
+  - **Hecksher-Ohlin** differences in factor endowments
+
+- Suggests that:
+  - "**Different**" countries should trade **more**
+  - "**Different**" countries should specialize in "**different**" goods
+  - Countries gain more from trading with **more-distant** countries 
+]
+]
+
+.pull-right[
+.center[
+![:scale 70%](../images/boeing777.jpg)
+
+![:scale 70%](../images/shoefactory.jpg)
+
+]
+]
+
+---
+
+# A New Paradigm in International Trade
+
+.pull-left[
+- The **real world** (particularly last 50 years) shows:
+
+- The bulk of international trade is between **similar** countries
+
+- These countries tend to trade **similar** goods
+
+- Countries are *more likely than ever before* to trade more with **less-distant** countries 
+]
+
+.pull-right[
+.center[
+
+![:scale 70%](../images/harleydavidson.jpg)
+
+
+![:scale 70%](../images/kawasaki.png)
+
+]
+]
+
+---
+
+# New Trade Theory
+
+.pull-left[
+.smallest[
+- Explanations for similar trade and a "new paradigm" of trade are collectively called .hi[New Trade Theory (NTT)]
+
+- Primarily rests upon the idea of .hi-purple[increasing returns to scale (IRS)] or .hi-purple[economies of scale (EOS)] as an alternative rationale for international trade
+  - Countries can specialize in something, even if they have no *ex ante* comparative advantage
+  - Large output creates a comparative advantage *ex post* due to lower costs than other countries 
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/factoryrobots.jpg)
+]
+]
+
+---
+
+# New Trade Theory
+
+.pull-left[
+
+- .hi-purple[Division of labor] strikes back! 
+
+- Importance is still .hi-purple[specialization], just not labor productivity, factor content, etc.
+]
+
+
+.pull-right[
+.center[
+![](../images/factoryrobots.jpg)
+]
+]
+
+---
+
+# Economies of Scale
+
+.pull-left[
+.smaller[
+- Economies of scale come in two flavors:
+
+- .hi-purple[*Internal* economies]: firm-level features that improve a **firm's** productivity, often leading to market power for that firm 
+  - e.g. firm produces more and lowers its average costs
+
+- .hi-purple[*External* economies]: industry-wide features that spill over to the productivity **all** firms in the industry
+  - e.g. more firms producing more lowers **all firms'** average costs
+
+]
+]
+
+.pull-right[
+.center[
+![](../images/factoryrobots.jpg)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# Internal Economies of Scale
+
+---
+
+# Internal Economies of Scale I
+
+.pull-left[
+.smaller[
+- Recall: .hi-purple[economies of scale]: as `\(\uparrow q\)`, `\(\downarrow AC(q)\)`
+
+- .hi-purple[Minimum Efficient Scale (MES)]: `\(q\)` with the lowest `\(AC(q)\)`
+]
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-1-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Internal Economies of Scale I
+
+.pull-left[
+.smaller[
+- Recall: .hi-purple[economies of scale]: as `\(\uparrow q\)`, `\(\downarrow AC(q)\)`
+
+- .hi-purple[Minimum Efficient Scale (MES)]: `\(q\)` with the lowest `\(AC(q)\)`
+
+- If MES is small relative to market demand...
+  - .orange[AC] hits .blue[Market demand] during **diseconomies of scale**...
+]
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-2-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Internal Economies of Scale
+
+.pull-left[
+
+- .hi[Minimum Efficient Scale]: `\(q\)` with the lowest `\(AC(q)\)`
+
+- .hi-green[Economies of Scale]: `\(\uparrow q\)`, `\(\downarrow AC(q)\)`
+
+- .hi-red[Diseconomies of Scale]: `\(\uparrow q\)`, `\(\uparrow AC(q)\)`
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-3-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+# Internal Economies of Scale I
+
+.pull-left[
+.smaller[
+- If MES is small relative to market demand...
+  - .orange[AC] hits .blue[Market demand] during **diseconomies of scale**...
+  - .hi-purple[...can fit more identical firms into the industry!]
+]
+
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-4-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Internal Economies of Scale I
+
+.pull-left[
+
+- If MES is *large* relative to market demand...
+  - .red[AC] hits .blue[Market demand] during **_economies_ of scale**...
+  - .hi-purple[likely to be a single firm in the industry!]
+
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+# Internal Economies of Scale I
+
+.pull-left[
+
+- If MES is *large* relative to market demand...
+  - .red[AC] hits .blue[Market demand] during **_economies_ of scale**...
+  - .hi-purple[likely to be a single firm in the industry!]
+
+- A .hi[natural monopoly] that can produce higher `\(q^*\)` and lower `\(p^*\)` than a competitive industry!
+
+]
+
+.pull-right[
+
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Internal Economies of Scale II
+
+.pull-left[
+.content-box-green[
+.green[**Example**]: Imagine a single isolated condo complex with 1,000 units far from any other buildings or telco infrastructure
+
+- **Fixed costs**: laying cable to the complex is $100,000
+- **Marginal costs**: connecting each unit: $0
+]
+]
+
+.pull-right[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/5mb85n9omfnmba4/beachcondo1.jpeg?raw=1)
+]
+]
+
+---
+
+# Internal Economies of Scale II
+
+.pull-left[
+- Suppose .hi-purple[10 providers] split the complex, each laying down their own cables, and each serving 100 units:
+
+$$\mathbf{\text{Average cost}}=\frac{\$100,000}{100}=\$1,000 \text{/subscriber}$$
+
+]
+.pull-right[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/5mb85n9omfnmba4/beachcondo1.jpeg?raw=1)
+]
+]
+
+---
+
+# Internal Economies of Scale II
+
+.pull-left[
+
+- Suppose .hi-purple[1 provider] serves the complex serving all 1,000 units:
+
+$$\mathbf{\text{Average cost}}=\frac{\$100,000}{1000}=\$100 \text{/subscriber}$$
+
+]
+.pull-right[
+
+.center[
+![:scale 80%](https://www.dropbox.com/s/5mb85n9omfnmba4/beachcondo1.jpeg?raw=1)
+]
+]
+
+---
+
+class: inverse, center, middle
+
+# External Economies of Scale
+
+---
+
+# Entry/Exit Effects on Market Price
+
+.pull-left[
+.smallest[
+- When **all firms produce more/less**; or **firms enter or exit** an industry, this .hi-purple[affects the equilibrium market price]
+
+- Think about basic supply &amp; demand graphs:
+  - .hi-purple[Entry]: `\(\color{red}{\uparrow}\)` .red[industry supply] `\(\implies\)` `\(\uparrow q, \downarrow p\)`
+  - .hi-purple[Exit]: `\(\color{red}{\downarrow}\)` .red[industry supply] `\(\implies\)` `\(\downarrow q, \uparrow p\)`
+
+- If the size of the entire industry affects all individual firm’s costs, then there are .hi[*external* economies] effects
+  - Cost externalities that spill over across all firms in an industry
+
+]
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+# External Economies I
+
+.pull-left[
+.smallest[
+- .shout[Decreasing cost industry] has *external economies*, costs fall for all firms in the industry as industry output increases (firms enter &amp; incumbents produce more)
+
+- A *downward sloping long-run industry supply curve*!
+
+- Determinants:
+  - High fixed costs, low marginal costs
+  - Economies of scale
+
+- Examples: geographic clusters, public utilities, infrastructure, entertainment
+
+- **Tends towards "natural" monopoly**
+
+]
+]
+
+.pull-right[
+.center[
+![:scale 50%](https://www.dropbox.com/s/pfxi4ay8q47m9v1/hollywood.png?raw=1)
+
+![:scale 50%](https://www.dropbox.com/s/9cgi6o9d5fzyntx/roads.png?raw=1)
+
+]
+]
+
+---
+
+# Decreasing Cost Industry (External Economies) II
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-8-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-9-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- Industry equilibrium: firms earning normal `\(\pi=0, p=MC(q)=AC(q)\)`
+
+
+---
+
+# Decreasing Cost Industry (External Economies) III
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-10-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-11-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- Industry equilibrium: firms earning normal `\(\pi=0, p=MC(q)=AC(q)\)`
+
+- Exogenous increase in market demand
+
+---
+
+# Decreasing Cost Industry (External Economies) IV
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-12-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-13-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- **Short run `\((A \rightarrow B)\)`**: industry reaches new equilibrium
+
+- Firms charge higher `\(p^*\)`, produce more `\(q^*\)`, earn `\(\pi\)`
+
+---
+
+# Decreasing Cost Industry (External Economies) V
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-14-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-15-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- **Long run**: profit attracts entry `\(\implies\)` industry supply will increase
+
+- **But more production lowers costs `\((MC, AC)\)` for all firms in industry**
+
+---
+
+# Decreasing Cost Industry (External Economies) VI
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-16-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-17-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- **Long run `\((B \rightarrow C)\)`**: firms enter until `\(\pi=0\)` at `\(p=AC(q)\)`
+
+- Firms charge higher `\(p^*\)`, producer lower `\(q^*\)`, earn `\(\pi=0\)`
+
+---
+
+# Decreasing Cost Industry (External Economies) VII
+
+.pull-left[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-18-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="1.11-slides_files/figure-html/unnamed-chunk-19-1.png" width="504" style="display: block; margin: auto;" /&gt;
+]
+
+- .red[Long run industry supply curve] is downward sloping!
+
+---
+
+# Internal vs. External Economies of Scale
+
+.left-column[
+.center[
+![:scale 80%](../images/marshall.png)
+.smallest[
+Alfred Marshall
+
+1842-1924
+]]
+]
+
+.right-column[
+.smallest[
+
+- Internal economies of scale:
+
+&gt; “...are dependent on the resources of individual houses of business engaged in [the industry], on their organization and the efficiency of their management,” (p.220).
+
+- External economies of scale:
+
+&gt; “...are dependent on the general development of the industry [some of which] depend on the aggregate volume of production of the kind in the neighborhood while others again, especially those connected with the growth of knowledge and the progress of the arts, depend chiefly on the aggregate volume of production in the whole civilized world,” (p.220).
+
+]
+.source[Marshall, Alfred, 1890, *Principles of Economics*]
+
+]
+
+---
+
+# Internal vs. External Economies of Scale
+
+.left-column[
+.center[
+![:scale 80%](../images/marshall.png)
+.smallest[
+Alfred Marshall
+
+1842-1924
+]]
+]
+
+.right-column[
+
+- What are some common sources of *external* economies?
+  - knowledge spillovers between firms
+  - subsidiary supplier industries
+  - local pools of skilled labor
+
+&gt; “The most important of these result from the growth of correlated branches of industry which mutually assist one another, perhaps being concentrated in the same localities, but anyhow availing themselves of the modern facilities for communication offered by steam transport, by the telegraph and by the printing press,” (p.264).
+
+.source[Marshall, Alfred, 1890, *Principles of Economics*]
+
+]
+
+---
+
+# External Economies: Geographic Clustering
+
+.pull-left[
+![:scale 80%](../images/daltonga.png)
+]
+.pull-right[
+![:scale 80%](../images/daltoncarpet.jpg)
+]
+
+.smaller[
+150 Firms in Dalton, Georgia (pop. 33,000) supply over 70% of entire world’s carpet. Carpet has been made there since 1895.
+]
+
+---
+
+# External Economies: Geographic Clustering
+
+.center[
+![:scale 40%](../images/hangjitoothbrush.jpg)
+]
+
+.smaller[
+990 firms in Hangji China (pop. 36,000) produce 3 billion toothbrushes a year, 80% of Chinese toothbrush production. Toothbrushes have been made there since 1827.
+]
+
+---
+
+# External Economies: Geographic Clustering
+
+.pull-left[
+.center[
+![](../images/hollywood.png)
+]
+]
+
+--
+
+.pull-right[
+.center[
+![:scale 100%](../images/siliconvalley.jpg)
+]
+]
+
+---
+
+# External Economies
+
+.left-column[
+.center[
+![:scale 80%](../images/marshall.png)
+.smallest[
+Alfred Marshall
+
+1842-1924
+]]
+]
+
+.right-column[
+
+&gt; “[G]reat are the advantages which people following the same trade get from near neighborhood...The mysteries of the trade become no mysteries; but are as it were in the air, and children learn many of them unconsciously. Good work is rightly appreciated, inventions and improvement in machinery, in process and the general organization of the business have their merits promptly discussed: if one man starts a new idea, it is taken up by others and combined with suggestions of their own; and thus it becomes the source of further new ideas.”
+
+.source[Marshall, Alfred, 1890, *Principles of Economics*, Ch. 10]
+]
+
+---
+
+# External Economies: Examples 
+
+.smallest[
+&gt; “[In Silicon Valley] engineers left established semiconductor companies to start firms that manufactured capital goods such as diffusion ovens, step-and-repeat cameras, and testers, and materials and components such as photomasks, testing jigs, and specialized chemicals. . . . This independent equipment sector promoted the continuing formation of semiconductor firms by freeing individual producers from the expense of developing capital equipment internally and by spreading the costs of development. It also reinforced the tendency toward industrial localization, as most of these specialized inputs were not available elsewhere in the country.”
+]
+
+--
+
+.smallest[
+&gt; “it wasn’t that big a catastrophe to quit your job on Friday and have another job on Monday. . . . You didn’t even necessarily have to tell your wife. You just drove off in another direction on Monday morning”
+
+]
+
+.source[Saxenian, Annalee, 1994, *Regional Advantage*. Cambridge: Harvard University Press, p.40 ]
+
+---
+
+# Division of Labor Strikes Back!
+
+.center[
+![:scale 100%](../images/pinfactory.png)
+
+Adam Smith's pin factory illustration
+]
+
+---
+
+# Division of Labor Strikes Back!
+
+.left-column[
+.center[
+![:scale 80%](../images/smith.png)
+
+Adam Smith
+
+1723-1790
+]
+]
+
+.right-column[
+
+&gt; "As it is the power of exchanging that gives occasion to the division of labour, so .hi[the extent of this division must always be limited by...the extent of the market.] When the market is very small, no person can have any encouragement to dedicate himself entirely to one employment, for want of the power to exchange all that surplus part of the produce of his own labour, which is over and above his own consumption, for such parts of the produce of other men's labour as he has occasion for," (Book I, Chapter 3).
+]
+
+.source[Smith, Adam, 1776, [*An Enquiry into the Nature and Causes of the Wealth of Nations*](https://www.econlib.org/library/Smith/smWN.html)]
+
+---
+
+# From Perfect Competition to Monopolistic Competition
+
+.pull-left[
+
+- Economies of scale are *inconsistent* with perfect competition!
+
+- Requires us to drop an assumption of perfectly competitive markets
+
+- Instead, new trade theory begins with a foundation of .hi-purple[monopolistic competition]
+
+- We will begin next class with a review of this
+]
+
+.pull-right[
+.center[
+![](../images/monopolyman.jpg)
+]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

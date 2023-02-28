@@ -58,6 +58,8 @@ website:
               href: content/1.9-content.qmd
             - text: "1.10 — The Hecksher-Ohlin Model: Empirics"
               href: content/1.10-content.qmd
+            - text: "1.11 — New Trade Theory I"
+              href: content/1.11-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
