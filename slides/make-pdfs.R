@@ -2,13 +2,13 @@
 rmarkdown::render("slides/1.1-slides.Rmd")
 
 # make-pdfs
-pagedown::chrome_print(input = "https://tradeS23.classes.ryansafner.com/slides/1.10-slides.html",
-                       output = "slides/1.10-slides.pdf",
+pagedown::chrome_print(input = "https://tradeS23.classes.ryansafner.com/slides/1.12-slides.html",
+                       output = "slides/1.12-slides.pdf",
                        timeout = 300)
 
 # create png of first slide
-pagedown::chrome_print(input = "https://tradeS23.classes.ryansafner.com/slides/1.10-slides.html",
-                       output = "slides/1.10-slides.png",
+pagedown::chrome_print(input = "https://tradeS23.classes.ryansafner.com/slides/1.12-slides.html",
+                       output = "slides/1.12-slides.png",
                        selector = "div.remark-slide",
                        format = "png",
                        timeout = 300)

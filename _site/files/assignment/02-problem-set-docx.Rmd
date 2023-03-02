@@ -1,0 +1,69 @@
+---
+title: "Problem Set 2"
+author: "ECON 324 — Spring 2023"
+date: "Due by 11:59 PM Tuesday March 7, 2023"
+output: word_document
+
+mainfont: "Fira Sans Condensed"
+monofont: "Fira Code"
+mathfont: "Fira Sans"
+fontsize: 11pt
+---
+
+# Concepts and Critical Thinking
+
+1. What are the sources of comparative advantage according to Hecksher-Ohlin theory, and what types of goods would we expect various countries to import and export?
+
+\vspace{3in}
+
+2. According to Hecksher-Ohlin theory, what would we expect to happen to factor prices across countries that freely trade?
+
+\clearpage
+
+3. Explain the Leontief paradox.
+
+\vspace{3in}
+
+4. How do specific factors and non-specific factors benefit or lose when trade increases? How do exports affect specific and non-specific factors' incomes? How do imports affect specific and non-specific factors' incomes?
+
+\clearpage
+
+5. In perfect competition, firms set price equal to marginal cost. Why can't firms do this when there are internal economies of scale?
+
+\vspace{3in}
+
+6. Respond to the following claim: “The world's poorest countries cannot find anything to export. There is no resource that is abundant--certainly not capital or land, and in small poor nations not even labor is abundant.”
+
+\clearpage
+
+7. Suppose a country can produce two goods, cloth (X) and food (Y). Explain what happens to the marginal rate of transformation & the PPF, and why, when all countries face (according to different models):
+
+- Constant costs
+- Increasing costs
+- Decreasing costs
+
+Drawing each example may help.
+
+\clearpage
+
+8. For each of the following parts, explain whether it is a case of *external* or *internal* economies of scale, and why.
+
+a. Most musical wind instruments in the United States are produced by more than a dozen factories in Elkhart, Indiana.
+b. All Hondas sold in the United States are either imported or produced in Marysville, Ohio.
+c. All airframes for Airbus, Europe’s only producer of large aircraft, are assembled in a factory in Toulouse, France.
+d. Hartford, Connecticut, is the insurance capital of the northeastern United States.
+
+# Problems
+
+## Question 9
+
+Suppose in 2016, the United States imports $400 million in aircraft parts, and exports $500 million in aircraft parts. Calculate the Grubel-Lloyd Index and interpret what your results mean. 
+
+\clearpage
+
+
+## Question 10
+
+Norway and Sweden have the same preferences, but have very different production opportunities. Norway has a long coast that borders on the north Atlantic, making it relatively more productive in fishing. Sweden has a relatively greater endowment of capital, making it relatively more productive in Volvos (automobiles). 
+
+Graphically illustrate the gains from trade between the two countries using the H-O model, placing fish on the horizontal axis and Volvos on the vertical axis. Be sure to label the equilibria in autarky, specialization, equilibria after trade, the relative price lines, and imports and exports for each country. 
