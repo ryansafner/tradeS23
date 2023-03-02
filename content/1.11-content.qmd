@@ -16,7 +16,7 @@ source(here::here("slides", "slide-links.R"))
 
 ::: callout-warning
 # Upcoming Assignment
-[Problem Set 1](/assignment/02-problem-set) (1.9-1.12) is due by 11:59 PM Thursday March 9 on Blackboard Assignments.
+[Problem Set 2](/assignment/02-problem-set) (1.9-1.12) is due by 11:59 PM Thursday March 9 on Blackboard Assignments.
 :::
 
 ## <i class="fas fa-info-circle fa-lg"></i> Overview
@@ -49,11 +49,11 @@ I suggest printing the slides beforehand and using them to take additional notes
 #| echo: false
 #| output: asis
 
-slide_links("1.10-slides")
+slide_links("1.11-slides")
 ```
 
 ## <i class="fas fa-laptop-code"></i> Assignments
 
-### Problem Set 1 Due Thursday February 23
+### Problem Set 2 Due Thursday February 23
 
-[Problem Set 1](/assignment/01-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.
+[Problem Set 2](/assignment/02-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.

@@ -1,0 +1,59 @@
+---
+title: "1.12 — New Trade Theory II — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, March 2, 2023*
+:::
+
+::: callout-warning
+# Upcoming Assignment
+[Problem Set 2](/assignment/02-problem-set) (1.9-1.12) is due by 11:59 PM Thursday March 9 on Blackboard Assignments.
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we begin New Trade Theory.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- Chapter 6.4 in Feenstra & Taylor
+
+We will cover 6.1-6.2 next class.
+
+I also strongly suggest you consume Paul Krugman’s [2008 Economics Nobel Prize address](https://www.nobelprize.org/prizes/economic-sciences/2008/krugman/lecture/) in some format. There is a video, his slides, and his written lecture posted there. I will be drawing from some of that today.
+
+# Primary Sources Mentioned:
+
+- [<i class="fas fa-file-pdf"></i> Krugman (1980), “Scale Economies, Product Differentiation, and Pattern of Trade”](/files/readings/Krugman-1980.pdf)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("1.12-slides")
+```
+
+## <i class="fas fa-laptop-code"></i> Assignments
+
+### Problem Set 2 Due Thursday February 23
+
+[Problem Set 2](/assignment/02-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.
