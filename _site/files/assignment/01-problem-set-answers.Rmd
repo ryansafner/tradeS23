@@ -1,0 +1,435 @@
+---
+title: "Problem Set 1"
+author: "Solutions"
+date: "ECON 324 — Spring 2023"
+output:
+  pdf_document:
+    dev: cairo_pdf
+    latex_engine: xelatex
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{multirow, multicol, booktabs}
+
+mainfont: "Fira Sans Condensed"
+monofont: "Fira Code"
+mathfont: "Fira Sans"
+fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F)
+library(tidyverse)
+library(patchwork)
+library(ggrepel)
+```
+
+Note: Answers may be longer than I would deem sufficient on an exam. Some might vary slightly based on points of interest, examples, or personal experience. These suggested answers are designed to give you both the answer and a short explanation of *why* it is the answer. Some questions, particularly the deeper ones, may rarely have several “good” answers, as they can be legitimately tough or complex questions.
+
+# Concepts and Critical Thinking
+
+1. Adam Smith notes that the “division of labor is limited by the extent of the market.” What does this mean, and what is its significance? As a way of answering this question, compare the economics of a small isolated island of a few hundred people with the economics of a large scale society of millions.
+
+---
+
+This means that people will only divide their labor and specialize to in proportion with the size of the market (amount of potential trading opportunities). Very small societies with limited exchange opportunities do not make it very profitable for much specialization or division of labor -- everyone must dedicate themselves to satisfying their most basic needs (e.g. growing food, building shelter, and generally just subsisting). On the other hand, very large societies with lots of trading opportunities justify the cost of expanding the division of labor and specialization to such an extent that a single factory run by very specialized workers can supply a product for millions of people, and individuals can specialize in such a narrow field because all of the “basic” necessities of life have been taken care of that we can focus on other desires.
+
+\clearpage
+
+2. Adam Smith also uses the example of the philosopher and the porter to talk about the division of labor – arguing that the wide diversity of talents and specialized jobs is not the cause of the division of labor, but one of its effects. Why is this so? Hint: Your answer to the previous question should help explain this.
+
+---
+
+It is not that we decide to specialize labor *because* different people are good at different things (whether naturally or otherwise), but people specialize and *grow* their talents in different directions *because* we have such a large division of labor. Imagine the tiny island from the last question — everyone would have to dedicate their lives to self-sufficiency and producing enough food and shelter just to get by. Such a small island would not have many chemical engineers, violinists, or antitrust lawyers. On the other hand, in a very large market-based society, there are ample opportunities for people (who start more or less the same) to choose different careers and trajectories that allow them to start accumulating skills in one particular field such that they may start from the same place, but end up in very different professions and with very different (and non-transferable) skills and life experiences — stock brokers, software developers, and veterinarians, etc.
+
+\clearpage
+
+# Problems
+
+3. Suppose Vietnam *only* exports clothing, and *only* imports rice. Analyze the impact on Vietnam's terms of trade from the following events.
+
+a. Tensions in the region disrupts trade routes delivering rice from abroad.
+
+---
+
+Recall for all of these problems that Vietnam’s terms of trade are defined as the relative price of its exports, i.e.:
+
+$$TOT = \frac{p_{exports}}{p_{imports}}$$
+
+This is measuring how many imports Vietnam gains for every export it ships out.
+
+The disruption in supply will likely raise the price of Vietnam's imports, and thus *lowering* its terms of trade.
+
+---
+
+b. Malaysia stimulates its own clothing-export industry.
+
+---
+
+This will boost the supply of exports, lowering the price of exports, and thus *lowering* its terms of trade.
+
+---
+
+c. There is a massive rice harvest in China.
+
+---
+
+This will increase the supply of imports, lowering their price, and thus *raising* Vietnam’s terms of trade.
+
+---
+
+d. Vietnam raises tariffs on rice imports.
+
+---
+
+This will increase the price of imports, and thus *lower* Vietnam’s terms of trade.
+
+---
+
+e. Vietnam lowers tariffs on rice imports.
+
+---
+
+This will lower the price of imports, and thus *raise* Vietnam’s terms of trade.
+
+---
+
+f. India raises tariffs on imported clothing.
+ 
+---
+
+Assuming India is importing from Vietnam, this will increase the price of Vietnam’s exports, and thus *raise* Vietnam’s terms of trade.
+
+\clearpage
+
+4. Suppose there are two countries, Ruritania and Lideria. Were they to trade, Ruritania has a comparative advantage in raising goats, Lideria has a comparative advantage in mining copper. Following the Ricardian model, explain which country would face a higher autarky relative price of goats, and what happens to the relative price of goats in each country as they open to trade? It may help to sketch a graph, with goats on the horizontal axis, but is not necessary.
+
+---
+
+The country with a comparative advantage in a good will have a lower relative price in autarky. This is easiest to see if that good is on the $x$-axis: a comparative advantage in $x$ means a very small (flat) slope of the country's PPF. Recall slope is the relative price of $x$, $\frac{p_x}{p_y}$. The country *without* the comparative advantage in $x$ will face a steeper slope, and higher relative price of $x$ (but inversely, a lower relative price of $y$, $\frac{p_y}{p_x}$. 
+
+When international trade opens up, the relative price for the comparative advantaged good in the country will increase, and the relative price of the comparatively disadvantaged good will decrease, within each country. This will continue until the relative prices are equal across both countries in equilibrium.
+
+In this example, Ruritania will face a lower relative price of goats (due to their comparative advantage) in autarky than Lideria, which will face a higher relative price of goats in autarky. When they begin to trade, the relative price of goats in Ruritania will rise and will fall in Lideria until they face the same relative price of goats (in between the two autarky prices). The opposite is true for the relative price of copper.
+
+```{r}
+ruritania_ppf=function(x){25-0.25*x}
+ruritania_line=function(x){40-0.4*x}
+ruritania_points<-tribble(
+  ~x, ~y, ~label,
+  100, 0, "A",
+  50, 20, "B"
+)
+
+ruritania<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = ruritania_ppf, geom = "line", color = "blue", size = 1)+
+  stat_function(fun = ruritania_line, geom = "line", linetype = "dashed", size = 1)+
+  geom_point(data = ruritania_points,
+             aes(x = x,
+                 y = y),
+             size =3)+
+  geom_label_repel(data = ruritania_points,
+             aes(x = x,
+                 y = y,
+                 label = label))+
+  labs(title = "Ruritania",
+       x = "Goats",
+       y = "Copper")+
+  scale_x_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,50,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+lideria_ppf=function(x){75-2*x}
+lideria_line=function(x){75-0.4*x}
+lideria_points<-tribble(
+  ~x, ~y, ~label,
+  0, 75, "A'",
+  50, 55, "B'"
+)
+
+lideria<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = lideria_ppf, geom = "line", color = "red", size = 1)+
+  stat_function(fun = lideria_line, geom = "line", linetype = "dashed", size = 1)+
+  geom_point(data = lideria_points,
+             aes(x = x,
+                 y = y),
+             size =3)+
+  geom_label_repel(data = lideria_points,
+             aes(x = x,
+                 y = y,
+                 label = label))+
+  labs(title = "Lideria",
+       x = "Goats",
+       y = "Copper")+
+  scale_x_continuous(breaks = NULL,
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+ruritania+lideria
+```
+
+\clearpage
+
+5. The planet Coruscant and the planet Tatooine can each produce Podracers and Lightsabers. If Coruscant devotes all of its resources, it can produce 75 Podracers, or 300 Lightsabers. If Tatooine devotes all of its resources, it can produce 30 Podracers or 150 Lightsabers. Put podracers on the horizontal axis and lightsabers on the vertical axis.
+
+a. Write the PPF equation for each planet.
+
+---
+
+Coruscant's PPF is $L = 300-4P$, Tatooine's is $L = 150-5P$. 
+
+The slope of each line is the opportunity cost of giving up L Lightsabers in producing an additional Podracer (see table below). The intercept is where the PPF crosses the vertical axis (Lightsabers), i.e. where Podracers = 0, i.e. how many Lightsabers each planet could make if all resources were devoted to making Lightsabers.  
+
+---
+
+b. Graph the PPF for each planet.
+
+---
+
+```{r}
+coruscant_ppf=function(x){300-4*x}
+coruscant<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = coruscant_ppf, geom = "line", color = "blue", size = 1)+
+  labs(title = "Coruscant",
+       x = "Podracers",
+       y = "Lightsabers")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,500,50),
+                     limits = c(0,500),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+tatooine_ppf=function(x){150-5*x}
+tatooine<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = tatooine_ppf, geom = "line", color = "red", size = 1)+
+  labs(title = "Tatooine",
+       x = "Podracers",
+       y = "Lightsabers")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,500,50),
+                     limits = c(0,500),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+coruscant+tatooine
+```
+
+\clearpage
+
+c. Which planet has an *absolute* advantage in producing each good?
+
+---
+
+\begin{center}
+Maximum Production:
+\end{center}
+
+| Planet | Podracers | Lightsabers |
+|:-------|--------:|------:|
+| Coruscant | **75** | 300 |
+| Tatooine | **30** | 150 |
+
+Coruscant has absolute advantage in producing both podracers and lightsabers.
+
+---
+
+d. Which planet has a *comparative* advantage in producing each good?
+
+---
+
+\begin{center}
+Opportunity Costs:
+\end{center}
+
+
+| Planet | 1 Podracer | 1 Lightsaber |
+|:-------|--------:|------:|
+| Coruscant | **4L** | 0.25P |
+| Tatooine | 5L | **0.2P** |
+
+
+---
+
+Coruscant has a comparative advantage in producing Podracers, since it must give up 4 Lightsabers to make one, whereas Tatooine must give up 5 Lightsabers to make one. On the other hand, Tatooine has a comparative advantage in producing Lightsabers, since it must give up 0.2 Podracers to make one, whereas Coruscant must give up 0.25 Podracers to make one. Coruscant should make Podracers and Tatooine should make Lightsabers.
+
+---
+
+e. What will the range of prices be for each good?
+
+---
+
+$$4 \text{ lightsabers} < p_{podracer} < 5 \text{ lightsabers}$$
+$$0.2 \text{ podracers} < p_{lightsaber} < 0.25 \text{ podracers}$$
+
+These ranges derive solely from the opportunity costs of each good for each planet. Coruscant, in deciding between holding onto their Podracers or selling them, will want to sell their Podracers if they can get a price beyond their opportunity cost of making them (4 Lightsabers). Tatooine, in deciding between buying a Podracer or making one themselves, will only want to buy a Podracer if it is lower cost than their opportunity cost of producing one (5 Lightsabers).
+
+\clearpage
+
+6. Suppose Finland has 250 workers, and Malaysia has 100 workers. It takes 2 workers in Finland to produce 1 lb of rice, and 4 workers to produce 1 lb of fish. It takes 2 workers in Malaysia to produce 1 lb of rice, and 5 workers to produce 1 lb of fish. Put rice on the horizontal axis and fish on the vertical axis.
+
+a. Write the PPF equation for each country.
+
+---
+
+The PPF for Finland is: 
+$$\begin{aligned}
+      l_rr + l_ff &=L^F\\
+      2r+4f&=250\\
+      4f&=250-2r\\
+      f&=62.5-0.5r\\
+\end{aligned}$$
+	
+The PPF for Malaysia is: 
+$$\begin{aligned}
+      l_rr + l_ff &=L^M\\
+      2r+5f&=100\\
+      5f&=100-2r\\
+      f&=20-0.4r\\
+\end{aligned}$$
+
+---
+
+b. Graph the PPF for each country.
+
+---
+
+```{r}
+finland_ppf=function(x){62.5-0.5*x}
+finland<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = finland_ppf, geom = "line", color = "blue", size = 1)+
+  labs(title = "Finland",
+       x = "Rice",
+       y = "Fish")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+malaysia_ppf=function(x){20-0.4*x}
+malaysia<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = malaysia_ppf, geom = "line", color = "red", size = 1)+
+  labs(title = "Malaysia",
+       x = "Rice",
+       y = "Fish")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+finland+malaysia
+```
+
+---
+
+c. Which country has an *absolute* advantage in producing each good?
+
+---
+
+Neither country has an absolute advantage in producing rice, since it requires 2 workers in both countries to produce 1 lb of rice. Finland has an absolute advantage in producing fish, since it requires 4 Finnish workers vs. 5 Malaysian workers to produce 1 lb of fish.
+
+---
+
+d. Which country has a *comparative* advantage in producing each good?
+
+---
+
+\begin{center}
+Opportunity Costs:
+\end{center}
+
+
+| Country | 1 Rice | 1 Fish |
+|:-------|--------:|------:|
+| Finland | 0.5f | **2.0r** |
+| Malaysia | **0.4f** | 2.5r |
+
+Malaysia has a lower opportunity cost (and a comparative advantage) in producing rice, and Finland has a lower opportunity cost (and a comparative advantage) in producing fish.
+
+---
+
+e. What will the range of prices be for each good?
+
+---
+
+$$0.4 \text{ fish} < p_{rice} < 0.5 \text{ fish}$$
+$$2.0 \text{ rice} < p_{fish} < 2.5 \text{ rice}$$
+
+---
+
+f. Suppose Malaysia becomes more productive at growing rice, such that it only needs 1 worker to produce 1 lb of rice. Recalculate Malaysia’s PPF equation and re-draw its PPF graph.
+
+---
+
+$$\begin{aligned}
+      l_rr + l_ff &=L^M\\
+      1r+5f&=100\\
+      5f&=100-r\\
+      f&=20-0.2r\\
+\end{aligned}$$
+
+```{r}
+malaysia_ppf2=function(x){20-0.2*x}
+malaysia2<-ggplot(data = tibble(x=1:10), aes(x=x))+
+  stat_function(fun = malaysia_ppf, geom = "line", color = "red", alpha=0.5, size = 1, linetype="dotted")+
+  stat_function(fun = malaysia_ppf2, geom = "line", color = "red", size = 1)+
+  labs(title = "Malaysia",
+       x = "Rice",
+       y = "Fish")+
+  scale_x_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10),
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=16)
+
+finland+malaysia2
+```
+
+---
+
+g. Recalculate the opportunity costs for both countries and both goods. What has happened to the countries’ comparative advantages?
+
+---
+
+\begin{center}
+Opportunity Costs:
+\end{center}
+
+
+| Country | 1 Rice | 1 Fish |
+|:-------|--------:|------:|
+| Finland | 0.5f | **2.0r** |
+| Malaysia | **0.2f** | 5r |
+
+---
+
+Each country’s comparative advantage is unchanged, but becomes stronger, and the countries depend more on trade!
+
+---
+
+h. What will the *new* range of prices be for each good?
+
+---
+
+$$0.2 \text{ fish} < p_{rice} < 0.5 \text{ fish}$$
+$$2.0 \text{ rice} < p_{fish} < 5 \text{ rice}$$
