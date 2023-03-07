@@ -1,0 +1,14 @@
+{
+  "hash": "4e5fd567c818039d3a0edd3cc1dcd413",
+  "result": {
+    "markdown": "---\ntitle: \"Midterm\"\nexecute: \n  freeze: auto\n---\n\n\n\n\n::: {.callout-warning appearance=\"minimal\"}\nCheck back here later today\n:::\n\n\n<a class=\"btn btn-primary btn-lg\" target=\"_blank\" href=\"/files/examprep/midtermconcepts.pdf\"><i class=\"fas fa-file-pdf\"></i> Midterm Review</a> \n\n</p>\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

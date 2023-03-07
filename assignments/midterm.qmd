@@ -1,0 +1,19 @@
+---
+title: "Midterm"
+execute: 
+  freeze: auto
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+```
+
+::: {.callout-warning appearance="minimal"}
+Check back here later today
+:::
+
+
+<a class="btn btn-primary btn-lg" target="_blank" href="/files/examprep/midtermconcepts.pdf"><i class="fas fa-file-pdf"></i> Midterm Review</a> 
+
+</p>
+
