@@ -172,7 +172,77 @@
     "href": "assignments/midterm.html",
     "title": "Midterm",
     "section": "",
-    "text": "Check back here later today\n\n\n\n Midterm Review"
+    "text": "This exam is due by email to me by 11:59 PM Friday March 10. Starting at 12:01, you will lose 2 points for every hour it is late.\nMidterm Review"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-1",
+    "href": "assignments/midterm.html#question-1",
+    "title": "Midterm",
+    "section": "Question 1",
+    "text": "Question 1\nAdam Smith famously says that “the division of labor is limited by the extent of the market.” Explain what he means by this, and comment about how the extent of the market affects the amount of employment, productivity, and capital in any given industry."
+  },
+  {
+    "objectID": "assignments/midterm.html#question-2",
+    "href": "assignments/midterm.html#question-2",
+    "title": "Midterm",
+    "section": "Question 2",
+    "text": "Question 2\nUnder the standard trade model(s), explain the connection between comparative advantage and relative prices of goods within each country. Discuss these relative prices in autarky, and what happens to them as countries open up to international trade. You may use examples if you wish, but they are not necessary."
+  },
+  {
+    "objectID": "assignments/midterm.html#question-3",
+    "href": "assignments/midterm.html#question-3",
+    "title": "Midterm",
+    "section": "Question 3",
+    "text": "Question 3\nExplain the Leontief paradox, and describe three responses that economists have given."
+  },
+  {
+    "objectID": "assignments/midterm.html#question-4",
+    "href": "assignments/midterm.html#question-4",
+    "title": "Midterm",
+    "section": "Question 4",
+    "text": "Question 4\nSuppose two countries can produce cars and wheat. Suppose producing cars requires the use of both manual labor and car parts, and producing wheat requires the use of both manual labor and tractors. Car parts cannot be used to produce wheat, and tractors cannot be used to produce cars, but manual labor can be switched to produce either.\nAssuming one country has a comparative advantage in producing cars and the other in producing wheat, how will the opening up of trade between these countries affect (i) manual laborers, (ii) producers of car parts, and (iii) producers of tractors in each country?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-5",
+    "href": "assignments/midterm.html#question-5",
+    "title": "Midterm",
+    "section": "Question 5",
+    "text": "Question 5\nConsider two countries that have identical preferences, identical resource endowments, and identical production opportunities (i.e. their PPFs are identical). Can these countries each benefit from trade? What would Ricardo say? What would Smith say?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-6",
+    "href": "assignments/midterm.html#question-6",
+    "title": "Midterm",
+    "section": "Question 6",
+    "text": "Question 6\nSuppose Winterfell and Braavos each have 100 workers. In Winterfell, it takes 1 worker to produce a pound of ice, and 4 workers to produce a pound of gold. In Braavos, it takes 2 workers to produce a pound of ice, and 2 workers to produce a pound of gold.\n\nPart A\nCalculate the PPF equations for Winterfell and for Braavos, and sketch graphs of each. Put ice on the horizontal axis and gold on the vertical axis.\n\n\nPart B\nWhich country has an absolute advantage in producing ice? Which country has an absolute advantage in producing gold?\n\n\nPart C\nCalculate each country’s opportunity cost for producing each good. Which country has a comparative advantage in producing ice? Which country has a comparative advantage in producing gold?\n\n\nPart D\nBefore any trade, what is the relative price of ice and of gold in each country?\n\n\nPart E\nWith trade, what could the relative price of ice and of gold be for each country?\n\n\nPart F\nWhat happens to the relative price of ice in each country as they trade?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-7",
+    "href": "assignments/midterm.html#question-7",
+    "title": "Midterm",
+    "section": "Question 7",
+    "text": "Question 7\nThe following graphs describe two countries — Ruritania and Lideria, which each can produce aircraft and soybeans — as they move from autarky to trading with each other.\n\n\n\n\n\n\nPart A\nLabel these graphs as follows:\n\nLabel each country’s optimum in autarky as point A\nLabel each country’s specialized production for trade as point B\nLabel each country’s post-trade consumption as point C\nMake a “trade triangle” by showing on the graphs the imports and the exports of each country when it trades (you may want to do the following parts first)\n\n\n\nPart B\nBased on this graph, which country has a comparative advantage in aircraft, and which has a comparative advantage in soybeans?\n\n\nPart C\nAssume aircraft are relatively capital-intensive to produce, and soybeans are relatively land-intensive. According to Hecksher-Ohlin theory, what would your answers so far tell us about each country’s relative factor endowments?\n\n\nPart D\nSuppose the world equilibrium relative price of aircraft decreases. What happens to each country’s terms of trade?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-8",
+    "href": "assignments/midterm.html#question-8",
+    "title": "Midterm",
+    "section": "Question 8",
+    "text": "Question 8\nSuppose the developing country of Aldonia has a lot of land, a small population, and very little capital. At the present, Aldonia has a two fledgling industries: agriculture, a relatively land-intensive good, and manufacturing, a relatively capital-intensive good. Analysts point out that Aldonia’s farmers are quite productive, though many believe that if Aldonia were to greatly expand its (currently inefficient) manufacturing sector, it would ultimately be the most cost-effective manufacturer in the region.\nThe Aldonian government puts together a study group of three economists to make policy recommendations. One economist is a pure Ricardian, the second is a former student of Hecksher and Ohlin, and the third is a in New Trade Theorist. What policies might each of the three economists suggest for Aldonia to promote its national interest?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-9",
+    "href": "assignments/midterm.html#question-9",
+    "title": "Midterm",
+    "section": "Question 9",
+    "text": "Question 9\nIn addition to the general implication of free trade, what possible role(s) do the standard model(s) of trade suggest for a government concerned for the welfare of its citizens?"
+  },
+  {
+    "objectID": "assignments/midterm.html#question-10",
+    "href": "assignments/midterm.html#question-10",
+    "title": "Midterm",
+    "section": "Question 10",
+    "text": "Question 10\nExplain how the presence of economies of scale may create a persuasive argument for deviating from free trade, and provide your own response to this argument. I will not grade based on your conclusion, only your reasoning."
   },
   {
     "objectID": "assignments/problem-sets.html",

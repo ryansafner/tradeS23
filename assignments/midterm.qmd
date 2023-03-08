@@ -5,11 +5,13 @@ execute:
 ---
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(message = F, warning = F, echo = F)
 library(tidyverse)
+library(ggrepel)
 ```
 
 ::: {.callout-warning appearance="minimal"}
-Check back here later today
+This exam is due by email to me by 11:59 PM Friday March 10. Starting at 12:01, you will lose 2 points for every hour it is late.
 :::
 
 
@@ -17,3 +19,252 @@ Check back here later today
 
 </p>
 
+# Instructions
+
+Choose **any five (5)** of the following questions to answer. Questions draw only from material discussed in class. **Each question is worth 20 points.** Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs, with minimal filler). If applicable, show all work and fully label all graphs. Showing more of your thought process increases your chances of getting partial credit.
+
+<!--You will be graded both on your use of reasoning and economic analysis, and ability when relevant to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your conclusion, only your reasoning.
+
+If appropriate, you must be able to talk with some familiarity about arguments put forth in our readings, or by various authors discussed in class, when relevant (informally, as in “According to John Stuart Mill…”). You do not need formal citations, but it should be clear when you are referencing the readings vs. your own thinking. This is not relevant for all questions! -->
+
+You may discuss the questions, but you must write your own responses and turn in your own work. Answers that are substantially similar, or indicate [use of ChatGPT or AI](https://trades23.classes.ryansafner.com/syllabus.html#chatgpt), will be interpreted as cheating and punished accordingly. I will not answer any questions about course content during while the exam is outstanding.
+
+# Questions
+
+## Question 1
+
+Adam Smith famously says that “the division of labor is limited by the extent of the market.” Explain what he means by this, and comment about how the extent of the market affects the amount of employment, productivity, and capital in any given industry.
+
+## Question 2
+
+Under the standard trade model(s), explain the connection between comparative advantage and relative prices of goods within each country. Discuss these relative prices in autarky, and what happens to them as countries open up to international trade. You may use examples if you wish, but they are not necessary.
+
+## Question 3
+
+Explain the Leontief paradox, and describe three responses that economists have given.
+
+## Question 4
+
+Suppose two countries can produce cars and wheat. Suppose producing cars requires the use of both manual labor and car parts, and producing wheat requires the use of both manual labor and tractors. Car parts cannot be used to produce wheat, and tractors cannot be used to produce cars, but manual labor can be switched to produce either.
+
+Assuming one country has a comparative advantage in producing cars and the other in producing wheat, how will the opening up of trade between these countries affect (i) manual laborers, (ii) producers of car parts, and (iii) producers of tractors in each country?
+
+## Question 5
+
+Consider two countries that have identical preferences, identical resource endowments, and identical production opportunities (i.e. their PPFs are identical). Can these countries each benefit from trade? What would Ricardo say? What would Smith say?
+
+## Question 6
+
+Suppose Winterfell and Braavos each have 100 workers. In Winterfell, it takes 1 worker to produce a pound of ice, and 4 workers to produce a pound of gold. In Braavos, it takes 2 workers to produce a pound of ice, and 2 workers to produce a pound of gold.
+
+### Part A
+
+Calculate the PPF equations for Winterfell and for Braavos, and *sketch* graphs of each. *Put ice on the horizontal axis and gold on the vertical axis.*
+
+### Part B
+
+Which country has an *absolute* advantage in producing ice? Which country has an *absolute* advantage in producing gold?
+
+### Part C
+
+Calculate each country's opportunity cost for producing each good. Which country has a *comparative* advantage in producing ice? Which country has a *comparative* advantage in producing gold? 
+
+### Part D
+
+Before any trade, what is the relative price of ice and of gold in each country? 
+
+### Part E
+
+With trade, what could the relative price of ice and of gold be for each country?
+
+### Part F
+
+What happens to the relative price of *ice* in each country as they trade?
+
+## Question 7
+
+The following graphs describe two countries — Ruritania and Lideria, which each can produce aircraft and soybeans — as they move from autarky to trading with each other.
+
+
+```{r}
+library(patchwork)
+
+home_point<-tribble(
+  ~x, ~y, ~letter,
+  2, 2.75, "A"
+)
+
+home_ppf_eq =function(x){sqrt(9-(x-0.75)^2)}
+home_IC_1 = function(x){1.75+(2/x)}
+home_price_1 = function(x){3.75-0.5*x}
+
+export_b=tribble(
+  ~x, ~y, ~letter,
+  3.15, 1.8, "B"
+)
+
+home_ppf_world_price = function(x){6.6-1.5*x}
+
+home_c_point<-tribble(
+  ~x, ~y, ~letter,
+  1.7, 4.1, "C"
+)
+
+home_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  
+  stat_function(fun = home_ppf_eq, geom = "line", color = "black", size = 1)+
+  #geom_label(x = 3.5, y = home_ppf_eq(3.5), label = "PPF", size = 3, color = "black")+
+  
+  stat_function(fun = home_IC_1, geom = "line", color = "black", size = 1)+
+  #geom_label(x = 3.5, y = home_IC_1(3.5), label = "IC", size = 3, color = "black")+
+  stat_function(fun = home_price_1, geom = "line", color = "black", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2, y = 2.75, yend = 2.75, linetype = "dotted", size = 1)+
+  geom_segment(x = 2, xend = 2, y = 2.75, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = home_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+geom_point(data = export_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  stat_function(fun = home_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "black")+ 
+  geom_segment(x = 0, xend = 3.15, y = 1.8, yend = 1.8, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.15, xend = 3.15, y = 1.8, yend = 0, linetype = "dotted", size = 1)+
+  
+  
+  geom_point(data = home_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_segment(x = 0, xend = 1.7, y = 4.1, yend = 4.1, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.7, xend = 1.7, y = 4.1, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.7, 2,3.15),
+                     labels=NULL,
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,1.8, 2.75, 4.1),
+                     labels=NULL,
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Aircraft",
+       y = "Soybeans",
+       title = "Ruritania")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  coord_fixed()
+
+home_high_IC=function(x){1.75+(4/x)}
+
+h <- home_c+
+  stat_function(fun = home_high_IC, geom = "line", size = 1, color = "black")#+
+  #geom_label(x=3.5, y=home_high_IC(3.5), size = 3, label = expression(IC[2]), color = "black")
+
+foreign_point<-tribble(
+  ~x, ~y, ~letter,
+  2.55, 3, "A'"
+)
+
+foreign_ppf_eq =function(x){sqrt(25-x^3)}
+foreign_IC_1 = function(x){4/(x-1.575)-1}
+foreign_price_1 = function(x){12.5-3.75*x}
+
+import_b=tribble(
+  ~x, ~y, ~letter,
+  1.95, 4.2, "B'"
+)
+
+foreign_ppf_world_price = function(x){7.15-1.5*x}
+
+foreign_c_point<-tribble(
+  ~x, ~y, ~letter,
+  3.2, 2.35, "C'"
+)
+
+foreign_c<-ggplot(data.frame(x=c(0,10)), aes(x=x))+
+  stat_function(fun = foreign_ppf_eq, geom = "line", color = "black", size = 1, xlim=c(0,4.1))+
+  #geom_label(x = 3.5, y = foreign_ppf_eq(3.5), label = "PPF", size = 3, color = "black")+
+  geom_segment(x = 2.91, y = 0.6, xend = 2.93, yend = 0, color = "black", size = 1)+
+  
+  stat_function(fun = foreign_IC_1, geom = "line", color = "black", size = 1)+
+  #geom_label(x = 3.5, y = foreign_IC_1(3.5), label = "IC", size = 3, color = "black")+
+  stat_function(fun = foreign_price_1, geom = "line", color = "black", size = 1, linetype = "dashed")+
+  geom_segment(x = 0, xend = 2.55, y = 3, yend = 3, linetype = "dotted", size = 1)+
+  geom_segment(x = 2.55, xend = 2.55, y = 3, yend = 0, linetype = "dotted", size = 1)+
+  geom_point(data = foreign_point,
+             mapping=aes(x=x, y=y),
+             size = 3)+
+geom_point(data = import_b,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  stat_function(fun = foreign_ppf_world_price, geom = "line", size = 1, linetype = "dashed", color = "black")+
+  geom_segment(x = 0, xend = 1.95, y = 4.2, yend = 4.2, linetype = "dotted", size = 1)+
+  geom_segment(x = 1.95, xend = 1.95, y = 4.2, yend = 0, linetype = "dotted", size = 1)+
+  
+  geom_point(data = foreign_c_point,
+             aes(x = x,
+                 y = y),
+             size = 3)+
+  geom_segment(x = 0, xend = 3.2, y = 2.35, yend = 2.35, linetype = "dotted", size = 1)+
+  geom_segment(x = 3.2, xend = 3.2, y = 2.35, yend = 0, linetype = "dotted", size = 1)+
+  
+  scale_x_continuous(breaks=c(0,1.95, 2.55, 3.2),
+                     labels=NULL,
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  scale_y_continuous(breaks=c(0,2.35, 3, 4.2),
+                     labels=NULL,
+                     limits=c(0,5),
+                     expand=expand_scale(mult=c(0,0.1)))+
+  labs(x = "Aircraft",
+       y = "Soybeans",
+       title = "Lideria")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)+
+  coord_fixed()
+
+foreign_high_IC=function(x){4/(x-1.575)-0.075}
+
+f <- foreign_c+
+  stat_function(fun = foreign_high_IC, geom = "line", size = 1, color = "black")#+
+  #geom_label(x=3.5, y=foreign_high_IC(3.5), size = 3, label = expression(IC[2]), color = "black")
+
+h | f
+```
+
+### Part A
+Label these graphs as follows:
+
+- Label each country's optimum in autarky as point A
+- Label each country's specialized production for trade as point B
+- Label each country's post-trade consumption as point C
+- Make a “trade triangle” by showing on the graphs the *imports* and the *exports* of each country when it trades (you may want to do the following parts first)
+
+### Part B
+
+Based on this graph, which country has a comparative advantage in aircraft, and which has a comparative advantage in soybeans?
+
+### Part C
+
+Assume aircraft are relatively *capital*-intensive to produce, and soybeans are relatively *land*-intensive. According to Hecksher-Ohlin theory, what would your answers so far tell us about each country's relative factor endowments?
+
+### Part D
+
+Suppose the world equilibrium relative price of aircraft *decreases*. What happens to each country's terms of trade?
+
+## Question 8
+
+Suppose the developing country of Aldonia has a lot of land, a small population, and very little capital. At the present, Aldonia has a two fledgling industries: *agriculture*, a relatively land-intensive good, and *manufacturing*, a relatively capital-intensive good. Analysts point out that Aldonia's farmers are quite productive, though many believe that if Aldonia were to greatly expand its (currently inefficient) manufacturing sector, it would ultimately be the most cost-effective manufacturer in the region.
+
+The Aldonian government puts together a study group of three economists to make policy recommendations. One economist is a pure Ricardian, the second is a former student of Hecksher and Ohlin, and the third is a in New Trade Theorist. What policies might each of the three economists suggest for Aldonia to promote its national interest?
+
+# Bonus
+
+The following questions are worth up to an additional 5 points each.
+
+## Question 9
+
+In addition to the general implication of free trade, what possible role(s) do the *standard* model(s) of trade suggest for a government concerned for the welfare of its citizens? 
+
+## Question 10
+
+Explain how the presence of *economies of scale* may create a persuasive argument for deviating from free trade, and provide your own response to this argument. I will not grade based on your conclusion, only your reasoning.

@@ -73,8 +73,12 @@ website:
               href: assignments/problem-sets.qmd
             - text: "Problem Set 1"
               href: assignments/01-problem-set.qmd
+            - text: "Problem Set 2"
+              href: assignments/02-problem-set.qmd
         - section: "Exams"
           contents:
+            - text: "Midterm Exam"
+              href: assignments/midterm.qmd
 
     - title: "Resources"
       style: "docked"
