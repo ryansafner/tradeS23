@@ -60,6 +60,12 @@ website:
               href: content/1.10-content.qmd
             - text: "1.11 — New Trade Theory I"
               href: content/1.11-content.qmd
+            - text: "1.12 — New Trade Theory II: Monopolistic Competition"
+              href: content/1.12-content.qmd
+        - section: "II. Trade Policy"
+          contents: 
+            - text: "2.1 — Tariffs"
+              href: content/2.1-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
