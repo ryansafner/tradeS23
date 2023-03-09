@@ -1,0 +1,53 @@
+---
+title: "2.1 — Tariffs — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, March 8, 2023*
+:::
+
+::: callout-warning
+# Upcoming Assignment
+The [Midterm Exam](/assignment/midterm) is due by 11:59 PM Friday March 10 on Blackboard Assignments.
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we begin trade policies by looking at the ubiquitous form of trade policy: tariffs (taxes) on imports. We might not finish today, and wrap up a few more things about tariffs next class, where we examine other types of trade barriers like quotas and subsidies.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- Chapter 8.2-8.4 in Feenstra & Taylor
+
+We will cover the material in 8.1 (trade agreements) at the end of the course, and 8.5 (quotas) next class.
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("1.12-slides")
+```
+
+## <i class="fas fa-laptop-code"></i> Assignments
+
+### Problem Set 2 Due Thursday February 23
+
+[Problem Set 2](/assignment/02-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.

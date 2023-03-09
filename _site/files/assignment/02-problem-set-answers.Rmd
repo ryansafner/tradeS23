@@ -1,0 +1,271 @@
+---
+title: "Problem Set 2"
+author: "Solutions"
+date: "ECON 324 — Spring 2023"
+output:
+  pdf_document:
+    dev: cairo_pdf
+    latex_engine: xelatex
+header-includes:
+- \usepackage{amsmath, tikz, pgfplots, multirow, multicol, booktabs}
+- \usetikzlibrary{shapes, arrows, calc}
+
+mainfont: "Fira Sans Condensed"
+monofont: "Fira Code"
+mathfont: "Fira Sans"
+fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,
+                      warning = F,
+                      message = F)
+library(tidyverse)
+library(patchwork)
+library(ggrepel)
+```
+
+Note: Answers may be longer than I would deem sufficient on an exam. Some might vary slightly based on points of interest, examples, or personal experience. These suggested answers are designed to give you both the answer and a short explanation of *why* it is the answer. Some questions, particularly the deeper ones, may rarely have several "good" answers, as they can be legitimately tough or complex questions.
+
+# Concepts and Critical Thinking
+
+1.  What are the sources of comparative advantage according to Hecksher-Ohlin theory, and what types of goods would we expect various countries to import and export?
+
+------------------------------------------------------------------------
+
+**Hecksher-Ohlin theory implies that countries' comparative advantage is derived from their relative abundance of a particular factor of production (i.e. land, labor, or capital). Countries export those goods that are intensive in the factor which is abundant in the country, and import goods that are intensive in the factor which is scarce in the country. For example, land-abundant countries export land-intensive goods and import labor-intensive goods.**
+
+------------------------------------------------------------------------
+
+2.  According to Hecksher-Ohlin theory, what would we expect to happen to factor prices across countries that freely trade?
+
+------------------------------------------------------------------------
+
+**One sub-theorem of H-O Theory is the factor price equalization (FPE) theorem, which states that relative factor prices equalize across countries when they trade just as relative good prices equalize across countries when they trade. Recall in autarky, relative prices and relative factor prices are very different across countries.**
+
+\clearpage
+
+3.  Explain the Leontief paradox.
+
+------------------------------------------------------------------------
+
+**The Leontief paradox describes the empirical finding (by Wassily Leontief in 1953) that the U.S. exports labor-intensive goods and imports capital-intensive goods. This contradicts the predictions Hecksher-Ohlin theory: the U.S., as a capital abundant country, should export capital-intensive goods and import labor-intensive goods. Some economists have tried to explain away this issue by arguing the U.S. can be considered a labor-abundant good due to the productivity of U.S. labor (from high levels of human capital and good institutions embodied in worker productivity). Others have tried to extend H-O theory or replace it with increasing returns models or by including transportation costs, for example.**
+
+------------------------------------------------------------------------
+
+4.  How do specific factors and non-specific factors benefit or lose when trade increases? How do exports affect specific and non-specific factors' incomes? How do imports affect specific and non-specific factors' incomes?
+
+------------------------------------------------------------------------
+
+**The specific factors model demonstrates that the fixed (immobile, specific) factor bears the largest brunt of the effects of trade -- they suffer most from import competition, and they benefit the most from increases in exports. Non-specific (mobile) factors can adapt better to changes in trade, so their gains from trade are not as clear.**
+
+**For example, suppose labor is non-specific (mobile), capital is specific to producing cloth, and land is specific to producing food. Suppose the country has a comparative advantage in producing food. Trade will increas the relative price of food and decrease the relative price of cloth. An increase in the relative price of food (from more exports) will raise income to land, while the decrease in the relative price of cloth (from cheaper imports) will lower the income of caoital. Labor is not unambiguously better or worse off, as its real wage will go up in terms of one good, and down in terms of the other.**
+
+\clearpage
+
+5.  In perfect competition, firms set price equal to marginal cost. Why can't firms do this when there are internal economies of scale?
+
+------------------------------------------------------------------------
+
+**With internal economies of scale, firms experience decreasing average cost curves, which means that firms' MC is always below their AC (mathematically, AC is at its minimum when MC intersects it from below, then it begins increasing as** $MC > AC$), meaning, for a firm to earn profits, its $P>AC>MC$. Firms are monopolistically competitive, facing downward sloping demand curves and charging $P>MC$, in models of increasing returns.
+
+```{r, fig.height=3}
+MC=function(x){3}
+AC=function(x){75/x}
+Demand=function(x){20-x}
+MR=function(x){20-2*x}
+
+
+ggplot(data.frame(x=c(0,12)), aes(x=x))+
+  stat_function(fun=MC, geom="line", color="red", size=2)+
+  geom_label(x=3.5,y=MC(3.5), color = "red", label="MC(q)")+
+  stat_function(fun=AC, geom="line", color="orange", size=2)+
+  geom_label(x=10,y=AC(10), color = "orange", label="AC(q)")+
+  stat_function(fun=Demand, geom="line", color="blue", size=2)+
+  geom_label(x=3.5,y=Demand(3.5), color = "blue", label="Demand")+
+  stat_function(fun=MR, geom="line", color="purple", size=2)+
+  geom_label(x=3.5,y=MR(3.5), color = "purple", label="MR(q)")+
+  #geom_segment(aes(x=10,y=0),xend=10,yend=450,linetype=3, size=2)+
+  #geom_segment(aes(x=0,y=450),xend=10,yend=450, linetype=3, size=2)+
+  labs(x = "Quantity (q)",
+       y = "Price (p)")+
+  scale_x_continuous(breaks = NULL,
+                     limits = c(0,22),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = NULL,
+                     limits = c(0,22),
+                     expand = c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=18)
+```
+
+------------------------------------------------------------------------
+
+6.  Respond to the following claim: "The world's poorest countries cannot find anything to export. There is no resource that is abundant--certainly not capital or land, and in small poor nations not even labor is abundant."
+
+------------------------------------------------------------------------
+
+**With regard to Hecksher-Ohlin theory, it is not *absolute* differences in land, labor, or capital (factor endowments) between nations, but *relative* endowments. For example, a poor country may have less labor and less capital than a wealthy country, but it may have more labor** \emph{relative} to capital than a wealthy nation, which may have more capital *relative* to labor. This would make the poor country a labor "abundant" country and give it a comparative advantage in exporting labor intensive goods.
+
+\clearpage
+
+7.  Suppose a country can produce two goods, cloth (X) and food (Y). Explain what happens to the marginal rate of transformation & the PPF, and why, when all countries face (according to different models):
+
+-   Constant costs
+-   Increasing costs
+-   Decreasing costs
+
+Drawing each example may help.
+
+------------------------------------------------------------------------
+
+**The Marginal Rate of Transformation (MRT) is the slope of the country's PPF. It is equivalent to the opportunity cost of producing one more unit of good** $X$ (on the horizontal axis) in terms of giving up units of good $Y$ (on the vertical axis). A country with constant costs has a PPF of a straight line, where MRT never changes. A country with increasing costs has a PPF curved inwards, where opportunity cost increases as the country produces more $X$ (MRT gets steeper as we move right) or more $Y$ (MRT gets flatter as we move up). A country with decreasing costs (increasing returns) has a PPF curved outwards, where opportunity cost decreases as a country produces more $X$ (MRT gets flatter as we move right) or more $Y$ (MRT gets steeper as we move up).
+
+```{r, fig.height=3}
+PPF_c=function(x){10-2*x}
+
+ppf_constant<-ggplot(data = tibble(x=1:10), aes(x = x))+
+  stat_function(fun = PPF_c, geom="line", size=2, color = "blue")+
+  scale_x_continuous(breaks=NULL, 
+                     limits = c(0,10),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks=NULL, 
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  labs(title = "Constant Costs")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+
+ppf_inc_eq=function(x){sqrt(16-x^2)}
+
+ppf_inc<-ggplot(data = tibble(x=1:10), aes(x = x))+
+  stat_function(fun = ppf_inc_eq, geom="line", size=2, color = "red")+
+  scale_x_continuous(breaks=NULL, 
+                     limits = c(0,5),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks=NULL, 
+                     limits = c(0,5),
+                     expand=c(0,0))+
+  labs(title = "Increasing Costs")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+
+ppf_dec_eq=function(x){1/(x+0.325)^2}
+
+ppf_dec<-ggplot(data = tibble(x=1:10), aes(x = x))+
+  stat_function(fun = ppf_dec_eq, geom="line", size=2, color = "green")+
+  scale_x_continuous(breaks=NULL, 
+                     limits = c(0,4),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks=NULL, 
+                     limits = c(0,10),
+                     expand=c(0,0))+
+  labs(title = "Decreasing Costs")+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=14)
+
+library(patchwork)
+
+ppf_constant+ppf_inc+ppf_dec
+```
+
+\clearpage
+
+8.  For each of the following parts, explain whether it is a case of *external* or *internal* economies of scale, and why.
+
+```{=html}
+<!-- -->
+```
+a.  Most musical wind instruments in the United States are produced by more than a dozen factories in Elkhart, Indiana.
+
+------------------------------------------------------------------------
+
+**In general, internal economies of scale take place only within a single firm, external economies of scale take place across many firms, as in a geographic cluster. Here, this is external economies of scale as it is a cluster of many firms.**
+
+------------------------------------------------------------------------
+
+b.  All Hondas sold in the United States are either imported or produced in Marysville, Ohio.
+
+------------------------------------------------------------------------
+
+**Internal economies of scale, as this is all happening in a single firm, Honda.**
+
+------------------------------------------------------------------------
+
+c.  All airframes for Airbus, Europe's only producer of large aircraft, are assembled in a factory in Toulouse, France.
+
+------------------------------------------------------------------------
+
+**This is internal economies of scale, as it is all happening within one firm, Airbus.**
+
+------------------------------------------------------------------------
+
+d.  Hartford, Connecticut, is the insurance capital of the northeastern United States.
+
+------------------------------------------------------------------------
+
+**External economies of scale, as this is across many firms in one geographic area.**
+
+\clearpage
+
+# Problems
+
+## Question 9
+
+Suppose in 2016, the United States imports \$400 million in aircraft parts, and exports \$500 million in aircraft parts. Calculate the Grubel-Lloyd Index and interpret what your results mean.
+
+------------------------------------------------------------------------
+
+$$\begin{aligned}
+GLI &= 1 - \frac{|X_i-M_i|}{X_i+M_i}\\
+GLI &= 1 - \frac{|500-400|}{400+500}\\
+GLI &=1-0.111\\
+GLI &=0.889\\
+\end{aligned}$$
+
+**There is a large share of intra-industry trade in aircraft because the GLI is very close to 1. The magnitude of our exports (by value) are almost perfectly matched by imports (by value).**
+
+\clearpage
+
+## Question 10
+
+Norway and Sweden have the same preferences, but have very different production opportunities. Norway has a long coast that borders on the north Atlantic, making it relatively more productive in fishing. Sweden has a relatively greater endowment of capital, making it relatively more productive in Volvos (automobiles).
+
+Graphically illustrate the gains from trade between the two countries using the H-O model, placing fish on the horizontal axis and Volvos on the vertical axis. Be sure to label the equilibria in autarky, specialization, equilibria after trade, the relative price lines, and imports and exports for each country.
+
+------------------------------------------------------------------------
+
+```{=tex}
+\begin{tikzpicture}[scale=.5]
+            \draw[->] (0,0) -- (11,0) coordinate (x axis) node[right]{Fish};
+            \draw[->] (0,0) -- (0,11) coordinate (y axis) node[above]{Volvos};
+            \draw[very thick, blue] (0, 5) to[out=0, in=90] (10,0);
+            \draw[very thick, red] (0, 10) to[out=0, in=90] (5,0);
+            \draw[fill=black] (3.75,7.5)circle(0.2cm)node[left]{A'};
+            \draw[very thick, black, dashed] (2.5,10)--(5,5);
+            \draw[fill=black] (7.75,3.75)circle(0.2cm)node[above]{A};
+            \draw[very thick, black, dashed] (6,4.5)--(10,2.5);
+            \draw[very thick, teal] (3.25, 10) to[out=275, in=180] (10,3.25)node[right]{$U_1$};
+        \end{tikzpicture}
+            \begin{tikzpicture}[scale=.5]
+            \draw[->] (0,0) -- (11,0) coordinate (x axis) node[right]{Fish};
+            \draw[->] (0,0) -- (0,11) coordinate (y axis) node[above]{Volvos};
+            \draw[very thick, blue] (0, 5) to[out=0, in=90] (10,0);
+            \draw[very thick, red] (0, 10) to[out=0, in=90] (5,0);
+            \draw[fill=black] (3.75,7.5)circle(0.2cm)node[left]{A'};
+            \draw[fill=black] (7.75,3.75)circle(0.2cm)node[below]{A};
+            \draw[very thick, teal] (3.25, 10) to[out=275, in=180] (10,3.25)node[right]{$U_1$};
+            \draw[very thick, black, dashed](1.75,10)--(10,1.75);
+            \draw[fill=black] (2.5,9.25)circle(0.2cm)node[left]{B'};
+            \draw[fill=black] (9.25,2.5)circle(0.2cm)node[right]{B};
+            \draw[very thick, teal] (4.125, 10) to[out=275, in=180] (10,4.125)node[right]{$U_2$};
+            \draw[fill=black] (6.125,5.75)circle(0.2cm)node[right]{D=D'};
+            \draw[very thick, magenta, ->](2.5,9.25)--(2.5,5.75);
+            \draw[very thick, olive, ->] (2.5,5.75)--(6.125,5.75);
+            \draw[very thick, magenta, ->](9.25,2.5)--(6.125,2.5);
+            \draw[very thick, olive, ->] (6.125,2.5)--(6.125,5.75);
+\end{tikzpicture}
+```
+**Norway is in blue, Sweden in red.**
+
+**The graph on the left shows the two countries' PPFs with an identical indifference curve (since they have the same preferences). Norway's PPF is biased towards Fish, indicating their relative land abundance for the land-intensive good--fish--implying a comparative advantage in fishing. Sweden's PPF is biased towards Volvos, indicating their relative capital abundance for the capital-intensive good--Volvos--implying a comparative advantage in making Volvos. Without trade, Norway thus produces at point A, and Sweden produces at point A'. Note the relative price of fish (slope) is steeper for Sweden than Norway, implying Sweden faces a higher opportunity cost of fish (has to give up more Volvos) than Norway, which has a comparative advantage in fish (and vice versa -- Norway faces a higher opportunity cost of Volvos and has to give up more fish than Sweden does, due to Sweden's comparative advantage in Volvos).**
+
+**With trade (on the right graph), the two countries face the same relative prices according to the new trade line in black. Note this line is steeper than Norway's relative price line at A and flatter than Sweden's relative price line at A'. This implies that each country is able to get the good they did not have a comparative advantage in at a lower opportunity cost than before, and supply the good they have a comparative advantage in for a higher price abroad than at home.**
+
+**Each country then specializes and produces more of the good they have the comparative advantage in. Norway produces more fish, moving from A to B. Sweden produces more Volvos, moving from A' to B'. The two countries then trade, at the relative prices determined by the trade line. Norway exports fish (pink) and imports Volvos (olive) to move from B to D. Sweden exports Volvos (pink) and imports fish (olive) to move from B' to D'. Both countries are gaining from trade as they are able to consume and enjoy a higher national welfare on the higher indifference curve** $U_2$.

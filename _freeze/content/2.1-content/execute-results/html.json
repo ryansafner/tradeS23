@@ -1,0 +1,14 @@
+{
+  "hash": "93a23d253051b5d1015d4d342ff08464",
+  "result": {
+    "markdown": "---\ntitle: \"2.1 — Tariffs — Class Content\"\nexecute:\n  freeze: auto\n---\n\n::: {.cell}\n\n:::\n\n\n::: {.callout-note appearance=\"minimal\"}\n# Meeting Date\n\n*Thursday, March 8, 2023*\n:::\n\n::: callout-warning\n# Upcoming Assignment\nThe [Midterm Exam](/assignment/midterm) is due by 11:59 PM Friday March 10 on Blackboard Assignments.\n:::\n\n## <i class=\"fas fa-info-circle fa-lg\"></i> Overview\n\nToday, we begin trade policies by looking at the ubiquitous form of trade policy: tariffs (taxes) on imports. We might not finish today, and wrap up a few more things about tariffs next class, where we examine other types of trade barriers like quotas and subsidies.\n\n## <i class=\"fas fa-book-reader fa-lg\"></i> Readings\n\n- Chapter 8.2-8.4 in Feenstra & Taylor\n\nWe will cover the material in 8.1 (trade agreements) at the end of the course, and 8.5 (quotas) next class.\n\n## <i class=\"fas fa-chalkboard-teacher\"></i> Slides\n\nBelow, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.\n\n::: callout-tip\nYou can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.\n:::\n\nI suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!\n\n\n<p style=\"text-align:center;\"><a target=\"_blank\" href=\"/slides/1.12-slides.html\"><img src =\"/slides/1.12-slides.png\" alt = \"1.12-slides\"></a></p>\n<p style=\"text-align:center;\"><a class=\"btn btn-primary btn-lg\" target=\"_blank\" href=\"/slides/1.12-slides.pdf\"><i class=\"fas fa-file-pdf\"></i> Download as PDF</a></p>\n\n\n## <i class=\"fas fa-laptop-code\"></i> Assignments\n\n### Problem Set 2 Due Thursday February 23\n\n[Problem Set 2](/assignment/02-problem-set) (1.1-1.8) is due by 11:59 PM Thursday February 23 on Blackboard Assignments.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
