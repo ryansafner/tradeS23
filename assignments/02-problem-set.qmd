@@ -18,7 +18,7 @@ Please read the [instructions](https://trades23.classes.ryansafner.com/assignmen
 
 ## Answers
 
-<p style="text-align:center"><a target="_blank" href="/files/assignment/01-problem-set-answers.html"><span class="btn btn-primary btn-lg"><i class="far fa-life-ring"></i> Answers</a> <a target="_blank" href="/files/assignment/02-problem-set-answers.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Answers (PDF)</a> </p>
+<p style="text-align:center"> <a target="_blank" href="/files/assignment/02-problem-set-answers.pdf"><span class="btn btn-primary btn-lg"><i class="fas fa-file-pdf"></i> Answers (PDF)</a> </p>
 
 # Concepts and Critical Thinking
 
