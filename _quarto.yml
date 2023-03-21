@@ -66,6 +66,8 @@ website:
           contents: 
             - text: "2.1 — Tariffs"
               href: content/2.1-content.qmd
+            - text: "2.2 — Quotas, Subsidies, and Non-Tariff Barriers"
+              href: content/2.2-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
