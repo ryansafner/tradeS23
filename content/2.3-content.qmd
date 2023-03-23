@@ -1,0 +1,68 @@
+---
+title: "2.2 — Quotas, Subsidies, and Non-Tariff Barriers — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, March 23, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we begin looking at an intellectual history of trade, in order to begin to trace out arguments for and against free trade. Today will takes us back to feudalism and up through mercantilism in Europe.
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+### Required Readings
+
+- [<i class="fas fa-file-pdf"></i> Benson, 1989, "The Spontaneous Evolution of Commercial Law"](/files/readings/Benson-1989.pdf)
+- [<i class="fas fa-file-pdf"></i> Greif, 2004, "Reputation and Coalitions in Medieval Trade: Evidence on the Maghribi Traders"](/files/readings/Greif-2004.pdf)
+
+The following video is also required viewing for any serious discussion of feudalism:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5Xd_zkMEgkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Optional Readings (Primary Sources Mentioned):
+
+- [<i class="fas fa-file-pdf"></i> Milgrom, North, and Weingast, 1990, "The Role of Institutions in the Revival of Trade: The Law Merchant, Private Judges, and the Champagne Fairs"](/files/readings/Milgrom-North-Weingast-1990.pdf)
+- [<i class="fas fa-file-pdf"></i> Greif, Milgrom, and Weingast, 1994, "Coordination, Commitment, and Encorcement: The Case of the Merchant Guild"](/files/readings/Milgrom-North-Weingast-1990.pdf)
+- [<i class="fas fa-file-pdf"></i> Greif, 2000, "The Fundamental Problem of Exchange: A Research Agenda in Historical Institutional Analysis"](/files/readings/Greif-2000.pdf)
+
+### Questions To Help Your Reading
+
+- What are the credible commitment problems present in each situation described in the papers?
+- What specific institutions are created to address these problems? How do they fix them?
+- How do these institutions appear, change, and/or disappear over time? (There are economic reasons!)
+- Are cartels always economically harmful?
+- How are these same problems present today?
+- Were monopolies, guilds, and other mercantilist restrictions all as bad as we economists often say they are?
+
+### Discussion Board 
+
+Starting next week, we will occasionally have a weekly discussion board open on Blackboard. (Not every week. I will let you know when we have one open at the beginning of each week.) You will be expected to contribute to the discussion board at least twice by Sunday night. Your weekly contribution will be graded out of 5 points. At the end of the semester, I will apply the average of your weekly participation grades to apply (20%) towards your final course grade.
+
+I am interested in your thoughts, reactions, comments, and questions about any of the material (lectures and/or readings). You do not need to write more than a paragraph. Anything more than that, including continuing to reply to each others’ thoughts, questions, or comments, (which I strongly hope you do!) is solely based on your own interest and curiosity. I will jump in to answer questions the group is stuck on, give my two cents, and stir the pot as needed. I strontly hope we still keep a conversation going and can learn from each other, that was always my goal, not to lecture at you!
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("2.3-slides")
+```
