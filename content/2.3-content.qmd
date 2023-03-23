@@ -1,5 +1,5 @@
 ---
-title: "2.2 — Quotas, Subsidies, and Non-Tariff Barriers — Class Content"
+title: "2.2 — An Intellectual History of Trade I: Feudalism — Class Content"
 execute:
   freeze: auto
 ---
@@ -27,7 +27,7 @@ Today, we begin looking at an intellectual history of trade, in order to begin t
 
 The following video is also required viewing for any serious discussion of feudalism:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5Xd_zkMEgkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t2c-X8HiBng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Optional Readings (Primary Sources Mentioned):
 
