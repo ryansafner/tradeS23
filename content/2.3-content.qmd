@@ -1,5 +1,5 @@
 ---
-title: "2.2 — An Intellectual History of Trade I: Feudalism — Class Content"
+title: "2.3 — An Intellectual History of Trade I: Feudalism — Class Content"
 execute:
   freeze: auto
 ---

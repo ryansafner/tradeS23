@@ -1,0 +1,70 @@
+---
+title: "2.4 — An Intellectual History of Trade II: Mercantilism — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Tuesday, March 28, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we continue looking at an intellectual history of trade, discussing mercantilism in Europe and the origin of classical economics, in opposition of it.
+
+This week we will begin a discussion board on this week’s readings and general topics. You are expected to post there by Sunday 11:59 PM, and will be graded for your posts. 
+
+## <i class="fas fa-book-reader fa-lg"></i> Readings
+
+### Required Readings
+
+There are no required readings (since you have several papers from last class), but you should closely read all of the quotes by the Classical economists arguing against mercantilism in my slides (starting on [slide 49](/slides/2.4-slides#49)).
+
+### Optional Readings (Primary Sources Mentioned):
+- [<i class="fas fa-file-pdf"></i> Acemoglu, Johnson, and Robinson (2001), "The Colonial Origins of Comparative Development: An Empirical Investigation"](/readings/Acemoglu-Johnson-Robinson-2001.pdf)
+- [<i class="fas fa-file-pdf"></i> Weingast (2017), "Adam Smith's Theory of Violence and the Political-Economics of Development"](https://web.stanford.edu/group/mcnollgast/cgi-bin/wordpress/wp-content/uploads/2016/01/Weingast.ASM_.NBER-ver-4.00__17.0116.pdf)
+- [<i class="fas fa-file-pdf"></i> Koyama and Johnson (2016), "States and Economic Growth: Capacity and Constraints"](/readings/Koyama-Johnson-2016.pdf)
+
+### Other Helpful Resources
+
+The following videos also help you get a perspective on history and changes. The first is serious, the second is hilarious:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UY9P0QSxlnI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xuCn8ux2gbs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Questions To Help Your Reading
+
+- What are the policy prescriptions of the mercantilists?
+- What aspects of mercantilism are still present today?
+- What does modern economics think of mercantilist ideas?
+- What are the legacies of colonialism and European imperialism? 
+- How did European colonists decide what kind of colony to set up (inclusive or extractive, to use Acemolgu & Robinson's terms)? 
+- Most (if not all) of the inclusive colonies tended to be British. Is that an important factor?  
+- Mercantilism as a coherent philosophy is archaic today. But how are some of its economic tenets (e.g. positive trade surplus) practiced or believed today?
+- In what ways are today's developing countries mercantilist? In what ways are they NWW's natural states? 
+- Adam Smith, Bastiat, and the Classical Economists ridiculed Mercantilism to a pulp, such that no serious economist today supports mercantilist ideas about trade. But how should we view Mercantilism in the context of its time?
+- Ending mercantilism is simple, in theory - get rid of trade barriers, monopoly privileges, and other restrictions. Why is it so hard? And in particular, should we encourage developing countries to do this?
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("2.4-slides")
+```
