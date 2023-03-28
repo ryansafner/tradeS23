@@ -27,6 +27,7 @@ This week we will begin a discussion board on this week’s readings and general
 There are no required readings (since you have several papers from last class), but you should closely read all of the quotes by the Classical economists arguing against mercantilism in my slides (starting on [slide 49](/slides/2.4-slides#49)).
 
 ### Optional Readings (Primary Sources Mentioned):
+- [<i class="fas fa-external-link-square-alt"></i> Bastiat, 1845, “The Candlemakers’ Petition”](http://bastiat.org/en/petition.html)
 - [<i class="fas fa-file-pdf"></i> Acemoglu, Johnson, and Robinson (2001), "The Colonial Origins of Comparative Development: An Empirical Investigation"](/readings/Acemoglu-Johnson-Robinson-2001.pdf)
 - [<i class="fas fa-file-pdf"></i> Weingast (2017), "Adam Smith's Theory of Violence and the Political-Economics of Development"](https://web.stanford.edu/group/mcnollgast/cgi-bin/wordpress/wp-content/uploads/2016/01/Weingast.ASM_.NBER-ver-4.00__17.0116.pdf)
 - [<i class="fas fa-file-pdf"></i> Koyama and Johnson (2016), "States and Economic Growth: Capacity and Constraints"](/readings/Koyama-Johnson-2016.pdf)
