@@ -1,5 +1,5 @@
 ---
-title: "2.5 — Better Protectionist Arguments"
+title: "2.5 — History of Trade III: Better Protectionist Arguments"
 author: 'Ryan Safner'
 #date:
 output:
@@ -39,7 +39,7 @@ update_geom_defaults("label", list(family = "Fira Sans Condensed"))
 
 class: title-slide
 
-# 2.5 — History of Trade III: Protectionist Arguments
+# 2.5 — Better Protectionist Arguments
 
 ## ECON 324 • International Trade • Spring 2023
 
