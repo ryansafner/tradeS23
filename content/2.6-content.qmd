@@ -1,0 +1,63 @@
+---
+title: "2.6 — An Intellectual History of Trade IV: Increasing Returns & Industrial Policy — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Tuesday, April 11, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we continue looking at an intellectual history of trade, discussing more modern increasing returns arguments for industrial policy, extending into the present.
+
+### <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- [<i class="fas fa-file-pdf"></i> Powell, 2004, "State Development Planning: Did it Create an East Asian Miracle?"](/files/readings/Powell-2004.pdf)
+- [<i class="fas fa-file-pdf"></i> Stiglitz, 2014, "Creating a Learning Society"](/files/readings/Stiglitz-2014.pdf)
+- [<i class="fas fa-file-pdf"></i> Gangotena and Safner, 2023, "The Production of Increasing Returns: Physical Technology, Institutional Technology, and the Pitfalls of Production Functions"](/files/readings/Gangotena-Safner-2023.pdf)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/etkd57lPfPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+John Oliver’s *Last Week Tonight* covers recent trade policies (in 2018) of the Trump administration, the brainchild of economist [Peter Navarro](https://en.wikipedia.org/wiki/Peter_Navarro). Some of it has been carried into the Biden administration.
+
+### Optional Readings
+
+- [<i class="fas fa-file-pdf"></i> Krugman, 1993, "What Do Undergrads Need to Know About Trade?"](/files/readings/Krugman-1993.pdf)
+- [<i class="fas fa-file-pdf"></i> Safner, 2013, "City-State on a Hill: The Institutional History Behind the Paradox of Modern Singapore"](/files/readings/Safner-2013.pdf)
+
+Much of my intellectual history series of lectures comes from Chapters 5-9 of Douglas Irwin’s^[One of the best economic historians on trade.] excellent book:
+
+- [<i class="fas fa-book"></i> Irwin, 1996, *Against the Tide: An Intellectual History of Free Trade*](https://www.amazon.com/Against-Tide-Intellectual-History-Trade/dp/0691058962)
+
+### Questions To Help Your Reading
+
+- What is the role of the State in promoting development?
+- How do we identify which industries might be worth protecting via industrial policy?
+- What are the supposed successes of industrial policy (e.g. Singapore, Korea, Japan, Hong Kong) and how/why were they successful?
+- What are the politics of the infant industry argument?
+- What should our trade policy be, and what should we tell other poor countries to do, if they want rapid growth? 
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("2.6-slides")
+```

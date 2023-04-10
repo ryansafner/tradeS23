@@ -1,0 +1,68 @@
+---
+title: "2.7 — The Political Economy of Trade Policy — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, April 13, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+Today, we look at the politics of trade policy, examining how different groups in a modern democracy have different objectives and face different incentives, culminating in trade policy that concentrates benefits and disperses costs. The tools we use are standard in [“public choice”](https://en.wikipedia.org/wiki/Public_choice) analysis — the economic analysis of politics. You can learn more in [my public economics course](https://publics20.classes.ryansafner.com).
+
+### <i class="fas fa-book-reader fa-lg"></i> Readings
+
+### Required Readings:
+
+- [<i class="fas fa-file-pdf"></i> Caplan, 2007, "The Myth of the Rational Voter"](/files/readings/Caplan-2007.pdf)
+- [<i class="fas fa-file-pdf"></i> Somin, 2014, "When Ignorance Isn't Bliss"](/files/readings/Somin-2014.pdf)
+- [<i class="fas fa-file-pdf"></i> Buchanan, 1984, "Politics Without Romance"](/files/readings/Buchanan-1984.pdf)
+- [<i class="fas fa-file.pdf"></i> Mitchell, 2013, "The Pathology of Privilege: The Economic Consequences of Government Favoritism"](/files/readings/Mitchell-2013.pdf)
+
+### Optional Readings
+
+- [<i class="fas fa-file-pdf"></i> Grossman and Helpman, 1994, "Protection for Sale"](/files/readings/Grossman-Helpman-1994.pdf)
+- [<i class="fas fa-file-pdf"></i> Baldwin and Magee, 2000, "Is trade policy for sale? Congressional voting on recent t?"](/files/readings/Baldwin-Magee-2000.pdf)
+
+### Helpful:
+
+- [<i class="fab fa-wikipedia-w"></i> Public Choice](https://en.wikipedia.org/wiki/Public_choice)
+- [<i class="fab fa-wikipedia-w"></i> The Logic of Collective Action](https://en.wikipedia.org/wiki/The_Logic_of_Collective_Action)
+- [<i class="fab fa-wikipedia-w"></i> Government failure](https://en.wikipedia.org/wiki/Government_failure)
+- [<i class="fab fa-wikipedia-w"></i> Rational ignorance](https://en.wikipedia.org/wiki/Rational_ignorance)
+- [<i class="fab fa-wikipedia-w"></i> Rent seeking](https://en.wikipedia.org/wiki/Rent_seeking)
+- [<i class="fab fa-wikipedia-w"></i> Regulatory capture](https://en.wikipedia.org/wiki/Regulatory_capture)
+
+### Questions To Help Your Reading
+
+- Why is good governance a public good, subject to a free rider problem?
+- What is “rational ignorance”?
+- What is Caplan’s idea of “rational irrationality” and how is it different from “rational ignorance?”
+- According to Caplan, what are the four systematic biases?
+- Why do people vote or not vote? How do people that do vote choose how they vote?
+- What is the principle of “concentrated benefits and dispersed costs?”
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("2.7-slides")
+```

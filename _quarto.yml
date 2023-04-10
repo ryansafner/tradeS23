@@ -74,6 +74,10 @@ website:
               href: content/2.4-content.qmd
             - text: "2.5 — An Intellectual History of Trade III: Better Protectionist Arguments"
               href: content/2.5-content.qmd
+            - text: "2.6 — An Intellectual History of Trade IV: Increasing Returns & Industrial Policy"
+              href: content/2.6-content.qmd
+            - text: "2.7 — The Political Economy of Trade Policy"
+              href: content/2.7-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
