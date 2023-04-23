@@ -1,0 +1,50 @@
+---
+title: "3.1 — Immigration — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Tuesday, April 25, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+### <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- [<i class="fas fa-file-pdf"></i> Clemens, 2006, "Economics and Emigration: Trillion-Dollar Bills on the Sidewalk?"](/files/readings/Clemens-2006.pdf)
+- [<i class="fas fa-external-link-square-alt"></i> Tabarrok, 2015, "The Case for Getting Rid of Borders—Completely," *The Atlantic*](https://www.theatlantic.com/business/archive/2015/10/get-rid-borders-completely/409501/)
+- [<i class="fas fa-podcast"></i> *NPR Planet Money*, 2015, Ep. 654: "When the Boats Arrive"](https://www.npr.org/sections/money/2015/09/30/444800350/episode-654-when-the-boats-arrive)
+
+### Optional Readings (Primary Sources)
+- [<i class="fas fa-file-pdf"></i> Borjas, 1994, "The Economics of Immigration"](/files/readings/Borjas-1994.pdf)
+- [<i class="fas fa-file-pdf"></i> Peri, 2018, "Lessons From Immigration Economics"](/files/readings/Borjas-2018.pdf)
+- [<i class="fas fa-file-pdf"></i> Peri, 2009, "Task Specialization, Immigration, and Wages"](/files/readings/Peri-2009.pdf)
+- [<i class="fas fa-file-pdf"></i> Peri, 2016, "Immigrants, Productivity, and Labor Markets"](/files/readings/Peri-2016.pdf)
+- [<i class="fas fa-file-pdf"></i> Autor, Dorn, and Hanson, 2016, "The China Shock: Learningfrom Labor-Market Adjustmentto Large Changes in Trade"](/files/readings/Autor-Dorn-Hanson-2016.pdf)
+- [<i class="fas fa-file-pdf"></i> Card, "How Immigration Affects U.S. Cities", Ch. 6 in *Making Cities Work*](https://books.google.com/books?hl=en&lr=&id=vRKIar9ALjgC&oi=fnd&pg=PA158&dq=david+card+immigration&ots=dAQRL-oRXr&sig=VTfXrrXXIGR9YB7jmuPDPm5KN9k#v=onepage&q=david%20card%20immigration&f=false)
+- [<i class="fas fa-external-link-square-alt"></i> Clemens, 2017, "What the Mariel Boatlift of Cuban Refugees Can Teach Us about the Economics of Immigration: An Explainer and a Revelation," *Center for Global Development*](https://www.cgdev.org/blog/what-mariel-boatlift-cuban-refugees-can-teach-us-about-economics-immigration)
+- [<i class="fas fa-external-link-square-alt"></i> Pew Research, 2020, "Key Findings About U.S. Immigrants"](https://www.pewresearch.org/fact-tank/2020/08/20/key-findings-about-u-s-immigrants/)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("3.1-slides")
+```

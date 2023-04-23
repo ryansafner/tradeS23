@@ -1,0 +1,40 @@
+---
+title: "3.2 — Globalization and its Discontents — Class Content"
+execute:
+  freeze: auto
+---
+
+```{r, echo = F}
+source(here::here("slides", "slide-links.R"))
+```
+
+::: {.callout-note appearance="minimal"}
+# Meeting Date
+
+*Thursday, April 27, 2023*
+:::
+
+## <i class="fas fa-info-circle fa-lg"></i> Overview
+
+### <i class="fas fa-book-reader fa-lg"></i> Readings
+
+- [<i class="fas fa-external-link-square-alt"></i> Bremmer, 2017, "In Defense of the Trump Voter "](https://www.linkedin.com/pulse/defense-trump-voter-ian-bremmer/)
+- [<i class="fas fa-external-link-square-alt"></i> Hall, 2017, "Six Theses about Contemporary Populism"](https://gem.cid.harvard.edu/files/gem2016/files/hall_blyth_berglof_gem17.pdf)
+- [<i class="fas fa-external-link-square-alt"></i> WSJ, Nov. 10, 2020, "How Politics Has Pulled the Country in Different Directions"](https://www.wsj.com/graphics/polarized-presidential-elections/?mod=hp_lead_pos9)
+
+## <i class="fas fa-chalkboard-teacher"></i> Slides
+
+Below, you can find the slides in two formats. Clicking the image will bring you to the html version of the slides in a new tab. The lower button will allow you to download a PDF version of the slides.
+
+::: callout-tip
+You can type <kbd>h</kbd> to see a special list of viewing options, and type <kbd>o</kbd> for an outline view of all the slides.
+:::
+
+I suggest printing the slides beforehand and using them to take additional notes in class (*not everything* is in the slides)!
+
+```{r}
+#| echo: false
+#| output: asis
+
+slide_links("3.2-slides")
+```

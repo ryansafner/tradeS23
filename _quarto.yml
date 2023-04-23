@@ -78,6 +78,12 @@ website:
               href: content/2.6-content.qmd
             - text: "2.7 — The Political Economy of Trade Policy"
               href: content/2.7-content.qmd
+        - section: "III. Globalization and its Discontents"
+          contents: 
+            - text: "3.1 — Immigration"
+              href: content/3.1-content.qmd
+            - text: "3.2 — Globalization and its Discontents"
+              href: content/3.2-content.qmd
     - title: "Assignments"
       style: "docked"
       search: false
