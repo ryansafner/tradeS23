@@ -51,11 +51,11 @@ class: inverse
 
 # Outline
 
-## [Immigration to the United States](#)
+## [Immigration to the United States](#3)
 
-## [The Economic Effects of Immigration](#)
+## [The Economic Effects of Immigration](#19)
 
-## [Big Picture: The Economics of Population](#39)
+## [Big Picture: The Economics of Population](#32)
 
 ---
 
@@ -382,7 +382,7 @@ class: inverse, center, middle
 .pull-left[
 .smaller[
 - .hi-purple[“The Place Premium”] — people’s wages are determined by the place that they live
-  - institutions and opportunities, productivity (complemenetary capital, land, etc)
+  - institutions and opportunities, productivity (complementary capital, land, etc)
   - entirely determined for an individual, through no fault of their own
 
 ]
@@ -412,7 +412,7 @@ Keenan, John, 2012, "Open Borders", NBER Working Paper 18307]
 
 .pull-right[
 .center[
-![](../images/immigrationwagegaps.png)
+![:scale 90%](../images/immigrationwagegaps.png)
 ]
 ]
 
@@ -455,7 +455,7 @@ Keenan, John, 2012, "Open Borders", NBER Working Paper 18307]
 # The Economic Effects of Immigration
 
 .center[
-![](../images/theytookourjobs.jpg)
+![:scale 60%](../images/theytookourjobs.jpg)
 ]
 
 ---

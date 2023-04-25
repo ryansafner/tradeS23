@@ -12,19 +12,22 @@ Each of you will give a short 5 minute presentation describing a country’s tra
 
 Please **email me** with the country you would like to choose. I will remove countries from this list in the order that I receive emails claiming them. You may decide to change your country at any time, at which point, I will re-release the country into the pool for others to select, and update the list below:
 
-
 ### Claimed Countries
  You can choose any country **except** for the following that have been claimed:
 
+- Australia
+- Chile
+- India
+- Japan
+- Peru
+- Poland
+- Samoa
+- Singapore
+- Sweden
 - Switzerland
 - Thailand
-- Poland
-- India
-- Chile
-- Singapore
-- 
 
-**Last Update: April 20, 2023**
+**Last Update: April 25, 2023**
 
 # Assignment
 
@@ -78,7 +81,7 @@ Be sure to include citations, or a short bibliography of the sources which you u
 
 # Presentation
 
-- [<i class="fas fa-file-powerpoint"></i> Example Powerpoint](/profile/usa_example.pptx)
+- [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (1)](/profile/USA-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (2)](/profile/Egypt-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (3)](/profile/Gambia-example.pptx)
 - [<i class="fab fa-markdown"></i> Using R to Download World Bank Data (`rmd`)](/profile/usa_country_profile_data.Rmd)
 - [<i class="fas fa-external-link-square-alt"></i> Using R to Download World Bank Data (`html`)](/profile/usa_country_profile_data.html)
 
