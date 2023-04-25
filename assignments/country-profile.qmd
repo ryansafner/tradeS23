@@ -81,9 +81,9 @@ Be sure to include citations, or a short bibliography of the sources which you u
 
 # Presentation
 
-- [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (1)](/profile/USA-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (2)](/profile/Egypt-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (3)](/profile/Gambia-example.pptx)
-- [<i class="fab fa-markdown"></i> Using R to Download World Bank Data (`rmd`)](/profile/usa_country_profile_data.Rmd)
-- [<i class="fas fa-external-link-square-alt"></i> Using R to Download World Bank Data (`html`)](/profile/usa_country_profile_data.html)
+- [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (1)](/files/profile/USA-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (2)](/files/profile/Egypt-example.pptx) [<i class="fas fa-file-powerpoint"></i> Example Powerpoint (3)](/files/profile/Gambia-example.pptx)
+- [<i class="fab fa-markdown"></i> Using R to Download World Bank Data (`rmd`)](/files/profile/usa_country_profile_data.Rmd)
+- [<i class="fas fa-external-link-square-alt"></i> Using R to Download World Bank Data (`html`)](/files/profile/usa_country_profile_data.html)
 
 On the last week of class, each student will have 5 minutes to present their country. I expect each of you to have slides to describe your country.
 
