@@ -1,0 +1,69 @@
+---
+title: "Final Exam"
+execute: 
+  freeze: auto
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(message = F, warning = F, echo = F)
+library(tidyverse)
+library(ggrepel)
+```
+
+::: {.callout-warning appearance="minimal"}
+This exam is due by email to me by 11:59 PM Friday May 12. Starting at 12:01, you will lose 2 points for every hour it is late.
+:::
+
+
+# Instructions
+
+Choose **any five (5)** of the following questions to answer. Questions draw only from material discussed in class. **Each question is worth 20 points.** Your answers, given the time and resources at your disposal, should be complete yet concise (e.g. 2-3 well-reasoned paragraphs, with minimal filler). If applicable, show all work and fully label all graphs. Showing more of your thought process increases your chances of getting partial credit.
+
+You will be graded both on your use of reasoning and economic analysis, and ability when relevant to accurately describe the arguments in the readings. Where asked for your opinion, you will not be graded on your conclusion, only your reasoning.
+
+If appropriate, you must be able to talk with some familiarity about arguments put forth in our readings, or by various authors discussed in class, when relevant (informally, as in “According to John Stuart Mill…”). You do not need formal citations, but it should be clear when you are referencing the readings vs. your own thinking. This is not relevant for all questions!
+
+You may discuss the questions, but you must write your own responses and turn in your own work. Answers that are substantially similar, or indicate [use of ChatGPT or AI](https://trades23.classes.ryansafner.com/syllabus.html#chatgpt), will be interpreted as cheating and punished accordingly. I will not answer any questions about course content during while the exam is outstanding.
+
+# Questions
+
+## Question 1
+
+Why do representative democracies tend to produce “bad” or economically inefficient trade policies?
+
+## Question 2
+
+The World Trade Organization (WTO) has no sovereign power, or “international army”, to enforce its rulings or resolutions to international trade disputes. Explain, using a game theoretic-framework (verbally is sufficient) why countries submit to its rulings on trade disputes, even if a ruling may not be in the country’s immediate interest. Consider how the logic of this problem has been consistent since the Commercial Revolution of Medieval Europe.
+
+## Question 3
+
+Historically, the United States has had several periods——including the crucial period at the end of the 19th century when it industrialized and became a world power——where it has had high import tariffs. Some have argued that the high tariffs *caused* the U.S.’ economic development (which has implications for modern trade policy). Respond to this historical argument.
+
+## Question 4
+
+It is economically undeniable that if the demand for labor slopes downwards, an increase in the supply of labor (from immigration) will decrease wages in the labor market. Respond to this argument on economic grounds (i.e. not on cultural, political, social, or moral grounds), given what you have learned in this class.
+
+## Question 5
+
+Explain the philosophy of mercantilism and the policy prescriptions derived from it. Critically appraise mercantilism as a historical economic and political philosophy, considering that before there was mercantilism, the world was primarily feudal.
+
+## Question 6
+
+Explain, in your opinion, what is/are the best argument(s) for trade protectionism of any kind, and why? What would a response be to the argument(s)? What do you find most convincing?
+
+## Question 7
+
+Historically, Congress delegated “fast track authority” to the President of the United States to (appoint experts to) negotiate trade agreements with other nations, produce an agreement, and then submit it to Congress for approval. Ordinarily, Congress would then deliberate, propose amendments, and alter the agreement before voting on it. But with “Fast Track Authority,” Congress is not allowed to make any changes, only vote for the agreement in full, or against it. Considering the political economy of trade policy, do you believe this is/was a good arrangement? Why or why not?
+
+## Question 8
+
+Under what circumstances can a tariff lead to an increase in overall national welfare? How likely do you expect this benefit to play out in practice, and why?
+
+## Question 9
+
+### Part A
+Which topic or concept this semester was your favorite, or you found the most surprising or interesting, and why?
+
+### Part B
+
+Which topic or concept this semester did you find most confusing, or difficult, and why?

@@ -154,6 +154,76 @@
     "text": "Country at a Glance\nGet data from a reputable source (United Nations, World Bank, International Monetary Fund, OECD, etc.) on the following statistics. You may write down just the number or descriptor for each of the following on your report.1 For each, please indicate both the source of your data, and the year for the data (try to get the latest possible). Note that some countries may not have data available on all statistics (and be sure to not if none is available).\nYour presentation should include:\n\nMacroeconomic Data\n\nReal Gross Domestic Product (and growth rate)\nReal GDP/capita (and growth rate)\nUnemployment rate\nLabor force participation rate\nInflation rate\nBudget deficit/surplus as percent of GDP\nDebt as percent of GDP\nCurrency, and exchange rate for 1 U.S. Dollar\n\n\n\nDemographic, Equality, and Health Data\n\nPopulation\nPopulation growth rate\nHuman development index\nGini coefficient\nLife expectancy at birth\nInfant mortality rate\n% of population living in extreme poverty (under \\(\\approx\\) $2 per day)\nHappiness index score\n\n\n\nTrade and Economy Data\n\nWhat are the top 5 exports by value?\nWho are the top 5 trading partners?\nTrade (imports + exports) as percent of GDP\nDoing Business Index score\nAmount of Foreign Aid recieved\n\n\n\nInstitutions\n\nPolity IV score\nFreedom house freedom score\nEconomic freedom score\nCorruption Perceptions Index score\nRule of law index score\n\nBe sure to include citations, or a short bibliography of the sources which you used to compile your overview. I do not care about the formatting, just be consistent, and use reputable sources (again, e.g. World Bank, IMF, OECD, UN, CIA World Factbook)."
   },
   {
+    "objectID": "assignments/final-exam.html",
+    "href": "assignments/final-exam.html",
+    "title": "Final Exam",
+    "section": "",
+    "text": "This exam is due by email to me by 11:59 PM Friday May 12. Starting at 12:01, you will lose 2 points for every hour it is late."
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-1",
+    "href": "assignments/final-exam.html#question-1",
+    "title": "Final Exam",
+    "section": "Question 1",
+    "text": "Question 1\nWhy do representative democracies tend to produce “bad” or economically inefficient trade policies?"
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-2",
+    "href": "assignments/final-exam.html#question-2",
+    "title": "Final Exam",
+    "section": "Question 2",
+    "text": "Question 2\nThe World Trade Organization (WTO) has no sovereign power, or “international army”, to enforce its rulings or resolutions to international trade disputes. Explain, using a game theoretic-framework (verbally is sufficient) why countries submit to its rulings on trade disputes, even if a ruling may not be in the country’s immediate interest. Consider how the logic of this problem has been consistent since the Commercial Revolution of Medieval Europe."
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-3",
+    "href": "assignments/final-exam.html#question-3",
+    "title": "Final Exam",
+    "section": "Question 3",
+    "text": "Question 3\nHistorically, the United States has had several periods——including the crucial period at the end of the 19th century when it industrialized and became a world power——where it has had high import tariffs. Some have argued that the high tariffs caused the U.S.’ economic development (which has implications for modern trade policy). Respond to this historical argument."
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-4",
+    "href": "assignments/final-exam.html#question-4",
+    "title": "Final Exam",
+    "section": "Question 4",
+    "text": "Question 4\nIt is economically undeniable that if the demand for labor slopes downwards, an increase in the supply of labor (from immigration) will decrease wages in the labor market. Respond to this argument on economic grounds (i.e. not on cultural, political, social, or moral grounds), given what you have learned in this class."
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-5",
+    "href": "assignments/final-exam.html#question-5",
+    "title": "Final Exam",
+    "section": "Question 5",
+    "text": "Question 5\nExplain the philosophy of mercantilism and the policy prescriptions derived from it. Critically appraise mercantilism as a historical economic and political philosophy, considering that before there was mercantilism, the world was primarily feudal."
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-6",
+    "href": "assignments/final-exam.html#question-6",
+    "title": "Final Exam",
+    "section": "Question 6",
+    "text": "Question 6\nExplain, in your opinion, what is/are the best argument(s) for trade protectionism of any kind, and why? What would a response be to the argument(s)? What do you find most convincing?"
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-7",
+    "href": "assignments/final-exam.html#question-7",
+    "title": "Final Exam",
+    "section": "Question 7",
+    "text": "Question 7\nHistorically, Congress delegated “fast track authority” to the President of the United States to (appoint experts to) negotiate trade agreements with other nations, produce an agreement, and then submit it to Congress for approval. Ordinarily, Congress would then deliberate, propose amendments, and alter the agreement before voting on it. But with “Fast Track Authority,” Congress is not allowed to make any changes, only vote for the agreement in full, or against it. Considering the political economy of trade policy, do you believe this is/was a good arrangement? Why or why not?"
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-8",
+    "href": "assignments/final-exam.html#question-8",
+    "title": "Final Exam",
+    "section": "Question 8",
+    "text": "Question 8\nUnder what circumstances can a tariff lead to an increase in overall national welfare? How likely do you expect this benefit to play out in practice, and why?"
+  },
+  {
+    "objectID": "assignments/final-exam.html#question-9",
+    "href": "assignments/final-exam.html#question-9",
+    "title": "Final Exam",
+    "section": "Question 9",
+    "text": "Question 9\n\nPart A\nWhich topic or concept this semester was your favorite, or you found the most surprising or interesting, and why?\n\n\nPart B\nWhich topic or concept this semester did you find most confusing, or difficult, and why?"
+  },
+  {
     "objectID": "assignments/index.html",
     "href": "assignments/index.html",
     "title": "Assignment Details",
@@ -956,7 +1026,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This page contains all of the following resources for each class meeting:\n\n Content materials contains suggested readings, more details about assignments, math appendices, and other helpful resources. I suggest you view these before each class.\n Slides are “Xaringan” presentations that can be opened in any browser (You can find a downloadable PDF in each content page)\n Assignments are listed with due dates\n\nPlease note that the lesson numbers, topics, and titles (e.g. 1.1) are my design, and do not match up with the textbook!\nRelevant materials, if applicable will be posted before class meets and become colored links.\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Models of Trade\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nTue Jan 24\n\n\n1.1 — Why Trade Matters\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Jan 26\n\n\n1.2 — The Smithean View of Trade: Divison of Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Jan 31\n\n\n1.3 — Ricardian View of Trade I: Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 02\n\n\n1.4 — 1.4 — Ricardian View of Trade II: One-Factor Model\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 07\n\n\n1.5 — Ricardian View of Trade III: Reflections on Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 09\n\n\n1.6 — The Standard Trade Model I\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 14\n\n\n1.7 — The Standard Trade Model II: Terms of Trade Changes\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 16\n\n\n1.8 — The Specific Factors Model\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 1 due Thurs Feb 23\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 21\n\n\n1.9 — The Hecksher-Ohlin Model: Theory\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 23\n\n\n1.10 — The Hecksher-Ohlin Model: Empirics\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 28\n\n\n1.11 — New Trade Theory I\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 02\n\n\n1.12 — New Trade Theory II: Monopolistic Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 2 due Tues Mar 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMidterm Exam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nII. Trade Policy\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nThu Mar 09\n\n\n2.1 — Tariffs\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 21\n\n\n2.2 — Quotas, Subsidies, and Non-Tariff Barriers\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 23\n\n\n2.3 — An Intellectual History of Trade I: Feudalism\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 28\n\n\n2.4 — An Intellectual History of Trade II: Mercantilism\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 04\n\n\n2.5 — An Intellectual History of Trade III: Better Protectionist Arguments\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 11\n\n\n2.6 — An Intellectual History of Trade IV: Increasing Returns & Industrial Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 13\n\n\n2.7 — The Political Economy of Trade Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 18\n\n\n2.8 — Trade Agreements\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIII. Globalization and its Discontents\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nTue Apr 25\n\n\n3.1 — Immigration\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 27\n\n\n3.2 — Globalization & Its Discontents\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPresentations & Review\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry Profile"
+    "text": "This page contains all of the following resources for each class meeting:\n\n Content materials contains suggested readings, more details about assignments, math appendices, and other helpful resources. I suggest you view these before each class.\n Slides are “Xaringan” presentations that can be opened in any browser (You can find a downloadable PDF in each content page)\n Assignments are listed with due dates\n\nPlease note that the lesson numbers, topics, and titles (e.g. 1.1) are my design, and do not match up with the textbook!\nRelevant materials, if applicable will be posted before class meets and become colored links.\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Models of Trade\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nTue Jan 24\n\n\n1.1 — Why Trade Matters\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Jan 26\n\n\n1.2 — The Smithean View of Trade: Divison of Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Jan 31\n\n\n1.3 — Ricardian View of Trade I: Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 02\n\n\n1.4 — Ricardian View of Trade II: One-Factor Model\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 07\n\n\n1.5 — Ricardian View of Trade III: Reflections on Comparative Advantage\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 09\n\n\n1.6 — The Standard Trade Model I\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 14\n\n\n1.7 — The Standard Trade Model II: Terms of Trade Changes\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 16\n\n\n1.8 — The Specific Factors Model\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 1 due Thurs Feb 23\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 21\n\n\n1.9 — The Hecksher-Ohlin Model: Theory\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Feb 23\n\n\n1.10 — The Hecksher-Ohlin Model: Empirics\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Feb 28\n\n\n1.11 — New Trade Theory I\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 02\n\n\n1.12 — New Trade Theory II: Monopolistic Competition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Set 2 due Tues Mar 7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMidterm Exam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nII. Trade Policy\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nThu Mar 09\n\n\n2.1 — Tariffs\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 21\n\n\n2.2 — Quotas, Subsidies, and Non-Tariff Barriers\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Mar 23\n\n\n2.3 — An Intellectual History of Trade I: Feudalism\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Mar 28\n\n\n2.4 — An Intellectual History of Trade II: Mercantilism\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 04\n\n\n2.5 — An Intellectual History of Trade III: Better Protectionist Arguments\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 11\n\n\n2.6 — An Intellectual History of Trade IV: Increasing Returns & Industrial Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 13\n\n\n2.7 — The Political Economy of Trade Policy\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue Apr 18\n\n\n2.8 — Trade Agreements\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIII. Globalization and its Discontents\n\n\n\n\n\n\n\nTitle\n\n\nContent\n\n\nSlides\n\n\nAssignment\n\n\n\n\n\n\nTue Apr 25\n\n\n3.1 — Immigration\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu Apr 27\n\n\n3.2 — Globalization & Its Discontents\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPresentations & Review\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCountry Profile\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Exam due Fri May 12"
   },
   {
     "objectID": "syllabus.html",

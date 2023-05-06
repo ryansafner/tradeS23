@@ -103,7 +103,8 @@ website:
           contents:
             - text: "Midterm Exam"
               href: assignments/midterm.qmd
-
+            - text: "Final Exam"
+              href: assignments/final-exam.qmd
     - title: "Resources"
       style: "docked"
       search: true
